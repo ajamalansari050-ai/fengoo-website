@@ -1,0 +1,68 @@
+{
+  "id": "saraswat-bank",
+  "name": "Saraswat Co-operative Bank",
+  "legalName": "Saraswat Co-operative Bank Limited",
+  "type": "Urban Co-operative Bank",
+  "category": "rrb",
+  "tag": "India's Largest Urban Co-operative Bank",
+  "detailPage": "cooperative/saraswat-bank/saraswat-bank.html",
+  "officialUrl": "https://www.saraswatbank.com/",
+  "helpline": "1800 22 9999 / 1800 266 5555",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Saraswat Basic Savings (BSBDA)",
+    "details": "शून्य शेष खाता, गोमो मोबाइल बैंकिंग ऐप और महाराष्ट्र, गुजरात, गोवा में व्यापक शाखाएं।",
+    "openUrl": "https://www.saraswatbank.com/"
+  },
+  "creditCards": {
+    "topCards": "Saraswat Bank RuPay Platinum & Classic",
+    "topOffer": "कम वार्षिक शुल्क और पेट्रोल पंपों पर 1% फ्यूल सरचार्ज छूट।",
+    "applyUrl": "https://www.saraswatbank.com/"
+  },
+  "rates": {
+    "savings": "3.00% - 3.50% p.a.",
+    "fd": "3.50% - 7.40% p.a. (Senior Citizen: 7.90%)"
+  },
+  "loans": "Vastu Siddhi Home Loan, MSME Advances",
+  "founded": "1918",
+  "headquarters": "Mumbai, Maharashtra",
+  "rbiStatus": "Scheduled Urban Co-operative Bank (Supervised by RBI and Central Registrar)",
+  "dicgcCoverage": "Yes (Covered under DICGC ₹5,00,000 deposit insurance scheme)",
+  "about": "Saraswat Co-operative Bank Limited is India's largest Urban Co-operative Bank (UCB) with a continuous operational history spanning over a century since 1918. Operating across six states (Maharashtra, Goa, Gujarat, Madhya Pradesh, Karnataka, and New Delhi), Saraswat Bank operates under the dual regulatory oversight of the Reserve Bank of India and the Multi-State Co-operative Societies Act. Deposits are fully covered by DICGC.",
+  "products": [
+    {
+      "name": "Saraswat Retail Savings & Term Deposits",
+      "desc": "Traditional and digital savings accounts offering competitive term deposit yields with quarterly compounding."
+    },
+    {
+      "name": "Vastu Siddhi Housing Loans",
+      "desc": "Home loans with easy documentation and customized repayment structures for salaried and self-employed professionals."
+    },
+    {
+      "name": "MSME & SME Business Finance",
+      "desc": "Credit support for small manufacturing and service enterprises with personalized branch relationships."
+    },
+    {
+      "name": "GoMo Mobile Banking App",
+      "desc": "Full-featured mobile application for IMPS/NEFT transfers, bill payments, and card management."
+    }
+  ],
+  "eligibility": [
+    "Individuals, business entities, and housing societies in operating states."
+  ],
+  "documents": [
+    "Standard KYC (Aadhaar, PAN, residential verification)."
+  ],
+  "charges": [
+    {
+      "item": "Minimum Balance",
+      "fee": "As per branch category (Metro/Urban)"
+    },
+    {
+      "item": "Deposit Insurance",
+      "fee": "Statutory ₹5,00,000 per depositor under DICGC"
+    }
+  ],
+  "partnerLink": null
+}

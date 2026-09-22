@@ -1,0 +1,68 @@
+{
+  "id": "punjab-national-bank",
+  "name": "Punjab National Bank (PNB)",
+  "legalName": "Punjab National Bank",
+  "type": "Public Sector Bank",
+  "category": "psu",
+  "tag": "Swadeshi Movement Pioneer (1894)",
+  "detailPage": "public-sector/punjab-national-bank/punjab-national-bank.html",
+  "officialUrl": "https://www.pnbindia.in/",
+  "helpline": "1800 1800 / 1800 2021",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "PNB Basic Savings (BSBDA) & Jan Dhan",
+    "details": "शून्य शेष बचत खाता, मुफ्त रुपे डेबिट कार्ड और डीबीटी सब्सिडी का सीधा भुगतान।",
+    "openUrl": "https://www.pnbindia.in/savings-fund-account.html"
+  },
+  "creditCards": {
+    "topCards": "PNB RuPay Platinum, Millennial, PNB Select",
+    "topOffer": "घरेलू हवाई अड्डा लाउंज एक्सेस + यूटिलिटी बिल भुगतान पर अतिरिक्त कैशबैक।",
+    "applyUrl": "https://pnbcard.in/"
+  },
+  "rates": {
+    "savings": "2.70% p.a.",
+    "fd": "3.50% - 7.25% p.a. (Senior Citizen: 7.75%)"
+  },
+  "loans": "PNB Pride Home Loan, PNB Sahyog Personal Loan",
+  "founded": "1894 in Lahore",
+  "headquarters": "New Delhi",
+  "rbiStatus": "Nationalized Scheduled Commercial Bank (Amalgamated with Oriental Bank of Commerce & United Bank of India)",
+  "dicgcCoverage": "Yes (Statutory ₹5,00,000 per depositor insurance)",
+  "about": "Punjab National Bank (PNB) is the second largest public sector bank in India, established in 1894 by leaders of the Swadeshi movement including Lala Lajpat Rai. PNB serves over 180 million customers across 10,000+ branches. Its PNB ONE app is a secure digital platform for retail and MSME banking.",
+  "products": [
+    {
+      "name": "PNB ONE Digital Banking",
+      "desc": "Unified mobile banking with biometric login, UPI scan, and virtual debit card."
+    },
+    {
+      "name": "PNB Max Saver Account",
+      "desc": "Premium savings account with high daily ATM withdrawal limit and complimentary accidental insurance."
+    },
+    {
+      "name": "PNB Housing Loan (Pride)",
+      "desc": "Affordable residential home loan scheme for public and government employees."
+    },
+    {
+      "name": "PNB Kisan Tatkal Rin",
+      "desc": "Instant agricultural credit for farmers during cropping cycles."
+    }
+  ],
+  "eligibility": [
+    "Indian citizens 18+ years; joint and minor accounts with guardians permitted."
+  ],
+  "documents": [
+    "Aadhaar Card, PAN Card, Form 60 if PAN not available."
+  ],
+  "charges": [
+    {
+      "item": "Quarterly Average Balance (QAB)",
+      "fee": "₹2,000 (Metro/Urban), ₹1,000 (Semi-Urban), ₹500 (Rural)"
+    },
+    {
+      "item": "Internet / Mobile NEFT",
+      "fee": "Nil"
+    }
+  ],
+  "partnerLink": null
+}

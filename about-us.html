@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>हमारे बारे में (About Us) | Fengoo.in</title>
+  <meta name="description" content="Fengoo.in का मिशन - भारत के प्रत्येक नागरिक तक निष्पक्ष, पारदर्शी व सुलभ वित्तीय ज्ञान पहुंचाना।" />
+  <link rel="canonical" href="https://fengoo.in/about-us.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/calculators.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/monetization.css" />
+  
+  <style>
+    .about-hero {
+      text-align: center;
+      padding: 3.5rem 1rem 2rem;
+      background: radial-gradient(circle at 50% 0%, var(--surface-2) 0%, var(--surface) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .about-hero h1 { font-size: 2.25rem; font-weight: 800; margin-bottom: 0.75rem; color: var(--text); }
+    .about-hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 720px; margin: 0 auto; }
+    .about-content {
+      max-width: 860px;
+      margin: 3rem auto 5rem;
+      background: var(--surface);
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .about-card {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+    }
+    .about-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text); }
+    .about-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" id="header-logo-link">
+        <span class="logo-badge" id="header-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </span>
+        <span class="brand-name">Fengoo<span>.in</span></span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="banks/index.html" class="nav-link">Banks</a>
+        <a href="credit-cards/index.html" class="nav-link">Cards</a>
+        <a href="upi/index.html" class="nav-link">UPI</a>
+        <a href="loans/index.html" class="nav-link">Loans</a>
+        <a href="insurance/index.html" class="nav-link">Insurance</a>
+        <a href="investments/index.html" class="nav-link">Investments</a>
+        <a href="government/index.html" class="nav-link">Govt Schemes</a>
+        <a href="tax/index.html" class="nav-link">Tax</a>
+        <a href="pension/index.html" class="nav-link">Pension</a>
+        <a href="savings/index.html" class="nav-link">Savings</a>
+        <a href="calculators/index.html" class="nav-link">Calculators</a>
+        <a href="official-links/official-links.html" class="nav-link">Official Links</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <button class="btn-icon mobile-menu-btn" id="mobile-menu-btn" title="Open Menu" aria-label="Open Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="brand-name font-bold">Fengoo Navigation</span>
+        <button class="modal-close drawer-close-btn" id="drawer-close-btn">&times;</button>
+      </div>
+      <div class="drawer-links">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="banks/index.html" class="drawer-link">Banks Directory</a>
+        <a href="credit-cards/index.html" class="drawer-link">Credit Cards</a>
+        <a href="upi/index.html" class="drawer-link">UPI & Payments</a>
+        <a href="loans/index.html" class="drawer-link">Loans</a>
+        <a href="insurance/index.html" class="drawer-link">Insurance</a>
+        <a href="investments/index.html" class="drawer-link">Investments</a>
+        <a href="government/index.html" class="drawer-link">Government Schemes</a>
+        <a href="tax/index.html" class="drawer-link">Tax Slabs</a>
+        <a href="pension/index.html" class="drawer-link">Pension & Retirement</a>
+        <a href="savings/index.html" class="drawer-link">Savings & Deposits</a>
+        <a href="financial-education/index.html" class="drawer-link">Financial Education</a>
+        <a href="calculators/index.html" class="drawer-link">20+ Calculators</a>
+        <a href="official-links/official-links.html" class="drawer-link">Official Regulatory Links</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <section class="about-hero">
+    <div class="container">
+      <span class="badge-official" style="margin-bottom:0.75rem; display:inline-block;">🏛️ भारत का निष्पक्ष वित्तीय साक्षरता पोर्टल</span>
+      <h1>हमारा मिशन: हर भारतीय के लिए सरल, पारदर्शी वित्त</h1>
+      <p>क्रेडिट कार्ड्स के छिपे हुए शुल्क, बैंक ऋणों के जटिल गणित और सरकारी बचत योजनाओं को आम बोलचाल की हिंदी में स्पष्ट रूप से समझना।</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="about-content">
+      <h2>हमारा दृष्टिकोण (Our Vision)</h2>
+      <p>
+        भारतीय वित्तीय बाज़ार में प्रतिदिन सैकड़ों नए क्रेडिट कार्ड्स, लोन ऐप्स और निवेश उत्पाद लॉन्च होते हैं। अक्सर उपभोक्ता विज्ञापनों के चकाचौंध में छिपे हुए शुल्कों और ब्याज के चक्रव्यूह में फंस जाते हैं। Fengoo.in की स्थापना इसी समस्या के समाधान हेतु की गई है—ताकि प्रत्येक उपभोक्ता को आवेदन करने से पहले 1,500 से 2,000 शब्दों की निष्पक्ष, तथ्य-आधारित समीक्षा प्राप्त हो सके।
+      </p>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <div style="font-size:1.75rem; margin-bottom:0.5rem;">📖</div>
+          <h3>1500+ शब्द गहन विश्लेषण</h3>
+          <p>प्रत्येक वित्तीय उत्पाद का शुल्क, नियम, ब्याज गणित और वास्तविक लाभ का विस्तृत व पारदर्शी परीक्षण।</p>
+        </div>
+        <div class="about-card">
+          <div style="font-size:1.75rem; margin-bottom:0.5rem;">🛡️</div>
+          <h3>100% विनियामक सत्यापन</h3>
+          <p>आरबीआई (RBI), सेबी (SEBI), और आईआरडीएआई (IRDAI) के नवीनतम सर्कुलर्स के अनुसार प्रमाणित डेटा।</p>
+        </div>
+        <div class="about-card">
+          <div style="font-size:1.75rem; margin-bottom:0.5rem;">🧮</div>
+          <h3>सटीक गणितीय टूल्स</h3>
+          <p>ईएमआई, एसआईपी और कर गणना के लिए बिना किसी छिपे शुल्क के 20+ मुफ़्त वित्तीय कैलकुलेटर।</p>
+        </div>
+      </div>
+
+      <h2>संपादकीय स्वतंत्रता (Editorial Independence)</h2>
+      <p>
+        हमारी संपादकीय टीम किसी भी बैंक अथवा वित्तीय संस्थान के दबाव में समीक्षाएं नहीं लिखती है। यदि किसी कार्ड अथवा लोन में कोई खामी (जैसे अधिक नवीनीकरण शुल्क, कम रिवॉर्ड दर अथवा छुपा हुआ मार्कअप) है, तो हम अपनी गाइड में उसे स्पष्ट रूप से रेखांकित करते हैं।
+      </p>
+    </div>
+  </main>
+
+  
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="logo-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </span>
+            <span class="brand-name">Fengoo<span>.in</span></span>
+          </div>
+          <p>Fengoo भारत का एक स्वतंत्र, निष्पक्ष वित्तीय सूचना व शिक्षा मंच है। यहाँ केवल वैधानिक और आधिकारिक स्रोतों (RBI, SEBI, IRDAI, Income Tax, PFRDA, DICGC) से सत्यापित डेटा प्रस्तुत किया जाता है।</p>
+          <div class="footer-badges">
+            <span class="trust-badge-pill">🛡️ DICGC ₹5L Coverage Guide</span>
+            <span class="trust-badge-pill">⚖️ Zero Biased Advice</span>
+            <span class="trust-badge-pill">🏛️ Verified Regulators</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>बैंकिंग व कार्ड्स</h5>
+          <ul class="footer-links">
+            <li><a href="banks/public-sector/sbi/sbi.html">State Bank of India</a></li>
+            <li><a href="banks/private-sector/hdfc/hdfc.html">HDFC Bank</a></li>
+            <li><a href="banks/private-sector/kotak/kotak.html">Kotak Mahindra Bank</a></li>
+            <li><a href="banks/small-finance/au-small-finance/au-small-finance.html">AU Small Finance</a></li>
+            <li><a href="credit-cards/index.html">Credit Cards Directory</a></li>
+            <li><a href="upi/index.html">UPI Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>ऋण व निवेश</h5>
+          <ul class="footer-links">
+            <li><a href="loans/home-loan/home-loan.html">Home Loan Guide</a></li>
+            <li><a href="loans/personal-loan/personal-loan.html">Personal Loan</a></li>
+            <li><a href="investments/mutual-funds/sip-equity-debt.html">Mutual Funds & SIP</a></li>
+            <li><a href="investments/bonds/sovereign-gold-bonds.html">Sovereign Gold Bonds</a></li>
+            <li><a href="insurance/life/term-insurance.html">Term Life Insurance</a></li>
+            <li><a href="insurance/health/individual-family-floater.html">Health Insurance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>सरकारी योजनाएं व टैक्स</h5>
+          <ul class="footer-links">
+            <li><a href="government/schemes/pm-jan-dhan-yojana.html">PM Jan Dhan Yojana</a></li>
+            <li><a href="government/schemes/sukanya-samriddhi-yojana.html">Sukanya Samriddhi</a></li>
+            <li><a href="pension/nps/nps.html">National Pension System</a></li>
+            <li><a href="pension/atal-pension-yojana/atal-pension-yojana.html">Atal Pension Yojana</a></li>
+            <li><a href="tax/income-tax-slabs/income-tax-slabs.html">Income Tax Slabs</a></li>
+            <li><a href="tax/gst-slabs/gst-slabs.html">GST Slabs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>टूल्स व नीतियां (Policies)</h5>
+          <ul class="footer-links">
+            <li><a href="calculators/emi.html">EMI Calculator</a></li>
+            <li><a href="calculators/sip.html">SIP Calculator</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="disclaimer.html">Legal Disclaimer</a></li>
+            <li><a href="about-us.html">About Fengoo</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="advertise.html">📢 Advertise With Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-compliance-box">
+        <strong>वैधानिक अस्वीकरण (Statutory Disclaimer):</strong> Fengoo.in कोई बैंक, गैर-बैंकिंग वित्तीय कंपनी (NBFC), बीमा मध्यस्थ अथवा SEBI-पंजीकृत निवेश सलाहकार नहीं है। यहाँ उपलब्ध सामग्री केवल सामान्य सूचना व वित्तीय साक्षरता के उद्देश्य से है। किसी भी वित्तीय उत्पाद में निवेश या ऋण लेने से पूर्व संबंधित संस्थान के आधिकारिक दस्तावेज़ व नियम अवश्य पढ़ें।
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fengoo.in. All rights reserved. Free, Independent Financial Information for India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Affiliate Disclosure Modal -->
+  <div class="modal-backdrop" id="affiliate-disclosure-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>पारदर्शिता व पार्टनर नीति (Affiliate Disclosure)</h3>
+        <button class="modal-close" onclick="closeModal('affiliate-disclosure-modal')">&times;</button>
+      </div>
+      <div style="font-size:0.9rem; line-height:1.6; color:var(--text); display:flex; flex-direction:column; gap:0.75rem;">
+        <p>1. <strong>स्पष्ट पृथक्करण:</strong> Fengoo पर आधिकारिक विनियामक लिंक्स (जैसे RBI, SEBI, Income Tax) 100% गैर-व्यावसायिक हैं और उन पर कोई कमीशन नहीं लिया जाता।</p>
+        <p>2. <strong>पार्टनर लिंक्स की पहचान:</strong> जहाँ भी व्यावसायिक रेफरल लिंक उपलब्ध है, वहाँ स्पष्ट रूप से <strong>"Partner Link"</strong> अथवा <strong>"Affiliate Link"</strong> का लेबल लगाया गया है।</p>
+        <p>3. <strong>उपयोगकर्ता पर शून्य अतिरिक्त लागत:</strong> यदि आप किसी पार्टनर लिंक का उपयोग करके खाता खोलते हैं या सेवा लेते हैं, तो आपको कोई अतिरिक्त शुल्क नहीं देना पड़ता।</p>
+        <p>4. <strong>संपादकीय स्वतंत्रता:</strong> किसी बैंक अथवा वित्तीय संस्था द्वारा दी जाने वाली कमीशन दर हमारी निष्पक्ष समीक्षा या कैलकुलेटर की गणना को प्रभावित नहीं करती।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer Modal -->
+  <div class="modal-backdrop" id="disclaimer-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>कानूनी अस्वीकरण (Disclaimer)</h3>
+        <button class="modal-close" onclick="closeModal('disclaimer-modal')">&times;</button>
+      </div>
+      <div style="font-size:0.9rem; line-height:1.6; color:var(--text); display:flex; flex-direction:column; gap:0.75rem;">
+        <p>Fengoo.in पर दी गई ब्याज दरें, शुल्क और सरकारी योजना के नियम संबंधित आधिकारिक पोर्टल्स के नवीनतम विज्ञापनों पर आधारित हैं। ब्याज दरें और पात्रता शर्तें समय-समय पर RBI और संबंधित बैंकों द्वारा बदली जा सकती हैं। अंतिम निर्णय से पूर्व अधिकृत बैंक शाखा अथवा पोर्टल से पुष्टि अवश्य करें।</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="js/registry.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/links.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/affiliate_config.js"></script>
+  <script src="js/monetization.js"></script>
+  
+</body>
+</html>

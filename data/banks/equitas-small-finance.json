@@ -1,0 +1,48 @@
+{
+  "id": "equitas-small-finance",
+  "name": "Equitas Small Finance Bank",
+  "legalName": "Equitas Small Finance Bank Limited",
+  "type": "Small Finance Bank",
+  "category": "sfb",
+  "tag": "Selfie Digital High-Yield Account",
+  "detailPage": "small-finance/au-small-finance/au-small-finance.html",
+  "officialUrl": "https://www.equitasbank.com/",
+  "helpline": "1800 103 1222",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Equitas 2.0 / Selfie Zero Balance Savings",
+    "details": "बिना शाखा गए 5 मिनट में वीडियो केवाईसी खाता। 7.00% तक बचत पर ब्याज, जीरो मेंटेनेंस चार्ज और डेबिट कार्ड पर रिवॉर्ड पॉइंट्स।",
+    "openUrl": "https://leads.banksathi.com/?h=Z2NROXgxU21RaU5UakRidUpBbFFGdz09"
+  },
+  "creditCards": {
+    "topCards": "Equitas Elegance, Wings Credit Card",
+    "topOffer": "मूवी और ग्रोसरी पर 2x रिवॉर्ड्स + आकर्षक एयर माइल्स।",
+    "applyUrl": "https://www.equitasbank.com/personal-banking/credit-cards"
+  },
+  "rates": {
+    "savings": "3.50% - 7.00% p.a.",
+    "fd": "4.00% - 8.20% p.a. (Senior Citizen: 8.70%)"
+  },
+  "loans": "Affordable Housing Loans, Microfinance",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "Equitas Small Finance Bank भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": {
+    "url": "https://leads.banksathi.com/?h=Z2NROXgxU21RaU5UakRidUpBbFFGdz09",
+    "label": "Equitas Small Finance Bank खाता तुरंत खोलें (BankSathi Partner Offer)",
+    "disclosure": "Disclosure: यह Equitas Small Finance Bank का Commercial Partner Link है।"
+  }
+}

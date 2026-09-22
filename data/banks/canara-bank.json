@@ -1,0 +1,64 @@
+{
+  "id": "canara-bank",
+  "name": "Canara Bank",
+  "legalName": "Canara Bank",
+  "type": "Public Sector Bank",
+  "category": "psu",
+  "tag": "Major PSU Commercial Bank",
+  "detailPage": "public-sector/canara-bank/canara-bank.html",
+  "officialUrl": "https://canarabank.com/",
+  "helpline": "1800 425 0018",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Canara Small Savings & BSBDA Account",
+    "details": "शून्य न्यूनतम शेष आवश्यकता, RuPay क्लासिक कार्ड और देश भर में 9,500+ शाखा नेटवर्क।",
+    "openUrl": "https://canarabank.com/User_page.aspx?othlink=3"
+  },
+  "creditCards": {
+    "topCards": "Canara RuPay Platinum, Visa Gold, World Card",
+    "topOffer": "न्यूनतम ब्याज दर के साथ 50 दिनों की ब्याज-मुक्त क्रेडिट अवधि।",
+    "applyUrl": "https://canarabank.com/User_page.aspx?othlink=9"
+  },
+  "rates": {
+    "savings": "2.90% p.a.",
+    "fd": "3.50% - 7.25% p.a. (Senior Citizen: 7.75%)"
+  },
+  "loans": "Canara Housing Loan (from 8.40%), MSME Advances",
+  "founded": "1906 (by Ammembal Subba Rao Pai)",
+  "headquarters": "Bengaluru, Karnataka",
+  "rbiStatus": "Nationalized Scheduled Commercial Bank (Amalgamated with Syndicate Bank)",
+  "dicgcCoverage": "Yes (DICGC ₹5,00,000 insured)",
+  "about": "Canara Bank is one of the oldest and largest public sector banks in India, established in 1906. Post its mega-merger with Syndicate Bank, Canara Bank boasts an extensive network spanning over 9,500 domestic branches, delivering extensive agricultural lending, retail advances, and MSME support.",
+  "products": [
+    {
+      "name": "Canara ai1 Super App",
+      "desc": "Omni-channel banking app with 250+ features including bill pay, fixed deposits, and mutual funds."
+    },
+    {
+      "name": "Canara SB Power Plus",
+      "desc": "Premier savings account for affluent professionals with zero processing fees on select retail loans."
+    },
+    {
+      "name": "Canara Housing Loan",
+      "desc": "Transparent floating rate home loans linked to Canara Bank Repo Linked Lending Rate (RLLR)."
+    }
+  ],
+  "eligibility": [
+    "Individual residents, joint applicants, trusts and associations."
+  ],
+  "documents": [
+    "Valid OVD (Aadhaar, Passport, Voter ID) + PAN."
+  ],
+  "charges": [
+    {
+      "item": "Average Monthly Balance",
+      "fee": "₹1,000 (Metro), ₹500 (Semi-Urban), ₹250 (Rural)"
+    },
+    {
+      "item": "Online Fund Transfers",
+      "fee": "Free on digital channels"
+    }
+  ],
+  "partnerLink": null
+}

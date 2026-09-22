@@ -1,0 +1,44 @@
+{
+  "id": "indian-bank",
+  "name": "Indian Bank",
+  "legalName": "Indian Bank",
+  "type": "Public Sector Bank",
+  "category": "psu",
+  "tag": "Amalgamated with Allahabad Bank",
+  "detailPage": "public-sector/sbi/sbi.html",
+  "officialUrl": "https://www.indianbank.in/",
+  "helpline": "1800 425 00 000",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Indian Bank BSBDA Savings",
+    "details": "शून्य न्यूनतम शेष, इंडोसिस मोबाइल ऐप और प्रत्यक्ष लाभ अंतरण (DBT) लिंकेज।",
+    "openUrl": "https://www.indianbank.in/departments/savings-bank-accounts/"
+  },
+  "creditCards": {
+    "topCards": "Indian Bank RuPay Platinum, Visa Classic",
+    "topOffer": "कैश विथड्रॉल पर कम ब्याज दर और शॉपिंग रिवॉर्ड्स।",
+    "applyUrl": "https://www.indianbank.in/departments/credit-card/"
+  },
+  "rates": {
+    "savings": "2.75% p.a.",
+    "fd": "3.50% - 7.20% p.a. (Senior Citizen: 7.70%)"
+  },
+  "loans": "IB Home Loan, Kisan Credit Card",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "Indian Bank भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": null
+}

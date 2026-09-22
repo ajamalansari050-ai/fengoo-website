@@ -1,0 +1,60 @@
+{
+  "id": "aryavart-bank",
+  "name": "Aryavart Bank",
+  "legalName": "Aryavart Bank (Sponsored by Bank of India)",
+  "type": "Regional Rural Bank",
+  "category": "rrb",
+  "tag": "Major RRB in Central Uttar Pradesh",
+  "detailPage": "regional-rural/aryavart-bank/aryavart-bank.html",
+  "officialUrl": "https://aryavart-rrb.com/",
+  "helpline": "1800 102 0304",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Aryavart BSBDA & PMJDY Account",
+    "details": "ग्रामीण परिवारों के लिए मुफ्त खाता, डीबीटी सरकारी सब्सिडी और रुपे डेबिट कार्ड।",
+    "openUrl": "https://aryavart-rrb.com/"
+  },
+  "creditCards": {
+    "topCards": "Aryavart RuPay Kisan Credit Card",
+    "topOffer": "समय पर पुनर्भुगतान करने पर 3% ब्याज छूट (Effective 4% p.a.)।",
+    "applyUrl": "https://aryavart-rrb.com/"
+  },
+  "rates": {
+    "savings": "2.75% p.a.",
+    "fd": "3.50% - 7.00% p.a."
+  },
+  "loans": "SHG Microloans, Kisan Credit Card, Mudra Shishu Loans",
+  "founded": "2019 (Amalgamation of Gramin Bank of Aryavart and Allahabad UP Gramin Bank)",
+  "headquarters": "Lucknow, Uttar Pradesh",
+  "rbiStatus": "Regional Rural Bank under RRB Act, 1976 (Regulated by RBI, supervised by NABARD)",
+  "dicgcCoverage": "Yes (DICGC ₹5 Lakh statutory deposit insurance applies)",
+  "about": "Aryavart Bank is a major Regional Rural Bank (RRB) operating in Uttar Pradesh, jointly owned by the Government of India, Government of Uttar Pradesh, and sponsored by Bank of India. It provides rural credit, Kisan Credit Cards, micro-finance, and SHG financing across 26 districts.",
+  "products": [
+    {
+      "name": "Kisan Credit Card (KCC)",
+      "desc": "Subsidized crop production loans for small and marginal agricultural farmers."
+    },
+    {
+      "name": "Rural Micro-Savings Account",
+      "desc": "Low-cost savings account with RuPay debit card and micro-ATM access."
+    },
+    {
+      "name": "Self Help Group (SHG) Bank Linkage",
+      "desc": "Concessional credit lines for women-led village livelihood collectives."
+    }
+  ],
+  "eligibility": [
+    "Farmers, rural artisans, small agricultural traders, and rural households."
+  ],
+  "documents": [
+    "Aadhaar Card, Land Revenue Records (Khatauni) for farmer loans."
+  ],
+  "charges": [
+    {
+      "item": "Rural Minimum Balance",
+      "fee": "₹100 to ₹500 depending on cheque-book facility"
+    }
+  ],
+  "partnerLink": null
+}

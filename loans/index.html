@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ऋण व लोन डायरेक्टरी (All Loans in India) - Home, Personal, Education & Mudra | Fengoo</title>
+  <meta name="description" content="भारत के सभी प्रमुख ऋणों की विस्तृत डायरेक्टरी। होम लोन, पर्सनल लोन, विद्या लक्ष्मी एजुकेशन लोन, कार लोन, गोल्ड लोन, मुद्रा लोन व किसान क्रेडिट कार्ड की ब्याज दरें व ऑनलाइन अप्लाई लिंक।" />
+  <link rel="canonical" href="https://fengoo.in/loans/index.html" />
+  
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../favicon.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/cards.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/calculators.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/monetization.css" />
+  
+  <style>
+    .loans-hero {
+      background: radial-gradient(circle at 50% 0%, var(--surface-2) 0%, var(--surface) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    .loans-hero h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .loans-hero p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.5;
+    }
+    .loan-filters-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .loan-type-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+    .loan-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .loan-btn:hover, .loan-btn.active {
+      background: #0d9488;
+      color: #fff;
+      border-color: #0d9488;
+    }
+    .loans-list-container {
+      padding: 2.5rem 0 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .loan-card-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 1.5rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .loan-card-item:hover {
+      border-color: #0d9488;
+      box-shadow: var(--shadow-md);
+    }
+    .loan-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .loan-cat-pill {
+      font-size: 0.725rem;
+      font-weight: 700;
+      background: #ccfbf1;
+      color: #0f766e;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+    }
+    .loan-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 0.3rem 0 0.25rem;
+    }
+    .loan-brief {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.45;
+    }
+    .loan-rate-box {
+      background: #f0fdfa;
+      border: 1px solid #99f6e4;
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      text-align: right;
+    }
+    .rate-lbl {
+      font-size: 0.725rem;
+      color: #0f766e;
+      text-transform: uppercase;
+      font-weight: 700;
+      display: block;
+    }
+    .rate-val {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: #115e59;
+    }
+    .loan-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .loan-stat-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .lstat-lbl {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .lstat-val {
+      font-size: 0.925rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .loan-details-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text);
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .loan-card-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+    .btn-loan-apply {
+      flex: 1;
+      min-width: 220px;
+      background: #0d9488;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .btn-loan-apply:hover {
+      background: #0f766e;
+      color: #fff;
+    }
+    .btn-loan-calc {
+      flex: 1;
+      min-width: 200px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .btn-loan-calc:hover {
+      border-color: #0d9488;
+      color: #0d9488;
+      background: var(--surface-subtle);
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo" id="header-logo-link">
+        <span class="logo-badge" id="header-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </span>
+        <span class="brand-name">Fengoo<span>.in</span></span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../banks/index.html" class="nav-link">Banks</a>
+        <a href="../credit-cards/index.html" class="nav-link">Cards</a>
+        <a href="../upi/index.html" class="nav-link">UPI</a>
+        <a href="../loans/index.html" class="nav-link">Loans</a>
+        <a href="../insurance/index.html" class="nav-link">Insurance</a>
+        <a href="../investments/index.html" class="nav-link">Investments</a>
+        <a href="../government/index.html" class="nav-link">Govt Schemes</a>
+        <a href="../tax/index.html" class="nav-link">Tax</a>
+        <a href="../pension/index.html" class="nav-link">Pension</a>
+        <a href="../savings/index.html" class="nav-link">Savings</a>
+        <a href="../calculators/index.html" class="nav-link">Calculators</a>
+        <a href="../official-links/official-links.html" class="nav-link">Official Links</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <button class="btn-icon mobile-menu-btn" id="mobile-menu-btn" title="Open Menu" aria-label="Open Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="brand-name font-bold">Fengoo Navigation</span>
+        <button class="modal-close drawer-close-btn" id="drawer-close-btn">&times;</button>
+      </div>
+      <div class="drawer-links">
+        <a href="../index.html" class="drawer-link">Home</a>
+        <a href="../banks/index.html" class="drawer-link">Banks Directory</a>
+        <a href="../credit-cards/index.html" class="drawer-link">Credit Cards</a>
+        <a href="../upi/index.html" class="drawer-link">UPI & Payments</a>
+        <a href="../loans/index.html" class="drawer-link">Loans</a>
+        <a href="../insurance/index.html" class="drawer-link">Insurance</a>
+        <a href="../investments/index.html" class="drawer-link">Investments</a>
+        <a href="../government/index.html" class="drawer-link">Government Schemes</a>
+        <a href="../tax/index.html" class="drawer-link">Tax Slabs</a>
+        <a href="../pension/index.html" class="drawer-link">Pension & Retirement</a>
+        <a href="../savings/index.html" class="drawer-link">Savings & Deposits</a>
+        <a href="../financial-education/index.html" class="drawer-link">Financial Education</a>
+        <a href="../calculators/index.html" class="drawer-link">20+ Calculators</a>
+        <a href="../official-links/official-links.html" class="drawer-link">Official Regulatory Links</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Breadcrumb -->
+  <div class="container breadcrumb-nav">
+    <ul class="breadcrumbs">
+      <li><a href="../index.html">होम (Home)</a></li>
+      <li><span>ऋण व लोन डायरेक्टरी</span></li>
+    </ul>
+  </div>
+
+  <!-- Hero Header -->
+  <section class="loans-hero">
+    <div class="container">
+      <span class="badge-official">💰 भारत में ऋण व लोन की संपूर्ण मार्गदर्शिका</span>
+      <h1>ऋण व लोन डायरेक्टरी (All Loans in India)</h1>
+      <p>
+        होम लोन, पर्सनल लोन, विद्या लक्ष्मी एजुकेशन लोन, कार लोन, गोल्ड लोन, पीएम मुद्रा व किसान क्रेडिट कार्ड। ब्याज दरें, लोन अवधि, पात्रता व मूल बैंक पोर्टल पर सीधा ऑनलाइन आवेदन लिंक।
+      </p>
+
+      <!-- Search & Filters -->
+      <div class="loan-filters-wrap">
+        <div class="search-input-box" style="margin: 0 auto;">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          <input 
+            type="text" 
+            id="loan-search-input" 
+            placeholder="लोन का प्रकार या बैंक खोजें (उदा. Home Loan, Mudra, Gold Loan, Vidya Lakshmi)..." 
+            aria-label="Search Loans"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="loan-type-tabs">
+          <button class="loan-btn active" data-cat="all">सभी प्रकार के लोन (All Loans)</button>
+          <button class="loan-btn" data-cat="housing">होम लोन (Home)</button>
+          <button class="loan-btn" data-cat="unsecured">पर्सनल लोन (Personal)</button>
+          <button class="loan-btn" data-cat="education">शिक्षा लोन (Education)</button>
+          <button class="loan-btn" data-cat="vehicle">कार व वाहन (Vehicle)</button>
+          <button class="loan-btn" data-cat="secured">गोल्ड व संपत्ति (Secured)</button>
+          <button class="loan-btn" data-cat="business">मुद्रा व व्यापार (MSME)</button>
+          <button class="loan-btn" data-cat="agri">किसान व कृषि (Agri KCC)</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Loans Listing -->
+  <main class="container">
+    <div class="loans-list-container" id="loans-list">
+      
+    <article class="loan-card-item" data-category="education" data-search="शिक्षा लोन (higher education loan) vidya lakshmi portal (moe), sbi global ed-vantage, canara bank भारत सरकार के 'विद्या लक्ष्मी' एकल पोर्टल द्वारा 40+ बैंकों में उच्च शिक्षा व विदेश पढ़ाई हेतु ऑनलाइन आवेदन।">
+      <div class="loan-card-top">
+        <div>
+          <span class="loan-cat-pill">EDUCATION</span>
+          <h3 class="loan-title">शिक्षा लोन (Higher Education Loan)</h3>
+          <p class="loan-brief">भारत सरकार के 'विद्या लक्ष्मी' एकल पोर्टल द्वारा 40+ बैंकों में उच्च शिक्षा व विदेश पढ़ाई हेतु ऑनलाइन आवेदन।</p>
+        </div>
+        <div class="loan-rate-box">
+          <span class="rate-lbl">ब्याज दर (Interest Rate):</span>
+          <strong class="rate-val">8.50% - 11.00% p.a.</strong>
+        </div>
+      </div>
+
+      <div class="loan-stats-grid">
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">अधिकतम लोन राशि:</span>
+          <strong class="lstat-val">भारत में ₹50 लाख तक, विदेश पढ़ाई हेतु ₹1.5 करोड़ तक</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">पुनर्भुगतान अवधि:</span>
+          <strong class="lstat-val">पढ़ाई पूरी होने के बाद 15 वर्ष तक पुनर्भुगतान</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">प्रोसेसिंग शुल्क:</span>
+          <strong class="lstat-val">घरेलू पढ़ाई पर शून्य, विदेश में ₹5,000-₹10,000 (अक्सर रिफंडेबल)</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">शीर्ष ऋणदाता बैंक:</span>
+          <strong class="lstat-val" style="color:var(--primary);">Vidya Lakshmi Portal (MoE), SBI Global Ed-vantage, Canara Bank</strong>
+        </div>
+      </div>
+
+      <div class="loan-details-section">
+        <div class="loan-spec-row">
+          <strong>पात्रता (Eligibility):</strong> <span>भारत का नागरिक, मान्यता प्राप्त कॉलेज/विश्वविद्यालय में मेरिट आधारित प्रवेश।</span>
+        </div>
+        <div class="loan-spec-row">
+          <strong>आवश्यक दस्तावेज:</strong> <span>एडमिशन ऑफर लेटर, कॉलेज फीस स्ट्रक्चर, 10वीं/12वीं मार्कशीट, माता-पिता (सह-आवेदक) के वित्तीय दस्तावेज।</span>
+        </div>
+      </div>
+
+      <div class="loan-card-actions">
+        <a href="https://www.vidyalakshmi.co.in/Students/" target="_blank" rel="noopener noreferrer" class="btn-loan-apply">
+          🏛️ ऑनलाइन आवेदन करें (Apply Online) ↗
+        </a>
+        <a href="../calculators/index.html" class="btn-loan-calc">
+          🧮 ईएमआई कैलकुलेट करें (Calculate EMI) →
+        </a>
+      </div>
+
+      <div class="loan-read-row" style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        <button type="button" class="btn-read-guide" onclick="openLoanGuide('education-loan')" aria-label="1500+ शब्द गाइड पढ़ें: शिक्षा लोन (Higher Education Loan)">
+          📖 शिक्षा लोन (Higher Education Loan) के बारे में विस्तार से पढ़ें (1,500+ शब्द संपूर्ण विश्लेषण व गाइड) →
+        </button>
+        <span class="guide-word-badge">📖 1,500 - 2,000 शब्द गाइड</span>
+      </div>
+    </article>
+  
+
+    <article class="loan-card-item" data-category="secured" data-search="गोल्ड लोन (loan against gold jewellery) sbi gold loan (8.75%), muthoot finance, manappuram gold loan बिना किसी सिबिल स्कोर या सैलरी स्लिप के अपने सोने के आभूषणों पर मात्र 15 मिनट में नकद ऋण।">
+      <div class="loan-card-top">
+        <div>
+          <span class="loan-cat-pill">SECURED</span>
+          <h3 class="loan-title">गोल्ड लोन (Loan Against Gold Jewellery)</h3>
+          <p class="loan-brief">बिना किसी सिबिल स्कोर या सैलरी स्लिप के अपने सोने के आभूषणों पर मात्र 15 मिनट में नकद ऋण।</p>
+        </div>
+        <div class="loan-rate-box">
+          <span class="rate-lbl">ब्याज दर (Interest Rate):</span>
+          <strong class="rate-val">7.00% (Agri) से 11.50% (General)</strong>
+        </div>
+      </div>
+
+      <div class="loan-stats-grid">
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">अधिकतम लोन राशि:</span>
+          <strong class="lstat-val">सोने के मूल्य का 75% (RBI LTV नियम के तहत)</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">पुनर्भुगतान अवधि:</span>
+          <strong class="lstat-val">3 महीने से 36 महीने (बुलेट रीपेमेंट विकल्प उपलब्ध)</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">प्रोसेसिंग शुल्क:</span>
+          <strong class="lstat-val">0.25% - 0.50% या नाममात्र वैल्यूएशन चार्ज</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">शीर्ष ऋणदाता बैंक:</span>
+          <strong class="lstat-val" style="color:var(--primary);">SBI Gold Loan (8.75%), Muthoot Finance, Manappuram Gold Loan</strong>
+        </div>
+      </div>
+
+      <div class="loan-details-section">
+        <div class="loan-spec-row">
+          <strong>पात्रता (Eligibility):</strong> <span>18+ वर्ष का कोई भी नागरिक जिसके पास 18k से 22k शुद्धता के सोने के जेवर हों।</span>
+        </div>
+        <div class="loan-spec-row">
+          <strong>आवश्यक दस्तावेज:</strong> <span>केवल आधार कार्ड व पैन कार्ड। किसी आय प्रमाण (Income Proof) की आवश्यकता नहीं।</span>
+        </div>
+      </div>
+
+      <div class="loan-card-actions">
+        <a href="https://sbi.co.in/web/personal-banking/loans/loans-against-securities/personal-gold-loans" target="_blank" rel="noopener noreferrer" class="btn-loan-apply">
+          🏛️ ऑनलाइन आवेदन करें (Apply Online) ↗
+        </a>
+        <a href="../calculators/index.html" class="btn-loan-calc">
+          🧮 ईएमआई कैलकुलेट करें (Calculate EMI) →
+        </a>
+      </div>
+
+      <div class="loan-read-row" style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        <button type="button" class="btn-read-guide" onclick="openLoanGuide('gold-loan')" aria-label="1500+ शब्द गाइड पढ़ें: गोल्ड लोन (Loan Against Gold Jewellery)">
+          📖 गोल्ड लोन (Loan Against Gold Jewellery) के बारे में विस्तार से पढ़ें (1,500+ शब्द संपूर्ण विश्लेषण व गाइड) →
+        </button>
+        <span class="guide-word-badge">📖 1,500 - 2,000 शब्द गाइड</span>
+      </div>
+    </article>
+  
+
+    <article class="loan-card-item" data-category="housing" data-search="होम लोन / आवास ऋण (housing finance) sbi (8.40%), hdfc bank (8.60%), icici bank (8.65%), bob (8.40%) नया मकान खरीदने, फ्लैट बुक करने, प्लॉट पर घर बनवाने या वर्तमान घर के विस्तार हेतु सबसे किफायती सुरक्षित ऋण।">
+      <div class="loan-card-top">
+        <div>
+          <span class="loan-cat-pill">HOUSING</span>
+          <h3 class="loan-title">होम लोन / आवास ऋण (Housing Finance)</h3>
+          <p class="loan-brief">नया मकान खरीदने, फ्लैट बुक करने, प्लॉट पर घर बनवाने या वर्तमान घर के विस्तार हेतु सबसे किफायती सुरक्षित ऋण।</p>
+        </div>
+        <div class="loan-rate-box">
+          <span class="rate-lbl">ब्याज दर (Interest Rate):</span>
+          <strong class="rate-val">8.40% - 9.50% p.a.</strong>
+        </div>
+      </div>
+
+      <div class="loan-stats-grid">
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">अधिकतम लोन राशि:</span>
+          <strong class="lstat-val">संपत्ति मूल्य का 80% से 90% (LTV Ratio)</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">पुनर्भुगतान अवधि:</span>
+          <strong class="lstat-val">5 वर्ष से 30 वर्ष (360 महीने)</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">प्रोसेसिंग शुल्क:</span>
+          <strong class="lstat-val">0.25% - 0.50% (अक्सर त्योहारी सीजन में शून्य)</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">शीर्ष ऋणदाता बैंक:</span>
+          <strong class="lstat-val" style="color:var(--primary);">SBI (8.40%), HDFC Bank (8.60%), ICICI Bank (8.65%), BoB (8.40%)</strong>
+        </div>
+      </div>
+
+      <div class="loan-details-section">
+        <div class="loan-spec-row">
+          <strong>पात्रता (Eligibility):</strong> <span>21 से 65 वर्ष की आयु, न्यूनतम ₹25,000 मासिक आय, 750+ सिबिल स्कोर।</span>
+        </div>
+        <div class="loan-spec-row">
+          <strong>आवश्यक दस्तावेज:</strong> <span>पैन, आधार, 6 माह का बैंक स्टेटमेंट, 3 माह की सैलरी स्लिप/3 साल का ITR, प्रॉपर्टी की रजिस्ट्री व नक्शा।</span>
+        </div>
+      </div>
+
+      <div class="loan-card-actions">
+        <a href="https://sbi.co.in/web/personal-banking/loans/home-loans" target="_blank" rel="noopener noreferrer" class="btn-loan-apply">
+          🏛️ ऑनलाइन आवेदन करें (Apply Online) ↗
+        </a>
+        <a href="../calculators/index.html" class="btn-loan-calc">
+          🧮 ईएमआई कैलकुलेट करें (Calculate EMI) →
+        </a>
+      </div>
+
+      <div class="loan-read-row" style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        <button type="button" class="btn-read-guide" onclick="openLoanGuide('home-loan')" aria-label="1500+ शब्द गाइड पढ़ें: होम लोन / आवास ऋण (Housing Finance)">
+          📖 होम लोन / आवास ऋण (Housing Finance) के बारे में विस्तार से पढ़ें (1,500+ शब्द संपूर्ण विश्लेषण व गाइड) →
+        </button>
+        <span class="guide-word-badge">📖 1,500 - 2,000 शब्द गाइड</span>
+      </div>
+    </article>
+  
+
+    <article class="loan-card-item" data-category="agri" data-search="किसान क्रेडिट कार्ड (kcc agri loan) sbi, pnb, bank of baroda, canara bank किसानों को खाद, बीज, कीटनाशक व कृषि उपकरणों की खरीद हेतु भारत सरकार की 4% सबवेंशन योजना।">
+      <div class="loan-card-top">
+        <div>
+          <span class="loan-cat-pill">AGRI</span>
+          <h3 class="loan-title">किसान क्रेडिट कार्ड (KCC Agri Loan)</h3>
+          <p class="loan-brief">किसानों को खाद, बीज, कीटनाशक व कृषि उपकरणों की खरीद हेतु भारत सरकार की 4% सबवेंशन योजना।</p>
+        </div>
+        <div class="loan-rate-box">
+          <span class="rate-lbl">ब्याज दर (Interest Rate):</span>
+          <strong class="rate-val">4.00% p.a. (3% समय पर भुगतान सबवेंशन के बाद)</strong>
+        </div>
+      </div>
+
+      <div class="loan-stats-grid">
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">अधिकतम लोन राशि:</span>
+          <strong class="lstat-val">₹3,00,000 तक मात्र 4% प्रभावी ब्याज पर</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">पुनर्भुगतान अवधि:</span>
+          <strong class="lstat-val">5 वर्ष (सालाना समीक्षा व नवीनीकरण)</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">प्रोसेसिंग शुल्क:</span>
+          <strong class="lstat-val">₹3 लाख तक शून्य</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">शीर्ष ऋणदाता बैंक:</span>
+          <strong class="lstat-val" style="color:var(--primary);">SBI, PNB, Bank of Baroda, Canara Bank</strong>
+        </div>
+      </div>
+
+      <div class="loan-details-section">
+        <div class="loan-spec-row">
+          <strong>पात्रता (Eligibility):</strong> <span>कृषक, काश्तकार, पट्टेदार, मौखिक काश्तकार और स्वयं सहायता समूह (SHG)।</span>
+        </div>
+        <div class="loan-spec-row">
+          <strong>आवश्यक दस्तावेज:</strong> <span>भूमि रिकॉर्ड (खतौनी / 7/12), आधार, पैन, फसल बुवाई का विवरण।</span>
+        </div>
+      </div>
+
+      <div class="loan-card-actions">
+        <a href="https://eseva.csc.gov.in/" target="_blank" rel="noopener noreferrer" class="btn-loan-apply">
+          🏛️ ऑनलाइन आवेदन करें (Apply Online) ↗
+        </a>
+        <a href="../calculators/index.html" class="btn-loan-calc">
+          🧮 ईएमआई कैलकुलेट करें (Calculate EMI) →
+        </a>
+      </div>
+
+      <div class="loan-read-row" style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        <button type="button" class="btn-read-guide" onclick="openLoanGuide('kcc-loan')" aria-label="1500+ शब्द गाइड पढ़ें: किसान क्रेडिट कार्ड (KCC Agri Loan)">
+          📖 किसान क्रेडिट कार्ड (KCC Agri Loan) के बारे में विस्तार से पढ़ें (1,500+ शब्द संपूर्ण विश्लेषण व गाइड) →
+        </button>
+        <span class="guide-word-badge">📖 1,500 - 2,000 शब्द गाइड</span>
+      </div>
+    </article>
+  
+
+    <article class="loan-card-item" data-category="secured" data-search="लोन अगेंस्ट प्रॉपर्टी (lap mortgage loan) bajaj finserv, hdfc bank, icici bank, pnb housing पर्सनल लोन से काफी कम ब्याज दर पर अपने मकान या दुकान को गिरवी रखकर बड़ी राशि का दीर्घकालिक ऋण।">
+      <div class="loan-card-top">
+        <div>
+          <span class="loan-cat-pill">SECURED</span>
+          <h3 class="loan-title">लोन अगेंस्ट प्रॉपर्टी (LAP Mortgage Loan)</h3>
+          <p class="loan-brief">पर्सनल लोन से काफी कम ब्याज दर पर अपने मकान या दुकान को गिरवी रखकर बड़ी राशि का दीर्घकालिक ऋण।</p>
+        </div>
+        <div class="loan-rate-box">
+          <span class="rate-lbl">ब्याज दर (Interest Rate):</span>
+          <strong class="rate-val">9.25% - 11.50% p.a.</strong>
+        </div>
+      </div>
+
+      <div class="loan-stats-grid">
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">अधिकतम लोन राशि:</span>
+          <strong class="lstat-val">संपत्ति के बाजार मूल्य का 50% से 70%</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">पुनर्भुगतान अवधि:</span>
+          <strong class="lstat-val">5 वर्ष से 15 वर्ष (180 महीने)</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">प्रोसेसिंग शुल्क:</span>
+          <strong class="lstat-val">0.50% - 1.00% + GST</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">शीर्ष ऋणदाता बैंक:</span>
+          <strong class="lstat-val" style="color:var(--primary);">Bajaj Finserv, HDFC Bank, ICICI Bank, PNB Housing</strong>
+        </div>
+      </div>
+
+      <div class="loan-details-section">
+        <div class="loan-spec-row">
+          <strong>पात्रता (Eligibility):</strong> <span>स्वयं के स्वामित्व वाला आवासीय, व्यावसायिक या औद्योगिक संपत्ति धारक।</span>
+        </div>
+        <div class="loan-spec-row">
+          <strong>आवश्यक दस्तावेज:</strong> <span>प्रॉपर्टी टाइटल डीड, भारमुक्त प्रमाण पत्र (EC), 3 वर्ष का ITR, बैंक स्टेटमेंट।</span>
+        </div>
+      </div>
+
+      <div class="loan-card-actions">
+        <a href="https://www.bajajfinserv.in/loan-against-property" target="_blank" rel="noopener noreferrer" class="btn-loan-apply">
+          🏛️ ऑनलाइन आवेदन करें (Apply Online) ↗
+        </a>
+        <a href="../calculators/index.html" class="btn-loan-calc">
+          🧮 ईएमआई कैलकुलेट करें (Calculate EMI) →
+        </a>
+      </div>
+
+      <div class="loan-read-row" style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        <button type="button" class="btn-read-guide" onclick="openLoanGuide('lap-loan')" aria-label="1500+ शब्द गाइड पढ़ें: लोन अगेंस्ट प्रॉपर्टी (LAP Mortgage Loan)">
+          📖 लोन अगेंस्ट प्रॉपर्टी (LAP Mortgage Loan) के बारे में विस्तार से पढ़ें (1,500+ शब्द संपूर्ण विश्लेषण व गाइड) →
+        </button>
+        <span class="guide-word-badge">📖 1,500 - 2,000 शब्द गाइड</span>
+      </div>
+    </article>
+  
+
+    <article class="loan-card-item" data-category="business" data-search="पीएम मुद्रा लोन (pradhan mantri mudra yojana - pmmy) all public sector banks (sbi, pnb, bob) & small finance banks भारत सरकार की गारंटी के साथ बिना किसी प्रॉपर्टी गिरवी रखे ₹10 लाख तक का रियायती व्यापार ऋण।">
+      <div class="loan-card-top">
+        <div>
+          <span class="loan-cat-pill">BUSINESS</span>
+          <h3 class="loan-title">पीएम मुद्रा लोन (Pradhan Mantri Mudra Yojana - PMMY)</h3>
+          <p class="loan-brief">भारत सरकार की गारंटी के साथ बिना किसी प्रॉपर्टी गिरवी रखे ₹10 लाख तक का रियायती व्यापार ऋण।</p>
+        </div>
+        <div class="loan-rate-box">
+          <span class="rate-lbl">ब्याज दर (Interest Rate):</span>
+          <strong class="rate-val">9.25% - 12.00% p.a.</strong>
+        </div>
+      </div>
+
+      <div class="loan-stats-grid">
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">अधिकतम लोन राशि:</span>
+          <strong class="lstat-val">शिशु: ₹50K | किशोर: ₹5L | तरुण: ₹10L</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">पुनर्भुगतान अवधि:</span>
+          <strong class="lstat-val">3 वर्ष से 5 वर्ष</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">प्रोसेसिंग शुल्क:</span>
+          <strong class="lstat-val">शिशु व किशोर श्रेणियों में पूर्णतः शून्य</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">शीर्ष ऋणदाता बैंक:</span>
+          <strong class="lstat-val" style="color:var(--primary);">All Public Sector Banks (SBI, PNB, BoB) & Small Finance Banks</strong>
+        </div>
+      </div>
+
+      <div class="loan-details-section">
+        <div class="loan-spec-row">
+          <strong>पात्रता (Eligibility):</strong> <span>छोटे व्यापारी, दुकानदार, विनिर्माण इकाई, सेवा प्रदाता, फल-सब्जी विक्रेता।</span>
+        </div>
+        <div class="loan-spec-row">
+          <strong>आवश्यक दस्तावेज:</strong> <span>आधार, पैन, उद्यम आधार/जीएसटी (यदि हो), बिजनेस कोटेशन या मशीनरी इनवॉइस।</span>
+        </div>
+      </div>
+
+      <div class="loan-card-actions">
+        <a href="https://www.mudra.org.in/" target="_blank" rel="noopener noreferrer" class="btn-loan-apply">
+          🏛️ ऑनलाइन आवेदन करें (Apply Online) ↗
+        </a>
+        <a href="../calculators/index.html" class="btn-loan-calc">
+          🧮 ईएमआई कैलकुलेट करें (Calculate EMI) →
+        </a>
+      </div>
+
+      <div class="loan-read-row" style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        <button type="button" class="btn-read-guide" onclick="openLoanGuide('mudra-loan')" aria-label="1500+ शब्द गाइड पढ़ें: पीएम मुद्रा लोन (Pradhan Mantri Mudra Yojana - PMMY)">
+          📖 पीएम मुद्रा लोन (Pradhan Mantri Mudra Yojana - PMMY) के बारे में विस्तार से पढ़ें (1,500+ शब्द संपूर्ण विश्लेषण व गाइड) →
+        </button>
+        <span class="guide-word-badge">📖 1,500 - 2,000 शब्द गाइड</span>
+      </div>
+    </article>
+  
+
+    <article class="loan-card-item" data-category="unsecured" data-search="पर्सनल लोन (unsecured personal loan) hdfc bank (insta 10 sec), icici bank, kotak 811, axis bank बिना किसी बंधक या गारंटी के शादी, चिकित्सा आपातकाल, यात्रा या कर्ज एकीकरण हेतु तत्काल नकदी।">
+      <div class="loan-card-top">
+        <div>
+          <span class="loan-cat-pill">UNSECURED</span>
+          <h3 class="loan-title">पर्सनल लोन (Unsecured Personal Loan)</h3>
+          <p class="loan-brief">बिना किसी बंधक या गारंटी के शादी, चिकित्सा आपातकाल, यात्रा या कर्ज एकीकरण हेतु तत्काल नकदी।</p>
+        </div>
+        <div class="loan-rate-box">
+          <span class="rate-lbl">ब्याज दर (Interest Rate):</span>
+          <strong class="rate-val">10.25% - 16.00% p.a.</strong>
+        </div>
+      </div>
+
+      <div class="loan-stats-grid">
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">अधिकतम लोन राशि:</span>
+          <strong class="lstat-val">₹50,000 से ₹40,00,000 तक (वेतन व कंपनी श्रेणी अनुसार)</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">पुनर्भुगतान अवधि:</span>
+          <strong class="lstat-val">1 वर्ष से 7 वर्ष (12 से 84 महीने)</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">प्रोसेसिंग शुल्क:</span>
+          <strong class="lstat-val">1.00% - 2.50% + GST</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">शीर्ष ऋणदाता बैंक:</span>
+          <strong class="lstat-val" style="color:var(--primary);">HDFC Bank (Insta 10 sec), ICICI Bank, Kotak 811, Axis Bank</strong>
+        </div>
+      </div>
+
+      <div class="loan-details-section">
+        <div class="loan-spec-row">
+          <strong>पात्रता (Eligibility):</strong> <span>वेतनभोगी या स्व-रोजगार पेशेवर, आयु 21-60 वर्ष, सिबिल 720+।</span>
+        </div>
+        <div class="loan-spec-row">
+          <strong>आवश्यक दस्तावेज:</strong> <span>पैन कार्ड, आधार कार्ड, नवीनतम सैलरी स्लिप्स, 6 महीने का वेतन खाता स्टेटमेंट।</span>
+        </div>
+      </div>
+
+      <div class="loan-card-actions">
+        <a href="https://www.hdfcbank.com/personal/borrow/popular-loans/personal-loan" target="_blank" rel="noopener noreferrer" class="btn-loan-apply">
+          🏛️ ऑनलाइन आवेदन करें (Apply Online) ↗
+        </a>
+        <a href="../calculators/index.html" class="btn-loan-calc">
+          🧮 ईएमआई कैलकुलेट करें (Calculate EMI) →
+        </a>
+      </div>
+
+      <div class="loan-read-row" style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        <button type="button" class="btn-read-guide" onclick="openLoanGuide('personal-loan')" aria-label="1500+ शब्द गाइड पढ़ें: पर्सनल लोन (Unsecured Personal Loan)">
+          📖 पर्सनल लोन (Unsecured Personal Loan) के बारे में विस्तार से पढ़ें (1,500+ शब्द संपूर्ण विश्लेषण व गाइड) →
+        </button>
+        <span class="guide-word-badge">📖 1,500 - 2,000 शब्द गाइड</span>
+      </div>
+    </article>
+  
+
+    <article class="loan-card-item" data-category="vehicle" data-search="कार व वाहन लोन (new & used car loan) sbi car loan, icici bank, hdfc bank, axis bank नई कार, पुरानी कार अथवा इलेक्ट्रिक व्हीकल (ev) खरीदने हेतु आकर्षक मासिक ईएमआई पर वाहन ऋण।">
+      <div class="loan-card-top">
+        <div>
+          <span class="loan-cat-pill">VEHICLE</span>
+          <h3 class="loan-title">कार व वाहन लोन (New & Used Car Loan)</h3>
+          <p class="loan-brief">नई कार, पुरानी कार अथवा इलेक्ट्रिक व्हीकल (EV) खरीदने हेतु आकर्षक मासिक ईएमआई पर वाहन ऋण।</p>
+        </div>
+        <div class="loan-rate-box">
+          <span class="rate-lbl">ब्याज दर (Interest Rate):</span>
+          <strong class="rate-val">8.65% - 12.00% p.a.</strong>
+        </div>
+      </div>
+
+      <div class="loan-stats-grid">
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">अधिकतम लोन राशि:</span>
+          <strong class="lstat-val">ऑन-रोड कीमत का 90% से 100% तक फाइनेंस</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">पुनर्भुगतान अवधि:</span>
+          <strong class="lstat-val">1 वर्ष से 8 वर्ष (84 से 96 महीने)</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">प्रोसेसिंग शुल्क:</span>
+          <strong class="lstat-val">₹1,500 से ₹5,000 फ्लैट या शून्य</strong>
+        </div>
+        <div class="loan-stat-col">
+          <span class="lstat-lbl">शीर्ष ऋणदाता बैंक:</span>
+          <strong class="lstat-val" style="color:var(--primary);">SBI Car Loan, ICICI Bank, HDFC Bank, Axis Bank</strong>
+        </div>
+      </div>
+
+      <div class="loan-details-section">
+        <div class="loan-spec-row">
+          <strong>पात्रता (Eligibility):</strong> <span>21 से 65 वर्ष आयु, नियमित आय स्रोत, वैध ड्राइविंग लाइसेंस।</span>
+        </div>
+        <div class="loan-spec-row">
+          <strong>आवश्यक दस्तावेज:</strong> <span>कार का प्रो-फॉर्मा इनवॉइस, आधार, पैन, आय प्रमाण व बैंक स्टेटमेंट।</span>
+        </div>
+      </div>
+
+      <div class="loan-card-actions">
+        <a href="https://sbi.co.in/web/personal-banking/loans/auto-loans" target="_blank" rel="noopener noreferrer" class="btn-loan-apply">
+          🏛️ ऑनलाइन आवेदन करें (Apply Online) ↗
+        </a>
+        <a href="../calculators/index.html" class="btn-loan-calc">
+          🧮 ईएमआई कैलकुलेट करें (Calculate EMI) →
+        </a>
+      </div>
+
+      <div class="loan-read-row" style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        <button type="button" class="btn-read-guide" onclick="openLoanGuide('vehicle-loan')" aria-label="1500+ शब्द गाइड पढ़ें: कार व वाहन लोन (New & Used Car Loan)">
+          📖 कार व वाहन लोन (New & Used Car Loan) के बारे में विस्तार से पढ़ें (1,500+ शब्द संपूर्ण विश्लेषण व गाइड) →
+        </button>
+        <span class="guide-word-badge">📖 1,500 - 2,000 शब्द गाइड</span>
+      </div>
+    </article>
+  
+    </div>
+  </main>
+
+  <!-- 1500-2000 Words Comprehensive Guide Reader Modal -->
+  <div class="guide-reader-overlay" id="guide-reader-overlay" aria-hidden="true" role="dialog">
+    <div class="guide-reader-modal" id="guide-reader-modal">
+      <div class="guide-reader-header">
+        <div class="guide-reader-title-area">
+          <h2 class="guide-reader-title" id="reader-title">ऋण का नाम</h2>
+          <span class="guide-reader-subtitle" id="reader-subtitle">संस्था व सत्यापन</span>
+        </div>
+        <div class="guide-reader-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="reader-apply-btn" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
+            🏛️ आधिकारिक पोर्टल पर जाएं ↗
+          </a>
+          <button type="button" class="guide-reader-close-btn" id="reader-close-btn" title="बंद करें (Close)">&times;</button>
+        </div>
+      </div>
+      <div class="guide-reader-body" id="reader-body">
+        <!-- 1500-2000 words injected dynamically -->
+      </div>
+      <div class="guide-reader-footer">
+        <span style="font-size:0.85rem; color:var(--text-muted);">
+          🏛️ Fengoo.in Statutory & Regulatory Knowledge Engine • 100% निष्पक्ष उपभोक्ता वित्तीय गाइड
+        </span>
+        <button type="button" class="btn btn-secondary" onclick="closeLoanGuide()" style="padding: 0.45rem 0.85rem; font-size: 0.85rem;">
+          बंद करें (Close)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const loanGuidesData = ${JSON.stringify(loanGuides)};
+
+    window.openLoanGuide = function(id) {
+      let guide = loanGuidesData[id];
+      if (!guide && id === 'kisan-credit-card') guide = loanGuidesData['kcc-loan'];
+      if (!guide) {
+        alert('गाइड लोड हो रही है...');
+        return;
+      }
+      document.getElementById('reader-title').textContent = guide.title;
+      document.getElementById('reader-subtitle').innerHTML = '<span>🏛️ ' + guide.name + '</span> • <span class="guide-word-badge">📖 ' + guide.wordCount + ' शब्द (' + guide.readTime + ')</span>';
+      document.getElementById('reader-apply-btn').href = guide.applyUrl;
+      document.getElementById('reader-body').innerHTML = guide.contentHTML;
+      const overlay = document.getElementById('guide-reader-overlay');
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.closeLoanGuide = function() {
+      const overlay = document.getElementById('guide-reader-overlay');
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+
+    document.getElementById('reader-close-btn').addEventListener('click', closeLoanGuide);
+    document.getElementById('guide-reader-overlay').addEventListener('click', (e) => {
+      if (e.target.id === 'guide-reader-overlay') {
+        closeLoanGuide();
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLoanGuide();
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('loan-search-input');
+      const filterBtns = document.querySelectorAll('.loan-btn');
+      const loanItems = document.querySelectorAll('.loan-card-item');
+
+      let currentCat = 'all';
+      let currentQuery = '';
+
+      function filterLoans() {
+        loanItems.forEach(item => {
+          const itemCat = item.getAttribute('data-category');
+          const searchData = item.getAttribute('data-search') || '';
+
+          const catMatch = (currentCat === 'all' || itemCat === currentCat);
+          const queryMatch = (!currentQuery || searchData.includes(currentQuery));
+
+          if (catMatch && queryMatch) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.trim().toLowerCase();
+          filterLoans();
+        });
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCat = btn.getAttribute('data-cat');
+          filterLoans();
+        });
+      });
+    });
+  </script>
+
+  
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="logo-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </span>
+            <span class="brand-name">Fengoo<span>.in</span></span>
+          </div>
+          <p>Fengoo भारत का एक स्वतंत्र, निष्पक्ष वित्तीय सूचना व शिक्षा मंच है। यहाँ केवल वैधानिक और आधिकारिक स्रोतों (RBI, SEBI, IRDAI, Income Tax, PFRDA, DICGC) से सत्यापित डेटा प्रस्तुत किया जाता है।</p>
+          <div class="footer-badges">
+            <span class="trust-badge-pill">🛡️ DICGC ₹5L Coverage Guide</span>
+            <span class="trust-badge-pill">⚖️ Zero Biased Advice</span>
+            <span class="trust-badge-pill">🏛️ Verified Regulators</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>बैंकिंग व कार्ड्स</h5>
+          <ul class="footer-links">
+            <li><a href="../banks/public-sector/sbi/sbi.html">State Bank of India</a></li>
+            <li><a href="../banks/private-sector/hdfc/hdfc.html">HDFC Bank</a></li>
+            <li><a href="../banks/private-sector/kotak/kotak.html">Kotak Mahindra Bank</a></li>
+            <li><a href="../banks/small-finance/au-small-finance/au-small-finance.html">AU Small Finance</a></li>
+            <li><a href="../credit-cards/index.html">Credit Cards Directory</a></li>
+            <li><a href="../upi/index.html">UPI Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>ऋण व निवेश</h5>
+          <ul class="footer-links">
+            <li><a href="../loans/home-loan/index.html">Home Loan Guide</a></li>
+            <li><a href="../loans/personal-loan/index.html">Personal Loan</a></li>
+            <li><a href="../investments/mutual-funds/sip-equity-debt.html">Mutual Funds & SIP</a></li>
+            <li><a href="../investments/bonds/sovereign-gold-bonds.html">Sovereign Gold Bonds</a></li>
+            <li><a href="../insurance/life/term-insurance.html">Term Life Insurance</a></li>
+            <li><a href="../insurance/health/individual-family-floater.html">Health Insurance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>सरकारी योजनाएं व टैक्स</h5>
+          <ul class="footer-links">
+            <li><a href="../government/schemes/pm-jan-dhan-yojana.html">PM Jan Dhan Yojana</a></li>
+            <li><a href="../government/schemes/sukanya-samriddhi-yojana.html">Sukanya Samriddhi</a></li>
+            <li><a href="../pension/nps/nps.html">National Pension System</a></li>
+            <li><a href="../pension/atal-pension-yojana/atal-pension-yojana.html">Atal Pension Yojana</a></li>
+            <li><a href="../tax/income-tax-slabs/income-tax-slabs.html">Income Tax Slabs</a></li>
+            <li><a href="../calculators/gst.html">GST Calculator & Slabs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>टूल्स व नीतियां (Policies)</h5>
+          <ul class="footer-links">
+            <li><a href="../link-manager.html" style="color:var(--primary); font-weight:700;">⚡ BankSathi Link Manager</a></li>
+            <li><a href="../calculators/emi.html">EMI Calculator</a></li>
+            <li><a href="../calculators/sip.html">SIP Calculator</a></li>
+            <li><a href="../affiliate-disclosure.html">Affiliate Disclosure</a></li>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../terms-of-service.html">Terms of Service</a></li>
+            <li><a href="../disclaimer.html">Legal Disclaimer</a></li>
+            <li><a href="../about-us.html">About Fengoo</a></li>
+            <li><a href="../contact-us.html">Contact Us</a></li>
+            <li><a href="../advertise.html">📢 Advertise With Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-compliance-box">
+        <strong>वैधानिक अस्वीकरण (Statutory Disclaimer):</strong> Fengoo.in कोई बैंक, गैर-बैंकिंग वित्तीय कंपनी (NBFC), बीमा मध्यस्थ अथवा SEBI-पंजीकृत निवेश सलाहकार नहीं है। यहाँ उपलब्ध सामग्री केवल सामान्य सूचना व वित्तीय साक्षरता के उद्देश्य से है। किसी भी वित्तीय उत्पाद में निवेश या ऋण लेने से पूर्व संबंधित संस्थान के आधिकारिक दस्तावेज़ व नियम अवश्य पढ़ें।
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fengoo.in. All rights reserved. Free, Independent Financial Information for India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Affiliate Disclosure Modal -->
+  <div class="modal-backdrop" id="affiliate-disclosure-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>पारदर्शिता व पार्टनर नीति (Affiliate Disclosure)</h3>
+        <button class="modal-close" onclick="closeModal('affiliate-disclosure-modal')">&times;</button>
+      </div>
+      <div style="font-size:0.9rem; line-height:1.6; color:var(--text); display:flex; flex-direction:column; gap:0.75rem;">
+        <p>1. <strong>स्पष्ट पृथक्करण:</strong> Fengoo पर आधिकारिक विनियामक लिंक्स (जैसे RBI, SEBI, Income Tax) 100% गैर-व्यावसायिक हैं और उन पर कोई कमीशन नहीं लिया जाता।</p>
+        <p>2. <strong>पार्टनर लिंक्स की पहचान:</strong> जहाँ भी व्यावसायिक रेफरल लिंक उपलब्ध है, वहाँ स्पष्ट रूप से <strong>"Partner Link"</strong> अथवा <strong>"Affiliate Link"</strong> का लेबल लगाया गया है।</p>
+        <p>3. <strong>उपयोगकर्ता पर शून्य अतिरिक्त लागत:</strong> यदि आप किसी पार्टनर लिंक का उपयोग करके खाता खोलते हैं या सेवा लेते हैं, तो आपको कोई अतिरिक्त शुल्क नहीं देना पड़ता।</p>
+        <p>4. <strong>संपादकीय स्वतंत्रता:</strong> किसी बैंक अथवा वित्तीय संस्था द्वारा दी जाने वाली कमीशन दर हमारी निष्पक्ष समीक्षा या कैलकुलेटर की गणना को प्रभावित नहीं करती।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer Modal -->
+  <div class="modal-backdrop" id="disclaimer-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>कानूनी अस्वीकरण (Disclaimer)</h3>
+        <button class="modal-close" onclick="closeModal('disclaimer-modal')">&times;</button>
+      </div>
+      <div style="font-size:0.9rem; line-height:1.6; color:var(--text); display:flex; flex-direction:column; gap:0.75rem;">
+        <p>Fengoo.in पर दी गई ब्याज दरें, शुल्क और सरकारी योजना के नियम संबंधित आधिकारिक पोर्टल्स के नवीनतम विज्ञापनों पर आधारित हैं। ब्याज दरें और पात्रता शर्तें समय-समय पर RBI और संबंधित बैंकों द्वारा बदली जा सकती हैं। अंतिम निर्णय से पूर्व अधिकृत बैंक शाखा अथवा पोर्टल से पुष्टि अवश्य करें।</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="../js/registry.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/links.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/language.js"></script>
+  <script src="../js/affiliate_config.js"></script>
+  <script src="../js/monetization.js"></script>
+  
+</body>
+</html>

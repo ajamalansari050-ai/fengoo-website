@@ -1,0 +1,44 @@
+{
+  "id": "union-bank",
+  "name": "Union Bank of India",
+  "legalName": "Union Bank of India",
+  "type": "Public Sector Bank",
+  "category": "psu",
+  "tag": "Nationalized Bank (Inaugurated by Mahatma Gandhi)",
+  "detailPage": "public-sector/sbi/sbi.html",
+  "officialUrl": "https://www.unionbankofindia.co.in/",
+  "helpline": "1800 22 2244 / 1800 208 2244",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Union BSBDA & Vyom Digital Account",
+    "details": "Union Vyom ऐप द्वारा त्वरित खाता और बिना किसी न्यूनतम शुल्क के बुनियादी सेवाएं।",
+    "openUrl": "https://www.unionbankofindia.co.in/english/savings-account.aspx"
+  },
+  "creditCards": {
+    "topCards": "Union RuPay Select, Visa Signature",
+    "topOffer": "वेलनेस बेनिफिट्स, जिम मेंबरशिप डिस्काउंट व कॉम्प्लिमेंट्री स्पा वाउचर्स।",
+    "applyUrl": "https://www.unionbankofindia.co.in/english/credit-card.aspx"
+  },
+  "rates": {
+    "savings": "2.75% p.a.",
+    "fd": "3.50% - 7.25% p.a. (Senior Citizen: 7.75%)"
+  },
+  "loans": "Union Awas Home Loan, Union Education Loan",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "Union Bank of India भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": null
+}

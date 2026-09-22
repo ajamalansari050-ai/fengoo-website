@@ -1,0 +1,84 @@
+{
+  "id": "sbi",
+  "name": "State Bank of India (SBI)",
+  "legalName": "State Bank of India",
+  "type": "Public Sector Bank",
+  "category": "psu",
+  "tag": "India's Largest Bank (D-SIB)",
+  "detailPage": "public-sector/sbi/sbi.html",
+  "officialUrl": "https://sbi.co.in/",
+  "helpline": "1800 1234 / 1800 2100",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "SBI Regular Savings (Zero Balance - No MAB Penalty)",
+    "details": "SBI ने सभी नियमित बचत खातों से न्यूनतम बैलेंस (MAB) का जुर्माना पूरी तरह समाप्त कर दिया है। BSBDA जन-धन भी उपलब्ध।",
+    "openUrl": "https://sbi.co.in/web/personal-banking/accounts/saving-account"
+  },
+  "creditCards": {
+    "topCards": "Cashback SBI Card (5% Online Cashback), SimplyCLICK (10x Rewards), SimplySAVE, BPCL Octane",
+    "topOffer": "बिना किसी मर्चेंट पाबंदी के सभी ऑनलाइन खरीदारी पर फ्लैट 5% कैशबैक (Cashback SBI)।",
+    "applyUrl": "https://www.sbicard.com/"
+  },
+  "rates": {
+    "savings": "2.70% p.a.",
+    "fd": "3.50% - 7.10% p.a. (Amrit Kalash Special: 7.60% Senior)"
+  },
+  "loans": "Home Loans (from 8.40% - Market Leader), Xpress Credit Personal Loan, Education Loan",
+  "founded": "1806 (Bank of Calcutta) / 1955 (SBI Act)",
+  "headquarters": "Mumbai, Maharashtra",
+  "rbiStatus": "Domestic Systemically Important Bank (D-SIB) / Public Sector Statutory Bank",
+  "dicgcCoverage": "Yes (Statutory ₹5,00,000 insurance coverage under DICGC Act, 1961)",
+  "about": "State Bank of India (SBI) is a Fortune 500 statutory banking corporation originating from the Bank of Calcutta founded in 1806. Holding over 23% market share in total Indian banking assets and commanding a massive network of over 22,500 branches, SBI anchors the nation's financial infrastructure. SBI is designated by RBI as a Domestic Systemically Important Bank (D-SIB). Its digital platform, YONO (You Only Need One), serves tens of millions of active users.",
+  "products": [
+    {
+      "name": "SBI Regular Savings & BSBDA Zero Balance",
+      "desc": "Zero average monthly balance requirement on regular savings accounts across all branch categories."
+    },
+    {
+      "name": "SBI Home Loans (Regular & Maxgain)",
+      "desc": "Lowest interest rates in the market linked to External Benchmark Lending Rate (EBLR), with overdraft savings option via Maxgain."
+    },
+    {
+      "name": "YONO Digital Banking & Insta Accounts",
+      "desc": "Instant paperless savings account opening via Aadhaar OTP, digital pre-approved personal loans, and shopping discounts."
+    },
+    {
+      "name": "Term Deposits (Amrit Kalash, Special Tenors)",
+      "desc": "High-safety fixed deposits, recurring deposits, and tax-saving 5-year term deposits under Section 80C."
+    },
+    {
+      "name": "Xpress Credit & Pension Loans",
+      "desc": "Low-rate unsecured personal financing for defense personnel, central/state government employees, and family pensioners."
+    },
+    {
+      "name": "SBI Cards (SimplyCLICK, SimplySAVE, Cashback)",
+      "desc": "Popular credit cards issued by SBI Card subsidiary with dining discounts and online cashback."
+    }
+  ],
+  "eligibility": [
+    "Any Indian citizen with valid KYC documents.",
+    "Zero balance BSBDA accounts accessible to every unbanked citizen without minimum balance requirement.",
+    "Aadhaar seeded for Direct Benefit Transfer (DBT) subsidies."
+  ],
+  "documents": [
+    "Officially Valid Documents (OVD): Aadhaar Card, Passport, Driving Licence, Voter ID, NREGA Job Card.",
+    "Permanent Account Number (PAN) or Form 60.",
+    "Recent passport-size photographs."
+  ],
+  "charges": [
+    {
+      "item": "Average Monthly Balance (AMB) Non-maintenance",
+      "fee": "WAIVED (Zero charge on all SBI savings accounts)"
+    },
+    {
+      "item": "Online NEFT / RTGS / IMPS (via YONO / INB)",
+      "fee": "Nil (Free)"
+    },
+    {
+      "item": "ATM Withdrawals (SBI ATMs)",
+      "fee": "5 free monthly withdrawals (unlimited on higher deposit balances)"
+    }
+  ],
+  "partnerLink": null
+}

@@ -1,0 +1,44 @@
+{
+  "id": "federal-bank",
+  "name": "Federal Bank",
+  "legalName": "The Federal Bank Limited",
+  "type": "Private Sector Bank",
+  "category": "private",
+  "tag": "Tech-Driven Pioneer (Jupiter/Fi Partner)",
+  "detailPage": "private-sector/hdfc/hdfc.html",
+  "officialUrl": "https://www.federalbank.co.in/",
+  "helpline": "1800 425 1199 / 1800 420 1199",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "FedBook Selfie & Digital Zero Balance",
+    "details": "सेल्फी से तुरंत खाता, डिजिटल बैंकिंग और आधुनिक फिनटेक इकोसिस्टम एकीकरण।",
+    "openUrl": "https://www.federalbank.co.in/savings-accounts"
+  },
+  "creditCards": {
+    "topCards": "Scapia Federal Credit Card (Zero Forex Markup), Signet, Celesta",
+    "topOffer": "Scapia के साथ अंतर्राष्ट्रीय यात्रा पर शून्य विदेशी मुद्रा मार्कअप (Zero Forex Fee)।",
+    "applyUrl": "https://www.federalbank.co.in/credit-cards"
+  },
+  "rates": {
+    "savings": "3.00% - 6.00% p.a.",
+    "fd": "3.00% - 7.40% p.a. (Senior: 7.90%)"
+  },
+  "loans": "Gold Loans, Housing Loans, MSME Business Loans",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "Federal Bank भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": null
+}

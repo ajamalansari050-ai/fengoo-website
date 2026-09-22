@@ -1,0 +1,76 @@
+{
+  "id": "au-small-finance",
+  "name": "AU Small Finance Bank",
+  "legalName": "AU Small Finance Bank Limited",
+  "type": "Small Finance Bank",
+  "category": "sfb",
+  "tag": "Highest Savings Interest (Up to 7.25%)",
+  "detailPage": "small-finance/au-small-finance/au-small-finance.html",
+  "officialUrl": "https://www.aubank.in/",
+  "helpline": "1800 1200 1200",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "AU 0101 Digital Zero Balance Account",
+    "details": "वीडियो बैंकिंग द्वारा घर बैठे खाता खुलता है। मासिक ब्याज भुगतान और 7.25% तक उच्च ब्याज दर।",
+    "openUrl": "https://www.aubank.in/personal-banking/savings-account"
+  },
+  "creditCards": {
+    "topCards": "AU Altura Plus, Vetta, Zenith Metal, LIT (Customizable Credit Card)",
+    "topOffer": "AU LIT कार्ड पर अपनी पसंद के फीचर्स (कैशबैक, लाउंज, रिवॉर्ड्स) खुद चुनें और कभी भी बदलें।",
+    "applyUrl": "https://www.aubank.in/personal-banking/credit-cards"
+  },
+  "rates": {
+    "savings": "3.50% - 7.25% p.a. (Monthly Interest Credit)",
+    "fd": "3.75% - 8.00% p.a. (Senior Citizen: 8.50%)"
+  },
+  "loans": "Wheels Vehicle Loan, Commercial Vehicle Loan, MSME Business Loan",
+  "founded": "1996 (as AU Financiers) / SFB License 2017",
+  "headquarters": "Jaipur, Rajasthan",
+  "rbiStatus": "Scheduled Commercial Bank under Small Finance Bank Regulatory Framework",
+  "dicgcCoverage": "Yes (100% covered under DICGC ₹5,00,000 statutory deposit insurance)",
+  "about": "AU Small Finance Bank Limited is a Fortune India 500 company and the largest Small Finance Bank in India. Transformed from a successful vehicle finance NBFC into a full-fledged scheduled commercial bank in 2017, AU Bank serves over 4 million customers through innovative digital video banking, competitive deposit interest rates, and high-yield savings tiers with monthly interest payouts.",
+  "products": [
+    {
+      "name": "AU High-Yield Savings Account",
+      "desc": "Earn up to 7.25% p.a. interest with monthly interest credit directly into account."
+    },
+    {
+      "name": "AU 0101 Video Banking",
+      "desc": "Face-to-face banking from home for account opening, FD booking, cheque requests, and service queries."
+    },
+    {
+      "name": "Wheels & Commercial Vehicle Loans",
+      "desc": "Specialized vehicle financing for individual operators and logistics fleets."
+    },
+    {
+      "name": "Secured Business & MSME Loans",
+      "desc": "Working capital and term finance for retail shopkeepers, traders, and small enterprises."
+    },
+    {
+      "name": "AU Credit Cards (Zenith, Vetta, Altura)",
+      "desc": "Rewards cards offering complimentary airport lounge visits, golf games, and device insurance."
+    }
+  ],
+  "eligibility": [
+    "Resident Indian individuals aged 18+."
+  ],
+  "documents": [
+    "Aadhaar Card, PAN Card, Proof of Residence."
+  ],
+  "charges": [
+    {
+      "item": "Savings Account Maintenance",
+      "fee": "Options for zero balance or tiered balance"
+    },
+    {
+      "item": "Monthly Interest Payout",
+      "fee": "Free automated feature on eligible savings"
+    }
+  ],
+  "partnerLink": {
+    "url": "https://www.aubank.in/personal-banking/savings-account",
+    "label": "AU Savings Account देखें (Partner Offer)",
+    "disclosure": "Disclosure: यह AU Small Finance Bank का Approved Partner Link है। पात्रता व सेवा नियम बैंक के आधिकारिक पोर्टल के अधीन हैं।"
+  }
+}

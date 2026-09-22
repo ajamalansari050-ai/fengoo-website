@@ -1,0 +1,44 @@
+{
+  "id": "yes-bank",
+  "name": "Yes Bank",
+  "legalName": "Yes Bank Limited",
+  "type": "Private Sector Bank",
+  "category": "private",
+  "tag": "UPI Market Infrastructure Backbone",
+  "detailPage": "private-sector/hdfc/hdfc.html",
+  "officialUrl": "https://www.yesbank.in/",
+  "helpline": "1800 1200",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Smart Salary & Basic Savings",
+    "details": "डिजिटल बचत खाते और फोनपे/पेटीएम/क्रेडिट UPI लेनदेन में अग्रणी तकनीकी बैंक।",
+    "openUrl": "https://www.yesbank.in/personal-banking/yes-individual/savings-accounts"
+  },
+  "creditCards": {
+    "topCards": "Kiwi Yes Bank RuPay (Flat 2% UPI Cashback), ACE, Reserv",
+    "topOffer": "Kiwi UPI स्कैन व पे पर फ्लैट 2% नियॉन कैशबैक + लाइफटाइम फ्री कार्ड।",
+    "applyUrl": "https://www.yesbank.in/personal-banking/yes-individual/cards/credit-cards"
+  },
+  "rates": {
+    "savings": "3.00% - 6.50% p.a.",
+    "fd": "3.25% - 7.75% p.a. (Senior: 8.25%)"
+  },
+  "loans": "Business Term Loans, Personal Loans",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "Yes Bank भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": null
+}

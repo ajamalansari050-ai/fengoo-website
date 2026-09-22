@@ -1,0 +1,68 @@
+{
+  "id": "axis",
+  "name": "Axis Bank",
+  "legalName": "Axis Bank Limited",
+  "type": "Private Sector Bank",
+  "category": "private",
+  "tag": "Third Largest Private Bank",
+  "detailPage": "private-sector/axis/axis.html",
+  "officialUrl": "https://www.axisbank.com/",
+  "helpline": "1860 419 5555 / 1860 500 5555",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Axis ASAP Digital Savings Account",
+    "details": "तत्काल वर्चुअल डेबिट कार्ड, फ्लैट 1% ऑनलाइन कैशबैक और डिजिटल वीडियो केवाईसी विकल्प।",
+    "openUrl": "https://www.axisbank.com/retail/accounts/savings-account"
+  },
+  "creditCards": {
+    "topCards": "Flipkart Axis Bank (5% Unlimited Cashback), Airtel Axis (25% on bills), Axis Atlas (Travel)",
+    "topOffer": "Flipkart पर 5% असीमित कैशबैक + स्विगी और जोमैटो पर 4% कैशबैक।",
+    "applyUrl": "https://www.axisbank.com/retail/cards/credit-card"
+  },
+  "rates": {
+    "savings": "3.00% - 3.50% p.a.",
+    "fd": "3.00% - 7.20% p.a. (Senior Citizen: 7.75%)"
+  },
+  "loans": "Axis 24x7 Digital Loans, Home Loan (from 8.65%)",
+  "founded": "1993 (as UTI Bank)",
+  "headquarters": "Mumbai, Maharashtra",
+  "rbiStatus": "Scheduled Commercial Bank (Second Schedule to RBI Act, 1934)",
+  "dicgcCoverage": "Yes (Protected up to ₹5,00,000 by DICGC)",
+  "about": "Axis Bank Limited is the third largest private sector bank in India, offering the entire spectrum of financial services to customer segments covering Large and Mid-Corporates, MSME, Agriculture and Retail Businesses. In 2023, Axis Bank completed the acquisition of Citibank India's consumer business, substantially expanding its premium wealth and card client base.",
+  "products": [
+    {
+      "name": "ASAP Digital Savings Account",
+      "desc": "Instant video KYC account with virtual debit card and flat 1% cashback on online spends."
+    },
+    {
+      "name": "Flipkart Axis Bank Credit Card",
+      "desc": "Market-leading co-branded retail card delivering 5% unlimited cashback on Flipkart and Cleartrip."
+    },
+    {
+      "name": "Burgundy Private & Priority Banking",
+      "desc": "Bespoke wealth management, dedicated relationship manager, and premium lifestyle concierge services."
+    },
+    {
+      "name": "Axis 24x7 Digital Loans",
+      "desc": "Fast digital disbursement of personal loans and auto finance with flexible tenures."
+    }
+  ],
+  "eligibility": [
+    "Resident Indian citizens 18 years and above."
+  ],
+  "documents": [
+    "Aadhaar Card, PAN Card, address verification proof."
+  ],
+  "charges": [
+    {
+      "item": "Standard Savings Monthly Average Balance",
+      "fee": "₹12,000 (Metro), ₹5,000 (Semi-urban)"
+    },
+    {
+      "item": "Digital Transfers",
+      "fee": "Nil on netbanking/mobile"
+    }
+  ],
+  "partnerLink": null
+}

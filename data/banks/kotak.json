@@ -1,0 +1,106 @@
+{
+  "id": "kotak",
+  "name": "Kotak Mahindra Bank",
+  "legalName": "Kotak Mahindra Bank Limited",
+  "type": "Private Sector Bank",
+  "category": "private",
+  "tag": "Top Digital 811 Banking",
+  "detailPage": "private-sector/kotak/kotak.html",
+  "officialUrl": "https://www.kotak.com/",
+  "helpline": "1860 266 2666 / 1800 209 0000",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Kotak 811 Zero Balance Savings",
+    "details": "100% लाइफटाइम जीरो बैलेंस खाता। ₹6,000 कैशबैक, फ्री प्लेटिनम डेबिट कार्ड, 7% तक ब्याज और बिना किसी मिनिमम बैलेंस चार्ज के तुरंत वीडियो केवाईसी से चालू।",
+    "openUrl": "https://leads.banksathi.com/?h=V0xkeXEyZnRlNUo3VUhkWTd6VWM2QT09"
+  },
+  "creditCards": {
+    "topCards": "Kotak League RuPay, Zen Signature, Mojo Platinum, 811 Dream Different (Secured FD)",
+    "topOffer": "UPI पेमेंट्स पर रिवॉर्ड पॉइंट्स + बुकमायशो मूवी टिकटों पर Buy 1 Get 1 ऑफर।",
+    "applyUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html"
+  },
+  "rates": {
+    "savings": "3.50% - 4.00% p.a.",
+    "fd": "2.75% - 7.40% p.a. (Senior Citizen: 7.90%)"
+  },
+  "loans": "Home Loan (from 8.65%), 811 Pre-approved Personal Loans (from 10.99%)",
+  "founded": "2003 (RBI license granted)",
+  "headquarters": "Mumbai, Maharashtra",
+  "rbiStatus": "Scheduled Commercial Bank (Second Schedule to RBI Act, 1934)",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor for principal + interest)",
+  "about": "Kotak Mahindra Bank Limited is one of India's premier private financial services conglomerates. In February 2003, Kotak Mahindra Finance Ltd. (KMFL), the group's flagship company, received a banking licence from the Reserve Bank of India (RBI), becoming the first non-banking finance company in India to convert into a commercial bank. The bank is recognized for its Kotak 811 zero-balance digital savings platform, innovative ActivMoney auto-sweep deposit system, and comprehensive corporate banking franchise.",
+  "products": [
+    {
+      "name": "Kotak 811 Zero Balance Savings",
+      "desc": "Completely paperless digital savings account opened via Video KYC. Zero minimum balance maintenance penalty, virtual Visa debit card, and instant fund transfers."
+    },
+    {
+      "name": "Everyday & Silk Savings Accounts",
+      "desc": "Specialized savings accounts tailored for family daily cashflows and women entrepreneurs with preferential locker discounts and health offers."
+    },
+    {
+      "name": "Kotak ActivMoney (Auto Sweep-in FD)",
+      "desc": "Surplus funds above threshold automatically convert into 180-day term deposits earning higher interest with zero premature penalty on liquidity draw."
+    },
+    {
+      "name": "Fixed & Recurring Deposits",
+      "desc": "Term deposits with tenors ranging from 7 days to 10 years, offering additional 0.50% interest rate premium for senior citizens."
+    },
+    {
+      "name": "Home Loans & Loan Against Property",
+      "desc": "Competitive floating interest rates linked to RBI Repo rate with simple documentation and online instant in-principle sanction."
+    },
+    {
+      "name": "Personal & Business Loans",
+      "desc": "Unsecured financing for medical emergencies, home renovation, or working capital with customized tenures up to 60 months."
+    },
+    {
+      "name": "Credit Cards (White, League, Zen)",
+      "desc": "Lifestyle, dining, and reward cards with airport lounge access, milestone reward vouchers, and contactless payment security."
+    },
+    {
+      "name": "Digital & Mobile Banking (Kotak App)",
+      "desc": "Rated digital banking platform featuring biometric login, UPI scan & pay, investment tracking, and instant card controls."
+    }
+  ],
+  "eligibility": [
+    "Resident Individuals aged 18 years and above (for 811 Video KYC).",
+    "Valid Indian Mobile Number linked with UIDAI Aadhaar.",
+    "Physical Permanent Account Number (PAN) card present during video verification.",
+    "Hindu Undivided Families (HUF), Proprietorships, and Corporate entities eligible for regular non-811 current/savings products."
+  ],
+  "documents": [
+    "Identity Proof: Aadhaar Card / Passport / Voter ID / Driving License.",
+    "Address Proof: Aadhaar / Passport / Utility Bill (not older than 2 months).",
+    "Tax Compliance: Original Permanent Account Number (PAN) Card or Form 60.",
+    "Income Documentation (For Loans/Cards): Latest 3 months salary slips, 6 months bank statement, Form 16 / ITR-V."
+  ],
+  "charges": [
+    {
+      "item": "Kotak 811 Account Maintenance",
+      "fee": "Zero (No minimum balance requirement)"
+    },
+    {
+      "item": "Standard Branch Savings MAB",
+      "fee": "₹10,000 (Metro) / ₹5,000 (Semi-Urban) / ₹2,000 (Rural)"
+    },
+    {
+      "item": "ATM Withdrawals (Kotak ATMs)",
+      "fee": "Free unlimited transactions on eligible tiers"
+    },
+    {
+      "item": "NEFT / RTGS (Online / Mobile)",
+      "fee": "Zero charges as per RBI mandate"
+    },
+    {
+      "item": "IMPS (Online Digital)",
+      "fee": "Nil for standard digital retail tiers"
+    }
+  ],
+  "partnerLink": {
+    "url": "https://leads.banksathi.com/?h=V0xkeXEyZnRlNUo3VUhkWTd6VWM2QT09",
+    "label": "Kotak 811 अकाउंट तुरंत खोलें (BankSathi Partner Offer)",
+    "disclosure": "Disclosure: यह Kotak Mahindra Bank का Commercial Partner Link है। यदि आप यहाँ से सफलतापूर्वक अकाउंट खोलते हैं तो Fengoo को referral commission मिल सकता है, बिना आपके किसी अतिरिक्त शुल्क के।"
+  }
+}

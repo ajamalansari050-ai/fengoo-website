@@ -1,0 +1,6 @@
+{
+  "name": "Fengoo - Free Finance Information & Tools",
+  "description": "Free finance information, financial calculators, government resources, banking and loan education.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

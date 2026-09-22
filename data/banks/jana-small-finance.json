@@ -1,0 +1,44 @@
+{
+  "id": "jana-small-finance",
+  "name": "Jana Small Finance Bank",
+  "legalName": "Jana Small Finance Bank Limited",
+  "type": "Small Finance Bank",
+  "category": "sfb",
+  "tag": "Leading SFB in Urban & Rural Clusters",
+  "detailPage": "small-finance/au-small-finance/au-small-finance.html",
+  "officialUrl": "https://www.janabank.com/",
+  "helpline": "1800 208 0",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Jana DigiGen Zero Balance Account",
+    "details": "डिजिटल ऑनबोर्डिंग, आकर्षक ब्याज और शून्य शेष सुविधा।",
+    "openUrl": "https://www.janabank.com/"
+  },
+  "creditCards": {
+    "topCards": "Jana RuPay Credit Card",
+    "topOffer": "यूटिलिटी बिल पेमेंट्स पर 5% छूट।",
+    "applyUrl": "https://www.janabank.com/"
+  },
+  "rates": {
+    "savings": "3.50% - 7.50% p.a.",
+    "fd": "4.00% - 8.50% p.a. (Senior: 9.00%)"
+  },
+  "loans": "Affordable Housing, MSME Group Loans",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "Jana Small Finance Bank भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": null
+}

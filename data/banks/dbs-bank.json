@@ -1,0 +1,48 @@
+{
+  "id": "dbs-bank",
+  "name": "DBS Bank India (digibank)",
+  "legalName": "DBS Bank India Limited (Wholly Owned Subsidiary)",
+  "type": "Foreign / WOS Bank",
+  "category": "foreign",
+  "tag": "Safest Bank in Asia | digibank",
+  "detailPage": "foreign/dbs-bank/dbs-bank.html",
+  "officialUrl": "https://www.dbs.com/in/",
+  "helpline": "1860 267 1234",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "DBS digibank Paperless Savings Account",
+    "details": "बचत पर 5.50% तक ब्याज, ₹300 वेलकम कैशबैक, 24x7 फ्री UPI, IMPS, NEFT व RTGS और ज़ीरो शुल्क फंड ट्रांसफर।",
+    "openUrl": "https://leads.banksathi.com/?h=Y1duMXFwZWc5U2liM0czRzdhSEk5QT09"
+  },
+  "creditCards": {
+    "topCards": "Bajaj Finserv DBS Bank SuperCard, DBS Spark Card",
+    "topOffer": "12-in-1 सुपरकार्ड फीचर्स: एयरपोर्ट लाउंज, रिवॉर्ड्स व आसान कैश विड्रॉल।",
+    "applyUrl": "https://www.dbs.com/in/personal/cards"
+  },
+  "rates": {
+    "savings": "3.25% - 5.50% p.a.",
+    "fd": "3.50% - 7.50% p.a. (Senior: 8.00%)"
+  },
+  "loans": "Instant Personal Loans up to ₹15 Lakh via digibank, Home Loans",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "DBS Bank India (digibank) भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": {
+    "url": "https://leads.banksathi.com/?h=Y1duMXFwZWc5U2liM0czRzdhSEk5QT09",
+    "label": "DBS Bank India (digibank) खाता तुरंत खोलें (BankSathi Partner Offer)",
+    "disclosure": "Disclosure: यह DBS Bank India (digibank) का Commercial Partner Link है।"
+  }
+}

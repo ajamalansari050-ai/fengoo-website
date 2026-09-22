@@ -1,0 +1,48 @@
+{
+  "id": "idfc-first",
+  "name": "IDFC FIRST Bank",
+  "legalName": "IDFC FIRST Bank Limited",
+  "type": "Private Sector Bank",
+  "category": "private",
+  "tag": "Monthly Interest Payout Leader",
+  "detailPage": "private-sector/hdfc/hdfc.html",
+  "officialUrl": "https://www.idfcfirstbank.com/",
+  "helpline": "1800 10 888",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "IDFC FIRST Digital Savings Account",
+    "details": "मासिक ब्याज क्रेडिट (Monthly Interest Payout) के साथ बचत पर 6.50% तक ब्याज, फ्री व असीमित एटीएम निकासी, और प्री-अप्रूव्ड लोन ऑफर्स।",
+    "openUrl": "https://leads.banksathi.com/?h=a25tRXd4RnliVVBEM21MdWcwYzlCdz09"
+  },
+  "creditCards": {
+    "topCards": "FIRST Millennia, FIRST Classic, FIRST Select, FIRST WOW (Secured FD Credit Card)",
+    "topOffer": "लाइफटाइम फ्री क्रेडिट कार्ड (Zero Annual Fee) + कभी एक्सपायर न होने वाले रिवॉर्ड पॉइंट्स।",
+    "applyUrl": "https://www.idfcfirstbank.com/credit-card"
+  },
+  "rates": {
+    "savings": "3.00% - 7.00% p.a. (Monthly Interest)",
+    "fd": "3.00% - 7.75% p.a. (Senior Citizen: 8.25%)"
+  },
+  "loans": "Consumer Durable Loans, Personal Loans, Home Loans",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "IDFC FIRST Bank भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": {
+    "url": "https://leads.banksathi.com/?h=a25tRXd4RnliVVBEM21MdWcwYzlCdz09",
+    "label": "IDFC FIRST Bank खाता तुरंत खोलें (BankSathi Partner Offer)",
+    "disclosure": "Disclosure: यह IDFC FIRST Bank का Commercial Partner Link है।"
+  }
+}

@@ -1,0 +1,413 @@
+/* ==========================================================================
+   FENGOO.IN RESPONSIVE SYSTEM (css/responsive.css)
+   Guaranteed Cross-Device Layout: Mobile (320px-480px), Phablets (481px-680px),
+   Tablets (681px-1080px), Laptops (1081px-1280px), and Desktops (1281px+)
+   Zero Content Cut-Off Guarantee
+   ========================================================================== */
+
+/* 1. Universal Anti-Overflow & Boundary Protection */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Ensure no media item ever forces horizontal overflow */
+img, svg, video, canvas, audio, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Text word-break protection for Indian languages, bank names & long URLs */
+h1, h2, h3, h4, h5, h6, p, span, a, label, li, td, th {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Prevent auto-zoom on iOS Safari when focusing inputs */
+input, select, textarea {
+  font-size: 16px !important;
+  max-width: 100%;
+}
+
+/* Ensure all tables are horizontally scrollable on small screens instead of pushing out viewport */
+.table-responsive,
+.data-table-wrap,
+.guide-table-wrap,
+.spec-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+  display: block;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+table {
+  max-width: 100%;
+}
+
+/* 2. LAPTOPS & TABLETS IN LANDSCAPE (max-width: 1080px) */
+@media (max-width: 1080px) {
+  /* When screen is under 1080px, 13 navigation links exceed 1 row.
+     Switch to clean mobile hamburger menu to keep header elegant */
+  .nav-desktop {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .page-sidebar-nav {
+    display: none;
+  }
+
+  .folders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 2fr repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* 3. TABLETS IN PORTRAIT (max-width: 900px) */
+@media (max-width: 900px) {
+  .calc-split {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .entity-hero-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .entity-hero-sidebar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand-col {
+    grid-column: 1 / -1;
+  }
+}
+
+/* 4. PHABLETS & LARGE SMARTPHONES (max-width: 680px) */
+@media (max-width: 680px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .header-inner {
+    height: 60px;
+    padding: 0;
+  }
+
+  .brand-logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+  }
+
+  .folders-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .entity-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .grid-categories {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .product-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .calc-card {
+    padding: 1.25rem;
+  }
+
+  .content-block {
+    padding: 1.25rem 1rem;
+  }
+
+  .hero {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    min-height: 44px; /* Accessible touch target */
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-icon {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .filter-pill {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.825rem;
+  }
+
+  .support-box {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sticky Deal Bar Mobile */
+  .sticky-bottom-deal-bar {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .deal-bar-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .deal-text p {
+    display: none;
+  }
+
+  .floating-community-badge {
+    bottom: 5rem;
+    right: 0.75rem;
+  }
+
+  .float-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Table auto scroll guarantee */
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+}
+
+/* 5. SMALL MOBILE SCREENS (max-width: 480px - iPhone SE, Android compacts) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .vip-community-bar {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.75rem;
+    gap: 0.4rem;
+  }
+
+  .vip-community-bar .vip-actions {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.2rem;
+  }
+
+  .btn-join-wa, .btn-join-tg {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.725rem;
+  }
+
+  .home-hero-pill {
+    font-size: 0.725rem;
+    padding: 0.3rem 0.6rem;
+    gap: 0.3rem;
+  }
+
+  .home-hero h1 {
+    font-size: 1.45rem;
+  }
+
+  .home-hero p {
+    font-size: 0.875rem;
+    padding: 0;
+  }
+
+  .search-input-box {
+    padding: 0.4rem 0.75rem;
+  }
+
+  .search-input-box input {
+    font-size: 0.875rem;
+  }
+
+  .stat-pill-item {
+    padding: 0.25rem 0;
+    gap: 0.5rem;
+  }
+
+  .stat-pill-icon {
+    font-size: 1.4rem;
+  }
+
+  .stat-pill-text strong {
+    font-size: 0.85rem;
+  }
+
+  .stat-pill-text span {
+    font-size: 0.72rem;
+  }
+
+  .section-head-title {
+    font-size: 1.35rem;
+  }
+
+  .folder-card {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .folder-header {
+    gap: 0.65rem;
+  }
+
+  .folder-icon-box {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 1.4rem;
+  }
+
+  .folder-name {
+    font-size: 1.05rem;
+  }
+
+  .folder-desc {
+    font-size: 0.825rem;
+  }
+
+  .folder-tag {
+    font-size: 0.685rem;
+    padding: 0.15rem 0.45rem;
+  }
+
+  .btn-open-folder {
+    font-size: 0.825rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .mobile-drawer-content {
+    width: 88vw;
+    max-width: 320px;
+    padding: 1.25rem 1rem;
+  }
+
+  .drawer-link {
+    font-size: 0.95rem;
+    padding: 0.65rem 0.75rem;
+  }
+
+  /* Toast & Notification full-width fit */
+  .toast-msg,
+  #lang-change-toast {
+    left: 12px !important;
+    right: 12px !important;
+    max-width: calc(100vw - 24px) !important;
+    transform: none !important;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+  }
+
+  /* Calculator sliders and inputs */
+  .calc-slider-box {
+    margin-bottom: 1.25rem;
+  }
+
+  .calc-val-display {
+    font-size: 1.15rem;
+  }
+
+  .calc-result-number {
+    font-size: 1.6rem;
+  }
+}
+
+/* 6. ULTRA-NARROW / FOLDABLE DEVICES (max-width: 340px - Galaxy Fold outer screen, etc.) */
+@media (max-width: 340px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .folder-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stat-pill-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}

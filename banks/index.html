@@ -1,0 +1,2652 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>भारत के सभी बैंक डायरेक्टरी (All Banks in India) - Zero Balance, Offers & Cards | Fengoo</title>
+  <meta name="description" content="भारत के सभी सार्वजनिक, निजी, स्मॉल फाइनेंस व पेमेंट्स बैंकों की संपूर्ण डायरेक्टरी। जीरो बैलेंस खाता खोलने का लिंक, क्रेडिट कार्ड ऑफर्स, ब्याज दरें और विस्तृत बैंक समीक्षा।" />
+  <link rel="canonical" href="https://fengoo.in/banks/index.html" />
+  
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../favicon.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/cards.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/calculators.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/monetization.css" />
+  
+  <style>
+    .banks-hero {
+      background: radial-gradient(circle at 50% 0%, var(--surface-2) 0%, var(--surface) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    .banks-hero h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .banks-hero p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.5;
+    }
+    .search-filter-section {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+    .filter-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .banks-list-container {
+      padding: 2.5rem 0 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .bank-card-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 1.5rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .bank-card-item:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+    .bank-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .bank-badge-type {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.25rem;
+    }
+    .bank-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+    .bank-legal-name {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+    }
+    .dicgc-pill {
+      font-size: 0.775rem;
+      font-weight: 600;
+      padding: 0.35rem 0.65rem;
+      border-radius: 9999px;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+    .dicgc-pill.warning {
+      background: #eff6ff;
+      color: #1e40af;
+      border-color: #bfdbfe;
+    }
+    .bank-card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .bank-feature-box {
+      border-radius: var(--radius-sm);
+      padding: 0.9rem 1.1rem;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+    }
+    .zero-balance-box {
+      border-left: 4px solid #10b981;
+    }
+    .credit-card-box {
+      border-left: 4px solid var(--primary);
+    }
+    .feature-label-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.925rem;
+    }
+    .status-pill {
+      font-size: 0.725rem;
+      font-weight: 700;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+    }
+    .status-pill.success {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    .status-pill.neutral {
+      background: #e2e8f0;
+      color: #475569;
+    }
+    .feature-desc {
+      font-size: 0.875rem;
+      color: var(--text);
+      line-height: 1.45;
+      margin-bottom: 0.4rem;
+    }
+    .feature-desc-offer {
+      font-size: 0.85rem;
+      color: #b45309;
+      background: #fffbeb;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+    .feature-action-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.35rem;
+    }
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.825rem;
+      font-weight: 700;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .btn-green {
+      background: #059669;
+      color: #fff;
+    }
+    .btn-green:hover {
+      background: #047857;
+      color: #fff;
+    }
+    .btn-blue {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-blue:hover {
+      background: var(--primary-hover);
+      color: #fff;
+    }
+    .bank-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1rem;
+    }
+    .bank-stat-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-lbl {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .stat-val {
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .stat-val.phone {
+      color: var(--primary);
+      font-size: 0.875rem;
+    }
+    .bank-card-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 0.9rem;
+    }
+    .btn-block {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo" id="header-logo-link">
+        <span class="logo-badge" id="header-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </span>
+        <span class="brand-name">Fengoo<span>.in</span></span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../banks/index.html" class="nav-link">Banks</a>
+        <a href="../credit-cards/index.html" class="nav-link">Cards</a>
+        <a href="../upi/index.html" class="nav-link">UPI</a>
+        <a href="../loans/index.html" class="nav-link">Loans</a>
+        <a href="../insurance/index.html" class="nav-link">Insurance</a>
+        <a href="../investments/index.html" class="nav-link">Investments</a>
+        <a href="../government/index.html" class="nav-link">Govt Schemes</a>
+        <a href="../tax/index.html" class="nav-link">Tax</a>
+        <a href="../pension/index.html" class="nav-link">Pension</a>
+        <a href="../savings/index.html" class="nav-link">Savings</a>
+        <a href="../calculators/index.html" class="nav-link">Calculators</a>
+        <a href="../official-links/official-links.html" class="nav-link">Official Links</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <button class="btn-icon mobile-menu-btn" id="mobile-menu-btn" title="Open Menu" aria-label="Open Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="brand-name font-bold">Fengoo Navigation</span>
+        <button class="modal-close drawer-close-btn" id="drawer-close-btn">&times;</button>
+      </div>
+      <div class="drawer-links">
+        <a href="../index.html" class="drawer-link">Home</a>
+        <a href="../banks/index.html" class="drawer-link">Banks Directory</a>
+        <a href="../credit-cards/index.html" class="drawer-link">Credit Cards</a>
+        <a href="../upi/index.html" class="drawer-link">UPI & Payments</a>
+        <a href="../loans/index.html" class="drawer-link">Loans</a>
+        <a href="../insurance/index.html" class="drawer-link">Insurance</a>
+        <a href="../investments/index.html" class="drawer-link">Investments</a>
+        <a href="../government/index.html" class="drawer-link">Government Schemes</a>
+        <a href="../tax/index.html" class="drawer-link">Tax Slabs</a>
+        <a href="../pension/index.html" class="drawer-link">Pension & Retirement</a>
+        <a href="../savings/index.html" class="drawer-link">Savings & Deposits</a>
+        <a href="../financial-education/index.html" class="drawer-link">Financial Education</a>
+        <a href="../calculators/index.html" class="drawer-link">20+ Calculators</a>
+        <a href="../official-links/official-links.html" class="drawer-link">Official Regulatory Links</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Breadcrumb -->
+  <div class="container breadcrumb-nav">
+    <ul class="breadcrumbs">
+      <li><a href="../index.html">होम (Home)</a></li>
+      <li><span>बैंक डायरेक्टरी (All Banks)</span></li>
+    </ul>
+  </div>
+
+  <!-- Hero Header -->
+  <section class="banks-hero">
+    <div class="container">
+      <span class="badge-official">🇮🇳 सम्पूर्ण भारतीय बैंकिंग डायरेक्टरी</span>
+      <h1>भारत के सभी बैंक (All Banks in India)</h1>
+      <p>
+        सार्वजनिक (PSU), निजी (Private), स्मॉल फाइनेंस, पेमेंट्स और क्षेत्रीय ग्रामीण बैंकों की आधिकारिक सूची। जीरो बैलेंस खाता खोलने का सीधा लिंक, क्रेडिट कार्ड ऑफर्स, ब्याज दरें व विस्तृत समीक्षा।
+      </p>
+
+      <!-- Live Search & Filter Box -->
+      <div class="search-filter-section">
+        <div class="search-input-box" style="margin: 0 auto;">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          <input 
+            type="text" 
+            id="banks-search-input" 
+            placeholder="किसी भी बैंक का नाम खोजें (उदा. HDFC, SBI, Kotak, ICICI, AU, IPPB)..." 
+            aria-label="Search Banks"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">सभी बैंक (All Banks)</button>
+          <button class="filter-btn" data-filter="psu">सार्वजनिक क्षेत्र (PSU Banks)</button>
+          <button class="filter-btn" data-filter="private">निजी क्षेत्र (Private Banks)</button>
+          <button class="filter-btn" data-filter="sfb">स्मॉल फाइनेंस (Small Finance)</button>
+          <button class="filter-btn" data-filter="payments">पेमेंट्स बैंक (Payments Banks)</button>
+          <button class="filter-btn" data-filter="rrb">ग्रामीण व सहकारी (RRB & Co-op)</button>
+          <button class="filter-btn" data-filter="foreign">विदेशी बैंक (Foreign Banks)</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Banks Listing -->
+  <main class="container">
+    <div class="banks-list-container" id="banks-list">
+      
+    <article class="bank-card-item" data-bank-id="airtel-payments" data-category="payments" data-search="airtel payments bank airtel payments bank limited first payments bank of india payments bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Payments Bank</span>
+          <h3 class="bank-title">Airtel Payments Bank</h3>
+          <span class="bank-legal-name">Airtel Payments Bank Limited • <em>First Payments Bank of India</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Airtel Thanks Digital Savings Account:</strong> मोबाइल नंबर ही खाता संख्या है। Airtel Safe Pay के साथ तीन-स्तरीय डिजिटल सुरक्षा।</p>
+          <div class="feature-action-row">
+            <a href="https://www.airtel.in/bank/" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Airtel Axis Bank Credit Card (Co-branded Partnership)</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> Airtel थैंक्स ऐप पर मोबाइल, डीटीएच और वाई-फाई रिचार्ज पर 25% कैशबैक।</p>
+          <div class="feature-action-row">
+            <a href="https://www.airtel.in/bank/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.00% - 7.00% p.a. (Above ₹1 Lakh)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">Sweep-out FD via partner IndusInd Bank up to 7.75%</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">400 (From Airtel) / 8800688006</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="payments-banks/airtel-payments-bank/airtel-payments-bank.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="aryavart-bank" data-category="rrb" data-search="aryavart bank aryavart bank (sponsored by bank of india) major rrb in central uttar pradesh regional rural bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Regional Rural Bank</span>
+          <h3 class="bank-title">Aryavart Bank</h3>
+          <span class="bank-legal-name">Aryavart Bank (Sponsored by Bank of India) • <em>Major RRB in Central Uttar Pradesh</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Aryavart BSBDA & PMJDY Account:</strong> ग्रामीण परिवारों के लिए मुफ्त खाता, डीबीटी सरकारी सब्सिडी और रुपे डेबिट कार्ड।</p>
+          <div class="feature-action-row">
+            <a href="https://aryavart-rrb.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Aryavart RuPay Kisan Credit Card</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> समय पर पुनर्भुगतान करने पर 3% ब्याज छूट (Effective 4% p.a.)।</p>
+          <div class="feature-action-row">
+            <a href="https://aryavart-rrb.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.75% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.00% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 102 0304</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="regional-rural/aryavart-bank/aryavart-bank.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="au-small-finance" data-category="sfb" data-search="au small finance bank au small finance bank limited highest savings interest (up to 7.25%) small finance bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Small Finance Bank</span>
+          <h3 class="bank-title">AU Small Finance Bank</h3>
+          <span class="bank-legal-name">AU Small Finance Bank Limited • <em>Highest Savings Interest (Up to 7.25%)</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>AU 0101 Digital Zero Balance Account:</strong> वीडियो बैंकिंग द्वारा घर बैठे खाता खुलता है। मासिक ब्याज भुगतान और 7.25% तक उच्च ब्याज दर।</p>
+          <div class="feature-action-row">
+            <a href="https://www.aubank.in/personal-banking/savings-account" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> AU Altura Plus, Vetta, Zenith Metal, LIT (Customizable Credit Card)</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> AU LIT कार्ड पर अपनी पसंद के फीचर्स (कैशबैक, लाउंज, रिवॉर्ड्स) खुद चुनें और कभी भी बदलें।</p>
+          <div class="feature-action-row">
+            <a href="https://www.aubank.in/personal-banking/credit-cards" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.50% - 7.25% p.a. (Monthly Interest Credit)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.75% - 8.00% p.a. (Senior Citizen: 8.50%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 1200 1200</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="small-finance/au-small-finance/au-small-finance.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="axis" data-category="private" data-search="axis bank axis bank limited third largest private bank private sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Private Sector Bank</span>
+          <h3 class="bank-title">Axis Bank</h3>
+          <span class="bank-legal-name">Axis Bank Limited • <em>Third Largest Private Bank</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Axis ASAP Digital Savings Account:</strong> तत्काल वर्चुअल डेबिट कार्ड, फ्लैट 1% ऑनलाइन कैशबैक और डिजिटल वीडियो केवाईसी विकल्प।</p>
+          <div class="feature-action-row">
+            <a href="https://www.axisbank.com/retail/accounts/savings-account" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Flipkart Axis Bank (5% Unlimited Cashback), Airtel Axis (25% on bills), Axis Atlas (Travel)</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> Flipkart पर 5% असीमित कैशबैक + स्विगी और जोमैटो पर 4% कैशबैक।</p>
+          <div class="feature-action-row">
+            <a href="https://www.axisbank.com/retail/cards/credit-card" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.00% - 3.50% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.00% - 7.20% p.a. (Senior Citizen: 7.75%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1860 419 5555 / 1860 500 5555</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="private-sector/axis/axis.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="bank-of-baroda" data-category="psu" data-search="bank of baroda (bob) bank of baroda second largest psu bank public sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Public Sector Bank</span>
+          <h3 class="bank-title">Bank of Baroda (BoB)</h3>
+          <span class="bank-legal-name">Bank of Baroda • <em>Second Largest PSU Bank</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>bob World Digital BSBDA Account:</strong> bob World ऐप द्वारा जीरो बैलेंस खाता और आधार आधारित तत्काल खाता खोलने की सुविधा।</p>
+          <div class="feature-action-row">
+            <a href="https://www.bankofbaroda.in/personal-banking/accounts/saving-accounts" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> bob Easy, Premier RuPay, Select, Eterna</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> किराने, मूवीज और डिपार्टमेंटल स्टोर पर 5x रिवॉर्ड पॉइंट्स + RuPay UPI क्रेडिट सपोर्ट।</p>
+          <div class="feature-action-row">
+            <a href="https://www.bobcard.co.in/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.75% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.15% p.a. (Senior Citizen: 7.65%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 5700 / 1800 5000</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="public-sector/bank-of-baroda/bank-of-baroda.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="bank-of-india" data-category="psu" data-search="bank of india (boi) bank of india pioneer in global branches public sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Public Sector Bank</span>
+          <h3 class="bank-title">Bank of India (BOI)</h3>
+          <span class="bank-legal-name">Bank of India • <em>Pioneer in Global Branches</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>BOI Basic Savings Bank Deposit Account:</strong> शून्य बैलेंस खाता, मुफ्त पासबुक और एटीएम से असीमित जमा की सुविधा।</p>
+          <div class="feature-action-row">
+            <a href="https://bankofindia.co.in/savings-accounts" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> BOI RuPay Platinum, Visa Gold</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> किफायती एनुअल चार्ज और फ्यूल सरचार्ज माफी।</p>
+          <div class="feature-action-row">
+            <a href="https://bankofindia.co.in/credit-cards" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.75% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.25% p.a. (Senior Citizen: 7.75%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 103 1906 / 1800 220 229</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="public-sector/sbi/sbi.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="baroda-up-bank" data-category="rrb" data-search="baroda up bank baroda up bank (sponsored by bank of baroda) uttar pradesh largest rural bank regional rural bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Regional Rural Bank</span>
+          <h3 class="bank-title">Baroda UP Bank</h3>
+          <span class="bank-legal-name">Baroda UP Bank (Sponsored by Bank of Baroda) • <em>Uttar Pradesh Largest Rural Bank</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Pradhan Mantri Jan Dhan Yojana (PMJDY) & BSBDA:</strong> ग्रामीण और कस्बाई उत्तर प्रदेश में शून्य शेष खाता, किसान क्रेडिट कार्ड और फसल बीमा सुविधा।</p>
+          <div class="feature-action-row">
+            <a href="https://barodaupbank.in/" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Baroda UP RuPay KCC / Classic Card</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> किसानों के लिए रियायती ब्याज दर और फसल ऋण सीमा।</p>
+          <div class="feature-action-row">
+            <a href="https://barodaupbank.in/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.75% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.15% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 1800 225</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="regional-rural/baroda-up-bank/baroda-up-bank.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="canara-bank" data-category="psu" data-search="canara bank canara bank major psu commercial bank public sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Public Sector Bank</span>
+          <h3 class="bank-title">Canara Bank</h3>
+          <span class="bank-legal-name">Canara Bank • <em>Major PSU Commercial Bank</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Canara Small Savings & BSBDA Account:</strong> शून्य न्यूनतम शेष आवश्यकता, RuPay क्लासिक कार्ड और देश भर में 9,500+ शाखा नेटवर्क।</p>
+          <div class="feature-action-row">
+            <a href="https://canarabank.com/User_page.aspx?othlink=3" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Canara RuPay Platinum, Visa Gold, World Card</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> न्यूनतम ब्याज दर के साथ 50 दिनों की ब्याज-मुक्त क्रेडिट अवधि।</p>
+          <div class="feature-action-row">
+            <a href="https://canarabank.com/User_page.aspx?othlink=9" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.90% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.25% p.a. (Senior Citizen: 7.75%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 425 0018</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="public-sector/canara-bank/canara-bank.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="central-bank" data-category="psu" data-search="central bank of india central bank of india first truly indian commercial bank (1911) public sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Public Sector Bank</span>
+          <h3 class="bank-title">Central Bank of India</h3>
+          <span class="bank-legal-name">Central Bank of India • <em>First Truly Indian Commercial Bank (1911)</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Cent Param & BSBDA Account:</strong> बिना किसी न्यूनतम शेष आवश्यकता के वेतनभोगियों और आम जनता के लिए खाता।</p>
+          <div class="feature-action-row">
+            <a href="https://www.centralbankofindia.co.in/en/savings-account" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Cent RuPay Select, Visa Platinum</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> स्वास्थ्य जांच पैकेजों पर विशेष छूट और लाउंज एक्सेस।</p>
+          <div class="feature-action-row">
+            <a href="https://www.centralbankofindia.co.in/en/credit-cards" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.75% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.15% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 22 1911</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="public-sector/sbi/sbi.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="cosmos-bank" data-category="rrb" data-search="cosmos co-operative bank the cosmos co-operative bank limited historic co-op bank (established 1906) multi-state co-operative bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Multi-State Co-operative Bank</span>
+          <h3 class="bank-title">Cosmos Co-operative Bank</h3>
+          <span class="bank-legal-name">The Cosmos Co-operative Bank Limited • <em>Historic Co-op Bank (Established 1906)</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Cosmos BSBDA Basic Savings:</strong> शून्य बैलेंस खाता, कॉसमॉस डिजिटल कनेक्ट और सुरक्षित जमा विकल्प।</p>
+          <div class="feature-action-row">
+            <a href="https://www.cosmosbank.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Cosmos RuPay Card Variants</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> यूटिलिटी बिल भुगतान पर पॉइंट्स।</p>
+          <div class="feature-action-row">
+            <a href="https://www.cosmosbank.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.00% - 3.50% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.50% p.a. (Senior: 8.00%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 233 0234</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="cooperative/cosmos-bank/cosmos-bank.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="dbs-bank" data-category="foreign" data-search="dbs bank india (digibank) dbs bank india limited (wholly owned subsidiary) safest bank in asia | digibank foreign / wos bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Foreign / WOS Bank</span>
+          <h3 class="bank-title">DBS Bank India (digibank)</h3>
+          <span class="bank-legal-name">DBS Bank India Limited (Wholly Owned Subsidiary) • <em>Safest Bank in Asia | digibank</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>DBS digibank Paperless Savings Account:</strong> बचत पर 5.50% तक ब्याज, ₹300 वेलकम कैशबैक, 24x7 फ्री UPI, IMPS, NEFT व RTGS और ज़ीरो शुल्क फंड ट्रांसफर।</p>
+          <div class="feature-action-row">
+            <a href="https://leads.banksathi.com/?h=Y1duMXFwZWc5U2liM0czRzdhSEk5QT09" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Bajaj Finserv DBS Bank SuperCard, DBS Spark Card</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> 12-in-1 सुपरकार्ड फीचर्स: एयरपोर्ट लाउंज, रिवॉर्ड्स व आसान कैश विड्रॉल।</p>
+          <div class="feature-action-row">
+            <a href="https://www.dbs.com/in/personal/cards" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.25% - 5.50% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.50% p.a. (Senior: 8.00%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1860 267 1234</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="foreign/dbs-bank/dbs-bank.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="equitas-small-finance" data-category="sfb" data-search="equitas small finance bank equitas small finance bank limited selfie digital high-yield account small finance bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Small Finance Bank</span>
+          <h3 class="bank-title">Equitas Small Finance Bank</h3>
+          <span class="bank-legal-name">Equitas Small Finance Bank Limited • <em>Selfie Digital High-Yield Account</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Equitas 2.0 / Selfie Zero Balance Savings:</strong> बिना शाखा गए 5 मिनट में वीडियो केवाईसी खाता। 7.00% तक बचत पर ब्याज, जीरो मेंटेनेंस चार्ज और डेबिट कार्ड पर रिवॉर्ड पॉइंट्स।</p>
+          <div class="feature-action-row">
+            <a href="https://leads.banksathi.com/?h=Z2NROXgxU21RaU5UakRidUpBbFFGdz09" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Equitas Elegance, Wings Credit Card</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> मूवी और ग्रोसरी पर 2x रिवॉर्ड्स + आकर्षक एयर माइल्स।</p>
+          <div class="feature-action-row">
+            <a href="https://www.equitasbank.com/personal-banking/credit-cards" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.50% - 7.00% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">4.00% - 8.20% p.a. (Senior Citizen: 8.70%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 103 1222</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="small-finance/au-small-finance/au-small-finance.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="exim-bank" data-category="foreign" data-search="export-import bank of india (exim) export-import bank of india apex export financing agency (govt of india) specialized financial institution">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Specialized Financial Institution</span>
+          <h3 class="bank-title">Export-Import Bank of India (EXIM)</h3>
+          <span class="bank-legal-name">Export-Import Bank of India • <em>Apex Export Financing Agency (Govt of India)</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill warning">🏛️ Institutional Apex</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill neutral">नियम लागू</span>
+          </div>
+          <p class="feature-desc"><strong>Institutional Only (Not for Retail Deposits):</strong> यह बैंक खुदरा जनता के लिए बचत खाता नहीं खोलता, केवल निर्यातकों व अंतरराष्ट्रीय व्यापार हेतु वित्त प्रदान करता है।</p>
+          <div class="feature-action-row">
+            <a href="https://www.eximbankindia.in/" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> No Retail Credit Cards (Corporate Trade Finance)</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> विदेशी सरकारों व व्यापारिक कंपनियों के लिए ऋण सुविधाएं (Buyer's Credit)।</p>
+          <div class="feature-action-row">
+            <a href="https://www.eximbankindia.in/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">Not Applicable</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">Bonds & Institutional Placements</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">022 2217 2600</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="other-rbi-regulated/exim-bank/exim-bank.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="federal-bank" data-category="private" data-search="federal bank the federal bank limited tech-driven pioneer (jupiter/fi partner) private sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Private Sector Bank</span>
+          <h3 class="bank-title">Federal Bank</h3>
+          <span class="bank-legal-name">The Federal Bank Limited • <em>Tech-Driven Pioneer (Jupiter/Fi Partner)</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>FedBook Selfie & Digital Zero Balance:</strong> सेल्फी से तुरंत खाता, डिजिटल बैंकिंग और आधुनिक फिनटेक इकोसिस्टम एकीकरण।</p>
+          <div class="feature-action-row">
+            <a href="https://www.federalbank.co.in/savings-accounts" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Scapia Federal Credit Card (Zero Forex Markup), Signet, Celesta</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> Scapia के साथ अंतर्राष्ट्रीय यात्रा पर शून्य विदेशी मुद्रा मार्कअप (Zero Forex Fee)।</p>
+          <div class="feature-action-row">
+            <a href="https://www.federalbank.co.in/credit-cards" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.00% - 6.00% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.00% - 7.40% p.a. (Senior: 7.90%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 425 1199 / 1800 420 1199</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="private-sector/hdfc/hdfc.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="hdfc" data-category="private" data-search="hdfc bank hdfc bank limited d-sib (systemically important) private sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Private Sector Bank</span>
+          <h3 class="bank-title">HDFC Bank</h3>
+          <span class="bank-legal-name">HDFC Bank Limited • <em>D-SIB (Systemically Important)</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>BSBDA & Digital InstaAccount:</strong> शून्य न्यूनतम शेष (Zero MAB) विकल्प उपलब्ध। वीडियो केवाईसी द्वारा तुरंत डिजिटल खाता खुलता है।</p>
+          <div class="feature-action-row">
+            <a href="https://www.hdfcbank.com/personal/save/accounts/savings-accounts" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Millennia (5% CashBack), Regalia Gold (Lounge Access), Swiggy HDFC (10% Off), Tata Neu Infinity (RuPay UPI)</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> अमेज़न, फ्लिपकार्ट व जोमैटो पर 5% से 10% तक कैशबैक + लाइफटाइम फ्री रिन्यूअल ऑफर।</p>
+          <div class="feature-action-row">
+            <a href="https://www.hdfcbank.com/personal/pay/cards/credit-cards" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.00% - 3.50% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.00% - 7.25% p.a. (Senior Citizen: 7.75%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 202 6161 / 1800 1600</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="private-sector/hdfc/hdfc.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="hsbc" data-category="foreign" data-search="hsbc india the hongkong and shanghai banking corporation limited international nri & wealth specialist foreign bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Foreign Bank</span>
+          <h3 class="bank-title">HSBC India</h3>
+          <span class="bank-legal-name">The Hongkong and Shanghai Banking Corporation Limited • <em>International NRI & Wealth Specialist</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill neutral">नियम लागू</span>
+          </div>
+          <p class="feature-desc"><strong>Corporate Salary & Premier Accounts:</strong> कॉर्पोरेट पेरोल टाई-अप्स में शून्य शेष। अंतर्राष्ट्रीय खाता पोर्टेबिलिटी और वैश्विक लाउंज।</p>
+          <div class="feature-action-row">
+            <a href="https://www.hsbc.co.in/accounts/" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> HSBC Cashback Credit Card, HSBC Premier Mastercard</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> डाइनिंग, ग्रोसरी और ऑनलाइन फूड डिलीवरी पर 10% कैशबैक।</p>
+          <div class="feature-action-row">
+            <a href="https://www.hsbc.co.in/credit-cards/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.50% - 3.00% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.00% - 7.25% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 266 3456</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="foreign/hsbc/hsbc.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="icici" data-category="private" data-search="icici bank icici bank limited d-sib (systemically important) private sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Private Sector Bank</span>
+          <h3 class="bank-title">ICICI Bank</h3>
+          <span class="bank-legal-name">ICICI Bank Limited • <em>D-SIB (Systemically Important)</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>ICICI Mine & BSBDA Basic Savings:</strong> युवाओं और सामान्य नागरिकों के लिए शून्य शेष बचत खाता व iMobile Pay आधारित डिजिटल ऑनबोर्डिंग।</p>
+          <div class="feature-action-row">
+            <a href="https://www.icicibank.com/personal-banking/accounts/savings-account" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Amazon Pay ICICI (Lifetime Free 5% Unlimited), Coral RuPay UPI, Sapphiro, Rubyx</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> Amazon Prime सदस्यों के लिए 5% अनलिमिटेड कैशबैक, कोई जॉइनिंग शुल्क नहीं (LTF)।</p>
+          <div class="feature-action-row">
+            <a href="https://www.icicibank.com/personal-banking/cards/credit-cards" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.00% - 3.50% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.00% - 7.20% p.a. (Senior Citizen: 7.75%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 1080</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="private-sector/icici/icici.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="idfc-first" data-category="private" data-search="idfc first bank idfc first bank limited monthly interest payout leader private sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Private Sector Bank</span>
+          <h3 class="bank-title">IDFC FIRST Bank</h3>
+          <span class="bank-legal-name">IDFC FIRST Bank Limited • <em>Monthly Interest Payout Leader</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>IDFC FIRST Digital Savings Account:</strong> मासिक ब्याज क्रेडिट (Monthly Interest Payout) के साथ बचत पर 6.50% तक ब्याज, फ्री व असीमित एटीएम निकासी, और प्री-अप्रूव्ड लोन ऑफर्स।</p>
+          <div class="feature-action-row">
+            <a href="https://leads.banksathi.com/?h=a25tRXd4RnliVVBEM21MdWcwYzlCdz09" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> FIRST Millennia, FIRST Classic, FIRST Select, FIRST WOW (Secured FD Credit Card)</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> लाइफटाइम फ्री क्रेडिट कार्ड (Zero Annual Fee) + कभी एक्सपायर न होने वाले रिवॉर्ड पॉइंट्स।</p>
+          <div class="feature-action-row">
+            <a href="https://www.idfcfirstbank.com/credit-card" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.00% - 7.00% p.a. (Monthly Interest)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.00% - 7.75% p.a. (Senior Citizen: 8.25%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 10 888</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="private-sector/hdfc/hdfc.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="indian-bank" data-category="psu" data-search="indian bank indian bank amalgamated with allahabad bank public sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Public Sector Bank</span>
+          <h3 class="bank-title">Indian Bank</h3>
+          <span class="bank-legal-name">Indian Bank • <em>Amalgamated with Allahabad Bank</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Indian Bank BSBDA Savings:</strong> शून्य न्यूनतम शेष, इंडोसिस मोबाइल ऐप और प्रत्यक्ष लाभ अंतरण (DBT) लिंकेज।</p>
+          <div class="feature-action-row">
+            <a href="https://www.indianbank.in/departments/savings-bank-accounts/" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Indian Bank RuPay Platinum, Visa Classic</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> कैश विथड्रॉल पर कम ब्याज दर और शॉपिंग रिवॉर्ड्स।</p>
+          <div class="feature-action-row">
+            <a href="https://www.indianbank.in/departments/credit-card/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.75% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.20% p.a. (Senior Citizen: 7.70%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 425 00 000</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="public-sector/sbi/sbi.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="indusind" data-category="private" data-search="indusind bank indusind bank limited high savings interest tier private sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Private Sector Bank</span>
+          <h3 class="bank-title">IndusInd Bank</h3>
+          <span class="bank-legal-name">IndusInd Bank Limited • <em>High Savings Interest Tier</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Indus Delite Zero Balance Account:</strong> चुनिंदा डिजिटल ऑफरिंग में जीरो बैलेंस खाता, ऑनलाइन शॉपिंग रिवॉर्ड्स और 5% डाइनिंग कैशबैक।</p>
+          <div class="feature-action-row">
+            <a href="https://www.indusind.com/in/en/personal/accounts/savings-account.html" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Legend Credit Card (LTF), Nexxt Credit Card, Platinum Aura Edge</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> वीकेंड पर रिवॉर्ड पॉइंट्स 2x + लाइफटाइम फ्री कार्ड्स की विस्तृत रेंज।</p>
+          <div class="feature-action-row">
+            <a href="https://www.indusind.com/in/en/personal/cards/credit-cards.html" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.50% - 6.75% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.75% p.a. (Senior Citizen: 8.25%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1860 267 7777</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="private-sector/hdfc/hdfc.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="ippb" data-category="payments" data-search="india post payments bank (ippb) india post payments bank limited department of posts (govt of india) payments bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Payments Bank</span>
+          <h3 class="bank-title">India Post Payments Bank (IPPB)</h3>
+          <span class="bank-legal-name">India Post Payments Bank Limited • <em>Department of Posts (Govt of India)</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>IPPB Regular Digital Savings (100% Zero Balance):</strong> डाकिया (Grameen Dak Sevak) बायोमेट्रिक मशीन लेकर घर आकर खाता खोलता है और नकद जमा/निकासी करता है।</p>
+          <div class="feature-action-row">
+            <a href="https://www.ippbonline.com/web/ippb/regular-savings-account" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> IPPB Doorstep Virtual Debit Card (No Credit Cards - Payments Bank regulation)</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> RBI नियमों के तहत पेमेंट्स बैंक क्रेडिट कार्ड जारी नहीं कर सकते, किंतु डिजिटल रुपे डेबिट कार्ड उपलब्ध है।</p>
+          <div class="feature-action-row">
+            <a href="https://www.ippbonline.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.00% - 2.25% p.a. (Limit: ₹2 Lakh per RBI)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">Post Office POSB Sweep-in Available (No direct FD)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">155299 / 1800 8899 860</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="payments-banks/india-post-payments-bank/india-post-payments-bank.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="jana-small-finance" data-category="sfb" data-search="jana small finance bank jana small finance bank limited leading sfb in urban & rural clusters small finance bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Small Finance Bank</span>
+          <h3 class="bank-title">Jana Small Finance Bank</h3>
+          <span class="bank-legal-name">Jana Small Finance Bank Limited • <em>Leading SFB in Urban & Rural Clusters</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Jana DigiGen Zero Balance Account:</strong> डिजिटल ऑनबोर्डिंग, आकर्षक ब्याज और शून्य शेष सुविधा।</p>
+          <div class="feature-action-row">
+            <a href="https://www.janabank.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Jana RuPay Credit Card</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> यूटिलिटी बिल पेमेंट्स पर 5% छूट।</p>
+          <div class="feature-action-row">
+            <a href="https://www.janabank.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.50% - 7.50% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">4.00% - 8.50% p.a. (Senior: 9.00%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 208 0</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="small-finance/au-small-finance/au-small-finance.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="kotak" data-category="private" data-search="kotak mahindra bank kotak mahindra bank limited top digital 811 banking private sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Private Sector Bank</span>
+          <h3 class="bank-title">Kotak Mahindra Bank</h3>
+          <span class="bank-legal-name">Kotak Mahindra Bank Limited • <em>Top Digital 811 Banking</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Kotak 811 Zero Balance Savings:</strong> 100% लाइफटाइम जीरो बैलेंस खाता। ₹6,000 कैशबैक, फ्री प्लेटिनम डेबिट कार्ड, 7% तक ब्याज और बिना किसी मिनिमम बैलेंस चार्ज के तुरंत वीडियो केवाईसी से चालू।</p>
+          <div class="feature-action-row">
+            <a href="https://leads.banksathi.com/?h=V0xkeXEyZnRlNUo3VUhkWTd6VWM2QT09" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Kotak League RuPay, Zen Signature, Mojo Platinum, 811 Dream Different (Secured FD)</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> UPI पेमेंट्स पर रिवॉर्ड पॉइंट्स + बुकमायशो मूवी टिकटों पर Buy 1 Get 1 ऑफर।</p>
+          <div class="feature-action-row">
+            <a href="https://www.kotak.com/en/personal-banking/cards/credit-cards.html" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.50% - 4.00% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">2.75% - 7.40% p.a. (Senior Citizen: 7.90%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1860 266 2666 / 1800 209 0000</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="private-sector/kotak/kotak.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="paytm-payments" data-category="payments" data-search="paytm payments bank paytm payments bank limited wallet & fastag ecosystem payments bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Payments Bank</span>
+          <h3 class="bank-title">Paytm Payments Bank</h3>
+          <span class="bank-legal-name">Paytm Payments Bank Limited • <em>Wallet & Fastag Ecosystem</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Paytm Digital BSBDA Account:</strong> डिजिटल वॉलेट और पेमेंट्स एकीकरण। (नोट: RBI के नवीनतम निर्देशों के अनुसार परिचालन समीक्षाधीन है)।</p>
+          <div class="feature-action-row">
+            <a href="https://www.paytmbank.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Paytm SBI Card / Paytm HDFC Co-branded Cards</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> Paytm ऐप पर मूवीज, फ्लाइट्स और शॉपिंग पर 3% से 5% कैशबैक।</p>
+          <div class="feature-action-row">
+            <a href="https://www.paytmbank.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.50% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">Sweep-out FD partner bank</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">0120 4456 456</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="payments-banks/airtel-payments-bank/airtel-payments-bank.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="punjab-national-bank" data-category="psu" data-search="punjab national bank (pnb) punjab national bank swadeshi movement pioneer (1894) public sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Public Sector Bank</span>
+          <h3 class="bank-title">Punjab National Bank (PNB)</h3>
+          <span class="bank-legal-name">Punjab National Bank • <em>Swadeshi Movement Pioneer (1894)</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>PNB Basic Savings (BSBDA) & Jan Dhan:</strong> शून्य शेष बचत खाता, मुफ्त रुपे डेबिट कार्ड और डीबीटी सब्सिडी का सीधा भुगतान।</p>
+          <div class="feature-action-row">
+            <a href="https://www.pnbindia.in/savings-fund-account.html" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> PNB RuPay Platinum, Millennial, PNB Select</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> घरेलू हवाई अड्डा लाउंज एक्सेस + यूटिलिटी बिल भुगतान पर अतिरिक्त कैशबैक।</p>
+          <div class="feature-action-row">
+            <a href="https://pnbcard.in/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.70% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.25% p.a. (Senior Citizen: 7.75%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 1800 / 1800 2021</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="public-sector/punjab-national-bank/punjab-national-bank.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="saraswat-bank" data-category="rrb" data-search="saraswat co-operative bank saraswat co-operative bank limited india's largest urban co-operative bank urban co-operative bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Urban Co-operative Bank</span>
+          <h3 class="bank-title">Saraswat Co-operative Bank</h3>
+          <span class="bank-legal-name">Saraswat Co-operative Bank Limited • <em>India's Largest Urban Co-operative Bank</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Saraswat Basic Savings (BSBDA):</strong> शून्य शेष खाता, गोमो मोबाइल बैंकिंग ऐप और महाराष्ट्र, गुजरात, गोवा में व्यापक शाखाएं।</p>
+          <div class="feature-action-row">
+            <a href="https://www.saraswatbank.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Saraswat Bank RuPay Platinum & Classic</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> कम वार्षिक शुल्क और पेट्रोल पंपों पर 1% फ्यूल सरचार्ज छूट।</p>
+          <div class="feature-action-row">
+            <a href="https://www.saraswatbank.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.00% - 3.50% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.40% p.a. (Senior Citizen: 7.90%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 22 9999 / 1800 266 5555</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="cooperative/saraswat-bank/saraswat-bank.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="sbi" data-category="psu" data-search="state bank of india (sbi) state bank of india india's largest bank (d-sib) public sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Public Sector Bank</span>
+          <h3 class="bank-title">State Bank of India (SBI)</h3>
+          <span class="bank-legal-name">State Bank of India • <em>India's Largest Bank (D-SIB)</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>SBI Regular Savings (Zero Balance - No MAB Penalty):</strong> SBI ने सभी नियमित बचत खातों से न्यूनतम बैलेंस (MAB) का जुर्माना पूरी तरह समाप्त कर दिया है। BSBDA जन-धन भी उपलब्ध।</p>
+          <div class="feature-action-row">
+            <a href="https://sbi.co.in/web/personal-banking/accounts/saving-account" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Cashback SBI Card (5% Online Cashback), SimplyCLICK (10x Rewards), SimplySAVE, BPCL Octane</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> बिना किसी मर्चेंट पाबंदी के सभी ऑनलाइन खरीदारी पर फ्लैट 5% कैशबैक (Cashback SBI)।</p>
+          <div class="feature-action-row">
+            <a href="https://www.sbicard.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.70% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.10% p.a. (Amrit Kalash Special: 7.60% Senior)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 1234 / 1800 2100</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="public-sector/sbi/sbi.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="standard-chartered" data-category="foreign" data-search="standard chartered bank (india) standard chartered bank (indian branches) premier global wealth bank foreign bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Foreign Bank</span>
+          <h3 class="bank-title">Standard Chartered Bank (India)</h3>
+          <span class="bank-legal-name">Standard Chartered Bank (Indian Branches) • <em>Premier Global Wealth Bank</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill neutral">नियम लागू</span>
+          </div>
+          <p class="feature-desc"><strong>Salary & Priority Accounts:</strong> वेतनभोगी कॉर्पोरेट खातों के लिए शून्य शेष, सामान्य खातों के लिए मासिक औसत शेष आवश्यक।</p>
+          <div class="feature-action-row">
+            <a href="https://www.sc.com/in/save/" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Standard Chartered Ultimate, Smart Credit Card, Rewards Card</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> Ultimate कार्ड पर सभी खर्चों पर 3.3% फ्लैट रिवॉर्ड वैल्यू + 2% विदेशी मुद्रा मार्कअप।</p>
+          <div class="feature-action-row">
+            <a href="https://www.sc.com/in/credit-cards/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.75% - 3.00% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.00% - 7.50% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 345 1000</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="foreign/standard-chartered/standard-chartered.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="ujjivan-small-finance" data-category="sfb" data-search="ujjivan small finance bank ujjivan small finance bank limited financial inclusion & high fd rates small finance bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Small Finance Bank</span>
+          <h3 class="bank-title">Ujjivan Small Finance Bank</h3>
+          <span class="bank-legal-name">Ujjivan Small Finance Bank Limited • <em>Financial Inclusion & High FD Rates</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Garima Zero Balance & Digital Account:</strong> वरिष्ठ नागरिकों और महिलाओं के लिए विशेष लाभ और उच्च ब्याज दरें।</p>
+          <div class="feature-action-row">
+            <a href="https://www.ujjivansfb.in/personal-banking/savings-account" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Ujjivan RuPay Credit Card</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> RuPay नेटवर्क पर यूपीआई क्यूआर कोड स्कैन करके सीधा भुगतान।</p>
+          <div class="feature-action-row">
+            <a href="https://www.ujjivansfb.in/" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.50% - 7.50% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.75% - 8.25% p.a. (Senior: 8.75%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 208 2121</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="small-finance/ujjivan-small-finance/ujjivan-small-finance.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="union-bank" data-category="psu" data-search="union bank of india union bank of india nationalized bank (inaugurated by mahatma gandhi) public sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Public Sector Bank</span>
+          <h3 class="bank-title">Union Bank of India</h3>
+          <span class="bank-legal-name">Union Bank of India • <em>Nationalized Bank (Inaugurated by Mahatma Gandhi)</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Union BSBDA & Vyom Digital Account:</strong> Union Vyom ऐप द्वारा त्वरित खाता और बिना किसी न्यूनतम शुल्क के बुनियादी सेवाएं।</p>
+          <div class="feature-action-row">
+            <a href="https://www.unionbankofindia.co.in/english/savings-account.aspx" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Union RuPay Select, Visa Signature</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> वेलनेस बेनिफिट्स, जिम मेंबरशिप डिस्काउंट व कॉम्प्लिमेंट्री स्पा वाउचर्स।</p>
+          <div class="feature-action-row">
+            <a href="https://www.unionbankofindia.co.in/english/credit-card.aspx" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">2.75% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.50% - 7.25% p.a. (Senior Citizen: 7.75%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 22 2244 / 1800 208 2244</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="public-sector/sbi/sbi.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+
+    <article class="bank-card-item" data-bank-id="yes-bank" data-category="private" data-search="yes bank yes bank limited upi market infrastructure backbone private sector bank">
+      <div class="bank-card-header">
+        <div class="bank-header-left">
+          <span class="bank-badge-type">Private Sector Bank</span>
+          <h3 class="bank-title">Yes Bank</h3>
+          <span class="bank-legal-name">Yes Bank Limited • <em>UPI Market Infrastructure Backbone</em></span>
+        </div>
+        <div class="bank-header-right">
+          <span class="dicgc-pill" title="DICGC द्वारा ₹5,00,000 तक की जमा राशि सुरक्षित">🛡️ DICGC ₹5L Insured</span>
+        </div>
+      </div>
+
+      <div class="bank-card-body">
+        <!-- Zero Balance Account Section -->
+        <div class="bank-feature-box zero-balance-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">🟢</span>
+            <strong>जीरो बैलेंस खाता (Zero Balance Account):</strong>
+            <span class="status-pill success">उपलब्ध (Available)</span>
+          </div>
+          <p class="feature-desc"><strong>Smart Salary & Basic Savings:</strong> डिजिटल बचत खाते और फोनपे/पेटीएम/क्रेडिट UPI लेनदेन में अग्रणी तकनीकी बैंक।</p>
+          <div class="feature-action-row">
+            <a href="https://www.yesbank.in/personal-banking/yes-individual/savings-accounts" target="_blank" rel="noopener noreferrer" class="btn-action btn-green">
+              खाता खोलें / Open Account ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Credit Cards & Offers Section -->
+        <div class="bank-feature-box credit-card-box">
+          <div class="feature-label-row">
+            <span class="feature-icon">💳</span>
+            <strong>क्रेडिट कार्ड व ऑफर्स (Credit Cards & Offers):</strong>
+          </div>
+          <p class="feature-desc"><strong>लोकप्रिय कार्ड:</strong> Kiwi Yes Bank RuPay (Flat 2% UPI Cashback), ACE, Reserv</p>
+          <p class="feature-desc-offer">🎁 <strong>मुख्य ऑफर:</strong> Kiwi UPI स्कैन व पे पर फ्लैट 2% नियॉन कैशबैक + लाइफटाइम फ्री कार्ड।</p>
+          <div class="feature-action-row">
+            <a href="https://www.yesbank.in/personal-banking/yes-individual/cards/credit-cards" target="_blank" rel="noopener noreferrer" class="btn-action btn-blue">
+              क्रेडिट कार्ड अप्लाई करें (Apply Card) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interest Rates & Key Details Grid -->
+        <div class="bank-stats-grid">
+          <div class="bank-stat-col">
+            <span class="stat-lbl">बचत खाता ब्याज:</span>
+            <strong class="stat-val">3.00% - 6.50% p.a.</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">फिक्स्ड डिपॉजिट (FD):</span>
+            <strong class="stat-val">3.25% - 7.75% p.a. (Senior: 8.25%)</strong>
+          </div>
+          <div class="bank-stat-col">
+            <span class="stat-lbl">हेल्पलाइन:</span>
+            <strong class="stat-val phone">1800 1200</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card-footer">
+        <a href="private-sector/hdfc/hdfc.html" class="btn btn-outline btn-block">
+          📄 विस्तृत समीक्षा व पूर्ण नियम (Full Bank Details) →
+        </a>
+      </div>
+    </article>
+    
+    </div>
+  </main>
+
+  <script>
+    // Client-side instant filter and search logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('banks-search-input');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const bankItems = document.querySelectorAll('.bank-card-item');
+
+      let currentFilter = 'all';
+      let currentQuery = '';
+
+      function applyFilter() {
+        let visibleCount = 0;
+        bankItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          const searchData = item.getAttribute('data-search') || '';
+          const matchesFilter = (currentFilter === 'all' || category === currentFilter);
+          const matchesQuery = (!currentQuery || searchData.includes(currentQuery));
+
+          if (matchesFilter && matchesQuery) {
+            item.style.display = 'block';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.trim().toLowerCase();
+          applyFilter();
+        });
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.getAttribute('data-filter');
+          applyFilter();
+        });
+      });
+    });
+  </script>
+
+  
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="logo-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </span>
+            <span class="brand-name">Fengoo<span>.in</span></span>
+          </div>
+          <p>Fengoo भारत का एक स्वतंत्र, निष्पक्ष वित्तीय सूचना व शिक्षा मंच है। यहाँ केवल वैधानिक और आधिकारिक स्रोतों (RBI, SEBI, IRDAI, Income Tax, PFRDA, DICGC) से सत्यापित डेटा प्रस्तुत किया जाता है।</p>
+          <div class="footer-badges">
+            <span class="trust-badge-pill">🛡️ DICGC ₹5L Coverage Guide</span>
+            <span class="trust-badge-pill">⚖️ Zero Biased Advice</span>
+            <span class="trust-badge-pill">🏛️ Verified Regulators</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>बैंकिंग व कार्ड्स</h5>
+          <ul class="footer-links">
+            <li><a href="../banks/public-sector/sbi/sbi.html">State Bank of India</a></li>
+            <li><a href="../banks/private-sector/hdfc/hdfc.html">HDFC Bank</a></li>
+            <li><a href="../banks/private-sector/kotak/kotak.html">Kotak Mahindra Bank</a></li>
+            <li><a href="../banks/small-finance/au-small-finance/au-small-finance.html">AU Small Finance</a></li>
+            <li><a href="../credit-cards/index.html">Credit Cards Directory</a></li>
+            <li><a href="../upi/index.html">UPI Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>ऋण व निवेश</h5>
+          <ul class="footer-links">
+            <li><a href="../loans/home-loan/index.html">Home Loan Guide</a></li>
+            <li><a href="../loans/personal-loan/index.html">Personal Loan</a></li>
+            <li><a href="../investments/mutual-funds/sip-equity-debt.html">Mutual Funds & SIP</a></li>
+            <li><a href="../investments/bonds/sovereign-gold-bonds.html">Sovereign Gold Bonds</a></li>
+            <li><a href="../insurance/life/term-insurance.html">Term Life Insurance</a></li>
+            <li><a href="../insurance/health/individual-family-floater.html">Health Insurance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>सरकारी योजनाएं व टैक्स</h5>
+          <ul class="footer-links">
+            <li><a href="../government/schemes/pm-jan-dhan-yojana.html">PM Jan Dhan Yojana</a></li>
+            <li><a href="../government/schemes/sukanya-samriddhi-yojana.html">Sukanya Samriddhi</a></li>
+            <li><a href="../pension/nps/nps.html">National Pension System</a></li>
+            <li><a href="../pension/atal-pension-yojana/atal-pension-yojana.html">Atal Pension Yojana</a></li>
+            <li><a href="../tax/income-tax-slabs/income-tax-slabs.html">Income Tax Slabs</a></li>
+            <li><a href="../calculators/gst.html">GST Calculator & Slabs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>टूल्स व नीतियां (Policies)</h5>
+          <ul class="footer-links">
+            <li><a href="../link-manager.html" style="color:var(--primary); font-weight:700;">⚡ BankSathi Link Manager</a></li>
+            <li><a href="../calculators/emi.html">EMI Calculator</a></li>
+            <li><a href="../calculators/sip.html">SIP Calculator</a></li>
+            <li><a href="../affiliate-disclosure.html">Affiliate Disclosure</a></li>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../terms-of-service.html">Terms of Service</a></li>
+            <li><a href="../disclaimer.html">Legal Disclaimer</a></li>
+            <li><a href="../about-us.html">About Fengoo</a></li>
+            <li><a href="../contact-us.html">Contact Us</a></li>
+            <li><a href="../advertise.html">📢 Advertise With Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-compliance-box">
+        <strong>वैधानिक अस्वीकरण (Statutory Disclaimer):</strong> Fengoo.in कोई बैंक, गैर-बैंकिंग वित्तीय कंपनी (NBFC), बीमा मध्यस्थ अथवा SEBI-पंजीकृत निवेश सलाहकार नहीं है। यहाँ उपलब्ध सामग्री केवल सामान्य सूचना व वित्तीय साक्षरता के उद्देश्य से है। किसी भी वित्तीय उत्पाद में निवेश या ऋण लेने से पूर्व संबंधित संस्थान के आधिकारिक दस्तावेज़ व नियम अवश्य पढ़ें।
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fengoo.in. All rights reserved. Free, Independent Financial Information for India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Affiliate Disclosure Modal -->
+  <div class="modal-backdrop" id="affiliate-disclosure-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>पारदर्शिता व पार्टनर नीति (Affiliate Disclosure)</h3>
+        <button class="modal-close" onclick="closeModal('affiliate-disclosure-modal')">&times;</button>
+      </div>
+      <div style="font-size:0.9rem; line-height:1.6; color:var(--text); display:flex; flex-direction:column; gap:0.75rem;">
+        <p>1. <strong>स्पष्ट पृथक्करण:</strong> Fengoo पर आधिकारिक विनियामक लिंक्स (जैसे RBI, SEBI, Income Tax) 100% गैर-व्यावसायिक हैं और उन पर कोई कमीशन नहीं लिया जाता।</p>
+        <p>2. <strong>पार्टनर लिंक्स की पहचान:</strong> जहाँ भी व्यावसायिक रेफरल लिंक उपलब्ध है, वहाँ स्पष्ट रूप से <strong>"Partner Link"</strong> अथवा <strong>"Affiliate Link"</strong> का लेबल लगाया गया है।</p>
+        <p>3. <strong>उपयोगकर्ता पर शून्य अतिरिक्त लागत:</strong> यदि आप किसी पार्टनर लिंक का उपयोग करके खाता खोलते हैं या सेवा लेते हैं, तो आपको कोई अतिरिक्त शुल्क नहीं देना पड़ता।</p>
+        <p>4. <strong>संपादकीय स्वतंत्रता:</strong> किसी बैंक अथवा वित्तीय संस्था द्वारा दी जाने वाली कमीशन दर हमारी निष्पक्ष समीक्षा या कैलकुलेटर की गणना को प्रभावित नहीं करती।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer Modal -->
+  <div class="modal-backdrop" id="disclaimer-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>कानूनी अस्वीकरण (Disclaimer)</h3>
+        <button class="modal-close" onclick="closeModal('disclaimer-modal')">&times;</button>
+      </div>
+      <div style="font-size:0.9rem; line-height:1.6; color:var(--text); display:flex; flex-direction:column; gap:0.75rem;">
+        <p>Fengoo.in पर दी गई ब्याज दरें, शुल्क और सरकारी योजना के नियम संबंधित आधिकारिक पोर्टल्स के नवीनतम विज्ञापनों पर आधारित हैं। ब्याज दरें और पात्रता शर्तें समय-समय पर RBI और संबंधित बैंकों द्वारा बदली जा सकती हैं। अंतिम निर्णय से पूर्व अधिकृत बैंक शाखा अथवा पोर्टल से पुष्टि अवश्य करें।</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="../js/registry.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/links.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/language.js"></script>
+  <script src="../js/affiliate_config.js"></script>
+  <script src="../js/monetization.js"></script>
+  
+</body>
+</html>

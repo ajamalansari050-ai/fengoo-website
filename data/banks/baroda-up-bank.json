@@ -1,0 +1,60 @@
+{
+  "id": "baroda-up-bank",
+  "name": "Baroda UP Bank",
+  "legalName": "Baroda UP Bank (Sponsored by Bank of Baroda)",
+  "type": "Regional Rural Bank",
+  "category": "rrb",
+  "tag": "Uttar Pradesh Largest Rural Bank",
+  "detailPage": "regional-rural/baroda-up-bank/baroda-up-bank.html",
+  "officialUrl": "https://barodaupbank.in/",
+  "helpline": "1800 1800 225",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Pradhan Mantri Jan Dhan Yojana (PMJDY) & BSBDA",
+    "details": "ग्रामीण और कस्बाई उत्तर प्रदेश में शून्य शेष खाता, किसान क्रेडिट कार्ड और फसल बीमा सुविधा।",
+    "openUrl": "https://barodaupbank.in/"
+  },
+  "creditCards": {
+    "topCards": "Baroda UP RuPay KCC / Classic Card",
+    "topOffer": "किसानों के लिए रियायती ब्याज दर और फसल ऋण सीमा।",
+    "applyUrl": "https://barodaupbank.in/"
+  },
+  "rates": {
+    "savings": "2.75% p.a.",
+    "fd": "3.50% - 7.15% p.a."
+  },
+  "loans": "Kisan Credit Card, Tractor Loans, Rural Housing",
+  "founded": "2020 (Amalgamation of Baroda UP Gramin Bank, Kashi Gomti Samyut Gramin Bank & Purvanchal Bank)",
+  "headquarters": "Gorakhpur, Uttar Pradesh",
+  "rbiStatus": "Scheduled Regional Rural Bank under RRB Act, 1976 (NABARD Supervised)",
+  "dicgcCoverage": "Yes (100% covered under DICGC ₹5,00,000 statutory deposit insurance)",
+  "about": "Baroda UP Bank is India's largest Regional Rural Bank in terms of branch network, operating over 2,050 branches across eastern and central Uttar Pradesh. Sponsored by Bank of Baroda, the bank empowers rural farm and non-farm enterprises with modern core banking (CBS) technology.",
+  "products": [
+    {
+      "name": "Baroda UP Kisan Credit Card",
+      "desc": "Short term crop loans with interest subvention benefit from central government."
+    },
+    {
+      "name": "Rural Housing Loan",
+      "desc": "Finance for constructing pacca houses in rural gram panchayat areas."
+    },
+    {
+      "name": "Baroda UP Mobile Banking App",
+      "desc": "Check balance, transfer funds via IMPS, and recharge utilities from smartphones."
+    }
+  ],
+  "eligibility": [
+    "Rural residents, farmers, rural business owners."
+  ],
+  "documents": [
+    "Aadhaar, Voter ID, Land ownership documents for agricultural advances."
+  ],
+  "charges": [
+    {
+      "item": "Savings Minimum Balance",
+      "fee": "₹100 (Rural without chequebook)"
+    }
+  ],
+  "partnerLink": null
+}

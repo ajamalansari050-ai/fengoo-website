@@ -1,0 +1,44 @@
+{
+  "id": "bank-of-india",
+  "name": "Bank of India (BOI)",
+  "legalName": "Bank of India",
+  "type": "Public Sector Bank",
+  "category": "psu",
+  "tag": "Pioneer in Global Branches",
+  "detailPage": "public-sector/sbi/sbi.html",
+  "officialUrl": "https://bankofindia.co.in/",
+  "helpline": "1800 103 1906 / 1800 220 229",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "BOI Basic Savings Bank Deposit Account",
+    "details": "शून्य बैलेंस खाता, मुफ्त पासबुक और एटीएम से असीमित जमा की सुविधा।",
+    "openUrl": "https://bankofindia.co.in/savings-accounts"
+  },
+  "creditCards": {
+    "topCards": "BOI RuPay Platinum, Visa Gold",
+    "topOffer": "किफायती एनुअल चार्ज और फ्यूल सरचार्ज माफी।",
+    "applyUrl": "https://bankofindia.co.in/credit-cards"
+  },
+  "rates": {
+    "savings": "2.75% p.a.",
+    "fd": "3.50% - 7.25% p.a. (Senior Citizen: 7.75%)"
+  },
+  "loans": "Star Home Loan, Star Personal Loan",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "Bank of India (BOI) भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": null
+}

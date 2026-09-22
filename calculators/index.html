@@ -1,0 +1,3002 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>100+ ईएमआई व वित्तीय कैलकुलेटर डायरेक्टरी (100+ EMI & Financial Calculators) | Fengoo</title>
+  <meta name="description" content="भारत का सबसे बड़ा 100+ वित्तीय व ईएमआई कैलकुलेटर हब। होम लोन, कार लोन, पर्सनल लोन, एजुकेशन, एमएसएमई, गोल्ड लोन, प्रीपेमेंट व एसआईपी की हर वैरायटी के लाइव कैलकुलेटर।" />
+  <link rel="canonical" href="https://fengoo.in/calculators/index.html" />
+  
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/cards.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/calculators.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  
+  <style>
+    .calc-hub-hero {
+      background: radial-gradient(circle at 50% 0%, var(--surface-2) 0%, var(--surface) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 0 2rem;
+      text-align: center;
+    }
+    .calc-hub-hero h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .calc-hub-hero p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.5;
+    }
+
+    /* Live Master Interactive Calculator Engine */
+    .master-calculator-box {
+      background: var(--surface);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin: 2rem auto 3rem;
+      max-width: 960px;
+    }
+    .master-calc-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .active-calc-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0;
+    }
+    .active-calc-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+    .calc-interactive-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .calc-interactive-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .input-control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .input-row-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4rem;
+    }
+    .input-label {
+      font-weight: 700;
+      font-size: 0.925rem;
+      color: var(--text);
+    }
+    .numeric-input-wrap {
+      display: flex;
+      align-items: center;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.2rem 0.6rem;
+    }
+    .numeric-input-wrap input {
+      border: none;
+      background: transparent;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      width: 130px;
+      text-align: right;
+      outline: none;
+    }
+    .slider-range {
+      width: 100%;
+      accent-color: var(--primary);
+      cursor: pointer;
+      height: 6px;
+    }
+    .range-limits {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Result Card */
+    .calc-result-panel {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      text-align: center;
+    }
+    .result-emi-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 1.25rem 1rem;
+    }
+    .result-emi-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1e40af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .result-emi-value {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #1e3a8a;
+      margin: 0.3rem 0;
+    }
+    .result-stats-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      text-align: left;
+    }
+    .res-col {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.75rem;
+      border-radius: 6px;
+    }
+    .res-lbl {
+      font-size: 0.725rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .res-val {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 0.2rem;
+    }
+
+    /* Ratio Progress Bar */
+    .ratio-bar-container {
+      margin-top: 0.5rem;
+      text-align: left;
+    }
+    .ratio-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .ratio-bar {
+      height: 10px;
+      border-radius: 9999px;
+      background: #e2e8f0;
+      display: flex;
+      overflow: hidden;
+    }
+    .ratio-principal {
+      background: #0284c7;
+      height: 100%;
+    }
+    .ratio-interest {
+      background: #f59e0b;
+      height: 100%;
+    }
+
+    /* Filter & Search for 100 Varieties */
+    .varieties-section {
+      padding: 1rem 0 5rem;
+    }
+    .section-header-row {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .section-header-row h2 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .filter-chips-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1.25rem 0 2rem;
+    }
+    .chip-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .chip-btn:hover, .chip-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* Calculator Cards Grid */
+    .varieties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.25rem;
+    }
+    .calculator-variety-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .calculator-variety-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+    .variety-badge-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .variety-cat-badge {
+      font-size: 0.725rem;
+      font-weight: 700;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+    }
+    .variety-index-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .variety-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+    }
+    .variety-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+      flex-grow: 1;
+    }
+    .variety-meta-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text);
+      background: var(--surface-subtle);
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+    .btn-load-preset {
+      width: 100%;
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.45rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-load-preset:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo" id="header-logo-link">
+        <span class="logo-badge" id="header-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </span>
+        <span class="brand-name">Fengoo<span>.in</span></span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../banks/index.html" class="nav-link">Banks</a>
+        <a href="../credit-cards/index.html" class="nav-link">Cards</a>
+        <a href="../upi/index.html" class="nav-link">UPI</a>
+        <a href="../loans/index.html" class="nav-link">Loans</a>
+        <a href="../insurance/index.html" class="nav-link">Insurance</a>
+        <a href="../investments/index.html" class="nav-link">Investments</a>
+        <a href="../government/index.html" class="nav-link">Govt Schemes</a>
+        <a href="../tax/index.html" class="nav-link">Tax</a>
+        <a href="../pension/index.html" class="nav-link">Pension</a>
+        <a href="../savings/index.html" class="nav-link">Savings</a>
+        <a href="../calculators/index.html" class="nav-link">Calculators</a>
+        <a href="../official-links/official-links.html" class="nav-link">Official Links</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <button class="btn-icon mobile-menu-btn" id="mobile-menu-btn" title="Open Menu" aria-label="Open Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="brand-name font-bold">Fengoo Navigation</span>
+        <button class="modal-close drawer-close-btn" id="drawer-close-btn">&times;</button>
+      </div>
+      <div class="drawer-links">
+        <a href="../index.html" class="drawer-link">Home</a>
+        <a href="../banks/index.html" class="drawer-link">Banks Directory</a>
+        <a href="../credit-cards/index.html" class="drawer-link">Credit Cards</a>
+        <a href="../upi/index.html" class="drawer-link">UPI & Payments</a>
+        <a href="../loans/index.html" class="drawer-link">Loans</a>
+        <a href="../insurance/index.html" class="drawer-link">Insurance</a>
+        <a href="../investments/index.html" class="drawer-link">Investments</a>
+        <a href="../government/index.html" class="drawer-link">Government Schemes</a>
+        <a href="../tax/index.html" class="drawer-link">Tax Slabs</a>
+        <a href="../pension/index.html" class="drawer-link">Pension & Retirement</a>
+        <a href="../savings/index.html" class="drawer-link">Savings & Deposits</a>
+        <a href="../financial-education/index.html" class="drawer-link">Financial Education</a>
+        <a href="../calculators/index.html" class="drawer-link">20+ Calculators</a>
+        <a href="../official-links/official-links.html" class="drawer-link">Official Regulatory Links</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Breadcrumb -->
+  <div class="container breadcrumb-nav">
+    <ul class="breadcrumbs">
+      <li><a href="../index.html">होम (Home)</a></li>
+      <li><span>100+ ईएमआई व वित्तीय कैलकुलेटर</span></li>
+    </ul>
+  </div>
+
+  <!-- Hero Header -->
+  <section class="calc-hub-hero">
+    <div class="container">
+      <span class="badge-official">🧮 100% सटीक वित्तीय गणितीय टूल्स</span>
+      <h1>100+ ईएमआई व वित्तीय कैलकुलेटर डायरेक्टरी</h1>
+      <p>
+        होम लोन, कार लोन, पर्सनल लोन, एजुकेशन, बिज़नेस, एमएसएमई, गोल्ड लोन, प्रीपेमेंट व एसआईपी की 100 से अधिक वैरायटी। किसी भी कार्ड पर क्लिक करके तुरंत लाइव कैलकुलेटर में गणना करें।
+      </p>
+    </div>
+  </section>
+
+  <!-- Live Master Interactive Calculator Engine -->
+  <div class="container">
+    <div class="master-calculator-box" id="master-calculator-engine">
+      <div class="master-calc-header">
+        <div>
+          <span class="badge-official" style="font-size:0.75rem;">लाइव गणना इंजन (Interactive Engine)</span>
+          <h2 class="active-calc-title" id="display-calc-title">नियमित होम लोन ईएमआई (Regular Home Loan EMI)</h2>
+          <p class="active-calc-desc" id="display-calc-desc">मानक आवासीय संपत्ति खरीद हेतु 20 वर्ष की अवधि के लिए होम लोन ईएमआई गणना।</p>
+        </div>
+      </div>
+
+      <div class="calc-interactive-grid">
+        <!-- Input Sliders Column -->
+        <div class="input-control-group">
+          <!-- Loan Amount -->
+          <div>
+            <div class="input-row-header">
+              <label class="input-label" for="input-amount">ऋण राशि (Loan Amount):</label>
+              <div class="numeric-input-wrap">
+                <span>₹</span>
+                <input type="number" id="input-amount" value="4000000" min="10000" max="100000000" step="10000" />
+              </div>
+            </div>
+            <input type="range" class="slider-range" id="slider-amount" min="50000" max="20000000" step="50000" value="4000000" />
+            <div class="range-limits">
+              <span>₹50,000</span>
+              <span>₹2 करोड़ (2 Cr)</span>
+            </div>
+          </div>
+
+          <!-- Interest Rate -->
+          <div>
+            <div class="input-row-header">
+              <label class="input-label" for="input-rate">वार्षिक ब्याज दर (Interest Rate % p.a.):</label>
+              <div class="numeric-input-wrap">
+                <input type="number" id="input-rate" value="8.50" min="1" max="36" step="0.05" />
+                <span>%</span>
+              </div>
+            </div>
+            <input type="range" class="slider-range" id="slider-rate" min="3" max="24" step="0.1" value="8.5" />
+            <div class="range-limits">
+              <span>3.0%</span>
+              <span>24.0%</span>
+            </div>
+          </div>
+
+          <!-- Tenure -->
+          <div>
+            <div class="input-row-header">
+              <label class="input-label" for="input-tenure">ऋण अवधि (Tenure in Years):</label>
+              <div class="numeric-input-wrap">
+                <input type="number" id="input-tenure" value="20" min="1" max="35" step="1" />
+                <span>वर्ष (Yrs)</span>
+              </div>
+            </div>
+            <input type="range" class="slider-range" id="slider-tenure" min="1" max="30" step="1" value="20" />
+            <div class="range-limits">
+              <span>1 वर्ष (12 माह)</span>
+              <span>30 वर्ष (360 माह)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result Stats Column -->
+        <div class="calc-result-panel">
+          <div class="result-emi-box">
+            <span class="result-emi-label">मासिक ईएमआई (Monthly EMI)</span>
+            <div class="result-emi-value" id="res-monthly-emi">₹34,713</div>
+            <span style="font-size:0.75rem; color:#475569;">प्रति माह देय किस्त</span>
+          </div>
+
+          <div class="result-stats-row">
+            <div class="res-col">
+              <span class="res-lbl">कुल ब्याज (Total Interest):</span>
+              <div class="res-val" id="res-total-interest">₹43,31,114</div>
+            </div>
+            <div class="res-col">
+              <span class="res-lbl">कुल भुगतान (Total Amount):</span>
+              <div class="res-val" id="res-total-payment">₹83,31,114</div>
+            </div>
+          </div>
+
+          <div class="ratio-bar-container">
+            <div class="ratio-bar-label">
+              <span style="color:#0284c7;">■ मूलधन: <strong id="ratio-p-val">48%</strong></span>
+              <span style="color:#f59e0b;">■ कुल ब्याज: <strong id="ratio-i-val">52%</strong></span>
+            </div>
+            <div class="ratio-bar">
+              <div class="ratio-principal" id="bar-principal" style="width: 48%;"></div>
+              <div class="ratio-interest" id="bar-interest" style="width: 52%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 100+ Varieties Directory Section -->
+  <main class="container varieties-section">
+    <div class="section-header-row">
+      <h2>100+ ईएमआई व वित्तीय कैलकुलेटर लाइब्रेरी</h2>
+      <p style="color:var(--text-muted); max-width:640px; margin:0 auto;">
+        नीचे दी गई किसी भी वैरायटी को चुनें। वह सीधे ऊपर दिए गए लाइव कैलकुलेटर इंजन में लोड हो जाएगी।
+      </p>
+
+      <!-- Instant Live Search Box -->
+      <div class="search-input-box" style="margin: 1.5rem auto 0; max-width:640px;">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input 
+          type="text" 
+          id="calc-search-input" 
+          placeholder="कैलकुलेटर खोजें (उदा. SBI होम लोन, बाइक, मुद्रा, प्रीपेमेंट, एसआईपी)..." 
+          aria-label="Search Calculators"
+          autocomplete="off"
+        />
+      </div>
+
+      <!-- Filter Chips -->
+      <div class="filter-chips-grid">
+        <button class="chip-btn active" data-filter="all">सभी 100+ कैलकुलेटर (All)</button>
+        <button class="chip-btn" data-filter="home">होम लोन (Home)</button>
+        <button class="chip-btn" data-filter="vehicle">वाहन व कार (Vehicle)</button>
+        <button class="chip-btn" data-filter="personal">पर्सनल लोन (Personal)</button>
+        <button class="chip-btn" data-filter="education">शिक्षा लोन (Education)</button>
+        <button class="chip-btn" data-filter="business">व्यापार व मुद्रा (MSME)</button>
+        <button class="chip-btn" data-filter="collateral">गोल्ड व संपत्ति (LAP)</button>
+        <button class="chip-btn" data-filter="agri">किसान व कृषि (Agri)</button>
+        <button class="chip-btn" data-filter="prepay">प्रीपेमेंट व बचत (Prepayment)</button>
+        <button class="chip-btn" data-filter="wealth">निवेश, SIP व वेल्थ (Wealth)</button>
+      </div>
+    </div>
+
+    <div class="varieties-grid" id="varieties-list">
+      
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="नियमित होम लोन ईएमआई (regular home loan emi) होम लोन मानक आवासीय संपत्ति खरीद हेतु 20 वर्ष की अवधि के लिए होम लोन ईएमआई गणना।"
+         onclick="loadPreset(4000000, 8.5, 240, 'नियमित होम लोन ईएमआई (Regular Home Loan EMI)', 'मानक आवासीय संपत्ति खरीद हेतु 20 वर्ष की अवधि के लिए होम लोन ईएमआई गणना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#1</span>
+      </div>
+      <h4 class="variety-title">नियमित होम लोन ईएमआई (Regular Home Loan EMI)</h4>
+      <p class="variety-desc">मानक आवासीय संपत्ति खरीद हेतु 20 वर्ष की अवधि के लिए होम लोन ईएमआई गणना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹40.0 Lakh</strong></span>
+        <span>दर: <strong>8.5%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="एसबीआई होम लोन ईएमआई (sbi home loan emi) होम लोन स्टेट बैंक ऑफ इंडिया (sbi) की न्यूनतम 8.40% फ्लोटिंग ब्याज दर पर 25 वर्ष की ईएमआई।"
+         onclick="loadPreset(5000000, 8.4, 300, 'एसबीआई होम लोन ईएमआई (SBI Home Loan EMI)', 'स्टेट बैंक ऑफ इंडिया (SBI) की न्यूनतम 8.40% फ्लोटिंग ब्याज दर पर 25 वर्ष की ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#2</span>
+      </div>
+      <h4 class="variety-title">एसबीआई होम लोन ईएमआई (SBI Home Loan EMI)</h4>
+      <p class="variety-desc">स्टेट बैंक ऑफ इंडिया (SBI) की न्यूनतम 8.40% फ्लोटिंग ब्याज दर पर 25 वर्ष की ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹50.0 Lakh</strong></span>
+        <span>दर: <strong>8.4%</strong></span>
+        <span>अवधि: <strong>25 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="एचडीएफसी होम लोन ईएमआई (hdfc bank home loan) होम लोन एचडीएफसी बैंक रिटेल हाउसिंग फाइनेंस के मानक स्लैब पर आधारित सटीक किस्त।"
+         onclick="loadPreset(6000000, 8.6, 240, 'एचडीएफसी होम लोन ईएमआई (HDFC Bank Home Loan)', 'एचडीएफसी बैंक रिटेल हाउसिंग फाइनेंस के मानक स्लैब पर आधारित सटीक किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#3</span>
+      </div>
+      <h4 class="variety-title">एचडीएफसी होम लोन ईएमआई (HDFC Bank Home Loan)</h4>
+      <p class="variety-desc">एचडीएफसी बैंक रिटेल हाउसिंग फाइनेंस के मानक स्लैब पर आधारित सटीक किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹60.0 Lakh</strong></span>
+        <span>दर: <strong>8.6%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="पीएम आवास योजना ब्याज सब्सिडी ईएमआई (pmay subsidy home loan) होम लोन pmay क्रेडिट लिंक्ड सब्सिडी (clss) के प्रभावी ब्याज लाभ के साथ रियायती ईएमआई।"
+         onclick="loadPreset(2500000, 6.5, 240, 'पीएम आवास योजना ब्याज सब्सिडी ईएमआई (PMAY Subsidy Home Loan)', 'PMAY क्रेडिट लिंक्ड सब्सिडी (CLSS) के प्रभावी ब्याज लाभ के साथ रियायती ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#4</span>
+      </div>
+      <h4 class="variety-title">पीएम आवास योजना ब्याज सब्सिडी ईएमआई (PMAY Subsidy Home Loan)</h4>
+      <p class="variety-desc">PMAY क्रेडिट लिंक्ड सब्सिडी (CLSS) के प्रभावी ब्याज लाभ के साथ रियायती ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹25.0 Lakh</strong></span>
+        <span>दर: <strong>6.5%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="स्टेप-अप होम लोन ईएमआई (step-up flexible emi) होम लोन युवा पेशेवरों के लिए शुरुआती वर्षों में कम किस्त और बाद में वेतन वृद्धि के साथ बढ़ती ईएमआई।"
+         onclick="loadPreset(3500000, 8.75, 240, 'स्टेप-अप होम लोन ईएमआई (Step-Up Flexible EMI)', 'युवा पेशेवरों के लिए शुरुआती वर्षों में कम किस्त और बाद में वेतन वृद्धि के साथ बढ़ती ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#5</span>
+      </div>
+      <h4 class="variety-title">स्टेप-अप होम लोन ईएमआई (Step-Up Flexible EMI)</h4>
+      <p class="variety-desc">युवा पेशेवरों के लिए शुरुआती वर्षों में कम किस्त और बाद में वेतन वृद्धि के साथ बढ़ती ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹35.0 Lakh</strong></span>
+        <span>दर: <strong>8.75%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="प्लॉट खरीद व मकान निर्माण लोन (plot + construction loan) होम लोन जमीन खरीद कर स्वयं का मकान बनवाने हेतु चरणबद्ध वितरण व निर्माण ईएमआई।"
+         onclick="loadPreset(4500000, 8.85, 180, 'प्लॉट खरीद व मकान निर्माण लोन (Plot + Construction Loan)', 'जमीन खरीद कर स्वयं का मकान बनवाने हेतु चरणबद्ध वितरण व निर्माण ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#6</span>
+      </div>
+      <h4 class="variety-title">प्लॉट खरीद व मकान निर्माण लोन (Plot + Construction Loan)</h4>
+      <p class="variety-desc">जमीन खरीद कर स्वयं का मकान बनवाने हेतु चरणबद्ध वितरण व निर्माण ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹45.0 Lakh</strong></span>
+        <span>दर: <strong>8.85%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="घर नवीनीकरण व विस्तार लोन (home renovation / improvement) होम लोन पुराने घर में अतिरिक्त कमरा, पेंटिंग या इंटीरियर कार्य हेतु 7 वर्ष की ईएमआई।"
+         onclick="loadPreset(1000000, 9.15, 84, 'घर नवीनीकरण व विस्तार लोन (Home Renovation / Improvement)', 'पुराने घर में अतिरिक्त कमरा, पेंटिंग या इंटीरियर कार्य हेतु 7 वर्ष की ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#7</span>
+      </div>
+      <h4 class="variety-title">घर नवीनीकरण व विस्तार लोन (Home Renovation / Improvement)</h4>
+      <p class="variety-desc">पुराने घर में अतिरिक्त कमरा, पेंटिंग या इंटीरियर कार्य हेतु 7 वर्ष की ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹10.0 Lakh</strong></span>
+        <span>दर: <strong>9.15%</strong></span>
+        <span>अवधि: <strong>7 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="एनआरआई होम लोन ईएमआई (nri home loan emi) होम लोन प्रवासी भारतीयों (nri) द्वारा भारत में रियल एस्टेट निवेश व मकान खरीद हेतु ईएमआई।"
+         onclick="loadPreset(8000000, 8.7, 180, 'एनआरआई होम लोन ईएमआई (NRI Home Loan EMI)', 'प्रवासी भारतीयों (NRI) द्वारा भारत में रियल एस्टेट निवेश व मकान खरीद हेतु ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#8</span>
+      </div>
+      <h4 class="variety-title">एनआरआई होम लोन ईएमआई (NRI Home Loan EMI)</h4>
+      <p class="variety-desc">प्रवासी भारतीयों (NRI) द्वारा भारत में रियल एस्टेट निवेश व मकान खरीद हेतु ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹80.0 Lakh</strong></span>
+        <span>दर: <strong>8.7%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="होम लोन टॉप-अप ईएमआई (home loan top-up emi) होम लोन मौजूदा होम लोन पर सस्ती दरों पर अतिरिक्त नकदी प्राप्त करने हेतु टॉप-अप किस्त।"
+         onclick="loadPreset(1500000, 8.95, 120, 'होम लोन टॉप-अप ईएमआई (Home Loan Top-Up EMI)', 'मौजूदा होम लोन पर सस्ती दरों पर अतिरिक्त नकदी प्राप्त करने हेतु टॉप-अप किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#9</span>
+      </div>
+      <h4 class="variety-title">होम लोन टॉप-अप ईएमआई (Home Loan Top-Up EMI)</h4>
+      <p class="variety-desc">मौजूदा होम लोन पर सस्ती दरों पर अतिरिक्त नकदी प्राप्त करने हेतु टॉप-अप किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹15.0 Lakh</strong></span>
+        <span>दर: <strong>8.95%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="होम लोन बैलेंस ट्रांसफर (home loan balance transfer) होम लोन दूसरे बैंक में कम ब्याज दर पर लोन ट्रांसफर करके ब्याज बचत की गणना।"
+         onclick="loadPreset(4200000, 8.35, 216, 'होम लोन बैलेंस ट्रांसफर (Home Loan Balance Transfer)', 'दूसरे बैंक में कम ब्याज दर पर लोन ट्रांसफर करके ब्याज बचत की गणना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#10</span>
+      </div>
+      <h4 class="variety-title">होम लोन बैलेंस ट्रांसफर (Home Loan Balance Transfer)</h4>
+      <p class="variety-desc">दूसरे बैंक में कम ब्याज दर पर लोन ट्रांसफर करके ब्याज बचत की गणना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹42.0 Lakh</strong></span>
+        <span>दर: <strong>8.35%</strong></span>
+        <span>अवधि: <strong>18 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="महिला सह-आवेदक छूट होम लोन (women concession home loan) होम लोन महिला गृहस्वामी को मिलने वाली 0.05% (5 bps) ब्याज छूट के साथ ईएमआई।"
+         onclick="loadPreset(5500000, 8.45, 240, 'महिला सह-आवेदक छूट होम लोन (Women Concession Home Loan)', 'महिला गृहस्वामी को मिलने वाली 0.05% (5 bps) ब्याज छूट के साथ ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#11</span>
+      </div>
+      <h4 class="variety-title">महिला सह-आवेदक छूट होम लोन (Women Concession Home Loan)</h4>
+      <p class="variety-desc">महिला गृहस्वामी को मिलने वाली 0.05% (5 bps) ब्याज छूट के साथ ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹55.0 Lakh</strong></span>
+        <span>दर: <strong>8.45%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="ग्रामीण आवास विकास लोन (rural housing / gramin awas emi) होम लोन कस्बों और ग्रामीण क्षेत्रों में पक्का मकान निर्माण हेतु कम राशि का किफायती लोन।"
+         onclick="loadPreset(1200000, 8.65, 180, 'ग्रामीण आवास विकास लोन (Rural Housing / Gramin Awas EMI)', 'कस्बों और ग्रामीण क्षेत्रों में पक्का मकान निर्माण हेतु कम राशि का किफायती लोन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#12</span>
+      </div>
+      <h4 class="variety-title">ग्रामीण आवास विकास लोन (Rural Housing / Gramin Awas EMI)</h4>
+      <p class="variety-desc">कस्बों और ग्रामीण क्षेत्रों में पक्का मकान निर्माण हेतु कम राशि का किफायती लोन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹12.0 Lakh</strong></span>
+        <span>दर: <strong>8.65%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="संयुक्त आवेदक होम लोन (joint borrower home loan emi) होम लोन पति-पत्नी या पिता-पुत्र की संयुक्त आय पर बड़ी लोन पात्रता की मासिक किस्त।"
+         onclick="loadPreset(7500000, 8.5, 300, 'संयुक्त आवेदक होम लोन (Joint Borrower Home Loan EMI)', 'पति-पत्नी या पिता-पुत्र की संयुक्त आय पर बड़ी लोन पात्रता की मासिक किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#13</span>
+      </div>
+      <h4 class="variety-title">संयुक्त आवेदक होम लोन (Joint Borrower Home Loan EMI)</h4>
+      <p class="variety-desc">पति-पत्नी या पिता-पुत्र की संयुक्त आय पर बड़ी लोन पात्रता की मासिक किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹75.0 Lakh</strong></span>
+        <span>दर: <strong>8.5%</strong></span>
+        <span>अवधि: <strong>25 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="प्री-ईएमआई अंडर-कंस्ट्रक्शन फ्लैट (pre-emi interest calculator) होम लोन बिल्डर द्वारा पजेशन मिलने तक केवल सरल ब्याज (simple interest) भुगतान गणना।"
+         onclick="loadPreset(3000000, 8.6, 36, 'प्री-ईएमआई अंडर-कंस्ट्रक्शन फ्लैट (Pre-EMI Interest Calculator)', 'बिल्डर द्वारा पजेशन मिलने तक केवल सरल ब्याज (Simple Interest) भुगतान गणना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#14</span>
+      </div>
+      <h4 class="variety-title">प्री-ईएमआई अंडर-कंस्ट्रक्शन फ्लैट (Pre-EMI Interest Calculator)</h4>
+      <p class="variety-desc">बिल्डर द्वारा पजेशन मिलने तक केवल सरल ब्याज (Simple Interest) भुगतान गणना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹30.0 Lakh</strong></span>
+        <span>दर: <strong>8.6%</strong></span>
+        <span>अवधि: <strong>3 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="home" 
+         data-search="30-वर्षीय दीर्घकालिक होम लोन ईएमआई (30-year ultra long home loan) होम लोन अधिकतम 30 वर्ष (360 महीने) की अवधि में न्यूनतम मासिक भार की गणना।"
+         onclick="loadPreset(6500000, 8.75, 360, '30-वर्षीय दीर्घकालिक होम लोन ईएमआई (30-Year Ultra Long Home Loan)', 'अधिकतम 30 वर्ष (360 महीने) की अवधि में न्यूनतम मासिक भार की गणना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">होम लोन</span>
+        <span class="variety-index-num">#15</span>
+      </div>
+      <h4 class="variety-title">30-वर्षीय दीर्घकालिक होम लोन ईएमआई (30-Year Ultra Long Home Loan)</h4>
+      <p class="variety-desc">अधिकतम 30 वर्ष (360 महीने) की अवधि में न्यूनतम मासिक भार की गणना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹65.0 Lakh</strong></span>
+        <span>दर: <strong>8.75%</strong></span>
+        <span>अवधि: <strong>30 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="नई कार लोन ईएमआई (new car loan emi) वाहन लोन नई गाड़ी की ऑन-रोड कीमत पर 7 वर्ष (84 महीने) की मानक कार लोन ईएमआई।"
+         onclick="loadPreset(800000, 8.85, 84, 'नई कार लोन ईएमआई (New Car Loan EMI)', 'नई गाड़ी की ऑन-रोड कीमत पर 7 वर्ष (84 महीने) की मानक कार लोन ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#16</span>
+      </div>
+      <h4 class="variety-title">नई कार लोन ईएमआई (New Car Loan EMI)</h4>
+      <p class="variety-desc">नई गाड़ी की ऑन-रोड कीमत पर 7 वर्ष (84 महीने) की मानक कार लोन ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹8.0 Lakh</strong></span>
+        <span>दर: <strong>8.85%</strong></span>
+        <span>अवधि: <strong>7 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="पुरानी / यूज्ड कार लोन ईएमआई (pre-owned / used car loan) वाहन लोन प्रमाणित सेकंड-हैंड कार खरीदने हेतु 5 वर्ष की अवधि पर किस्त गणना।"
+         onclick="loadPreset(450000, 12.5, 60, 'पुरानी / यूज्ड कार लोन ईएमआई (Pre-Owned / Used Car Loan)', 'प्रमाणित सेकंड-हैंड कार खरीदने हेतु 5 वर्ष की अवधि पर किस्त गणना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#17</span>
+      </div>
+      <h4 class="variety-title">पुरानी / यूज्ड कार लोन ईएमआई (Pre-Owned / Used Car Loan)</h4>
+      <p class="variety-desc">प्रमाणित सेकंड-हैंड कार खरीदने हेतु 5 वर्ष की अवधि पर किस्त गणना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹4.5 Lakh</strong></span>
+        <span>दर: <strong>12.5%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="इलेक्ट्रिक वाहन (ev) ग्रीन कार लोन ईएमआई (electric vehicle green loan) वाहन लोन पर्यावरण अनुकूल इलेक्ट्रिक कार पर 0.25% विशेष ग्रीन कंसेशन ब्याज दर।"
+         onclick="loadPreset(1400000, 8.6, 84, 'इलेक्ट्रिक वाहन (EV) ग्रीन कार लोन ईएमआई (Electric Vehicle Green Loan)', 'पर्यावरण अनुकूल इलेक्ट्रिक कार पर 0.25% विशेष ग्रीन कंसेशन ब्याज दर।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#18</span>
+      </div>
+      <h4 class="variety-title">इलेक्ट्रिक वाहन (EV) ग्रीन कार लोन ईएमआई (Electric Vehicle Green Loan)</h4>
+      <p class="variety-desc">पर्यावरण अनुकूल इलेक्ट्रिक कार पर 0.25% विशेष ग्रीन कंसेशन ब्याज दर।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹14.0 Lakh</strong></span>
+        <span>दर: <strong>8.6%</strong></span>
+        <span>अवधि: <strong>7 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="टू-व्हीलर व बाइक लोन ईएमआई (two-wheeler / motorcycle loan) वाहन लोन कम्यूटर मोटरसाइकिल व स्कूटी खरीद हेतु 3 वर्ष की आसान मासिक किस्त।"
+         onclick="loadPreset(120000, 11.5, 36, 'टू-व्हीलर व बाइक लोन ईएमआई (Two-Wheeler / Motorcycle Loan)', 'कम्यूटर मोटरसाइकिल व स्कूटी खरीद हेतु 3 वर्ष की आसान मासिक किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#19</span>
+      </div>
+      <h4 class="variety-title">टू-व्हीलर व बाइक लोन ईएमआई (Two-Wheeler / Motorcycle Loan)</h4>
+      <p class="variety-desc">कम्यूटर मोटरसाइकिल व स्कूटी खरीद हेतु 3 वर्ष की आसान मासिक किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹1.2 Lakh</strong></span>
+        <span>दर: <strong>11.5%</strong></span>
+        <span>अवधि: <strong>3 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="प्रीमियम सुपरबाइक लोन ईएमआई (superbike & cruiser loan) वाहन लोन रॉयल एनफील्ड, हार्ले या कावासाकी जैसी प्रीमियम स्पोर्ट्स बाइक्स हेतु किस्त।"
+         onclick="loadPreset(500000, 10.25, 48, 'प्रीमियम सुपरबाइक लोन ईएमआई (Superbike & Cruiser Loan)', 'रॉयल एनफील्ड, हार्ले या कावासाकी जैसी प्रीमियम स्पोर्ट्स बाइक्स हेतु किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#20</span>
+      </div>
+      <h4 class="variety-title">प्रीमियम सुपरबाइक लोन ईएमआई (Superbike & Cruiser Loan)</h4>
+      <p class="variety-desc">रॉयल एनफील्ड, हार्ले या कावासाकी जैसी प्रीमियम स्पोर्ट्स बाइक्स हेतु किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹5.0 Lakh</strong></span>
+        <span>दर: <strong>10.25%</strong></span>
+        <span>अवधि: <strong>4 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="कमर्शियल व्हीकल (ट्रक/बस) लोन ईएमआई (commercial vehicle truck/bus) वाहन लोन ट्रांसपोर्ट व्यवसाय हेतु भारी मालवाहक व यात्री बसों के लिए ऋण किस्त।"
+         onclick="loadPreset(2800000, 9.75, 60, 'कमर्शियल व्हीकल (ट्रक/बस) लोन ईएमआई (Commercial Vehicle Truck/Bus)', 'ट्रांसपोर्ट व्यवसाय हेतु भारी मालवाहक व यात्री बसों के लिए ऋण किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#21</span>
+      </div>
+      <h4 class="variety-title">कमर्शियल व्हीकल (ट्रक/बस) लोन ईएमआई (Commercial Vehicle Truck/Bus)</h4>
+      <p class="variety-desc">ट्रांसपोर्ट व्यवसाय हेतु भारी मालवाहक व यात्री बसों के लिए ऋण किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹28.0 Lakh</strong></span>
+        <span>दर: <strong>9.75%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="ट्रैक्टर व कृषि उपकरण लोन (tractor & farm equipment loan) वाहन लोन किसानों के लिए महिंद्रा/स्वराज ट्रैक्टर व कल्टीवेटर खरीद हेतु ईएमआई।"
+         onclick="loadPreset(650000, 10.5, 60, 'ट्रैक्टर व कृषि उपकरण लोन (Tractor & Farm Equipment Loan)', 'किसानों के लिए महिंद्रा/स्वराज ट्रैक्टर व कल्टीवेटर खरीद हेतु ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#22</span>
+      </div>
+      <h4 class="variety-title">ट्रैक्टर व कृषि उपकरण लोन (Tractor & Farm Equipment Loan)</h4>
+      <p class="variety-desc">किसानों के लिए महिंद्रा/स्वराज ट्रैक्टर व कल्टीवेटर खरीद हेतु ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹6.5 Lakh</strong></span>
+        <span>दर: <strong>10.5%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="ऑटो रिक्शा व 3-व्हीलर लोन (auto rickshaw & 3-wheeler loan) वाहन लोन सीएनजी व ई-रिक्शा चालकों के लिए स्वरोजगार वाहन ऋण किस्त।"
+         onclick="loadPreset(250000, 12, 48, 'ऑटो रिक्शा व 3-व्हीलर लोन (Auto Rickshaw & 3-Wheeler Loan)', 'सीएनजी व ई-रिक्शा चालकों के लिए स्वरोजगार वाहन ऋण किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#23</span>
+      </div>
+      <h4 class="variety-title">ऑटो रिक्शा व 3-व्हीलर लोन (Auto Rickshaw & 3-Wheeler Loan)</h4>
+      <p class="variety-desc">सीएनजी व ई-रिक्शा चालकों के लिए स्वरोजगार वाहन ऋण किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹2.5 Lakh</strong></span>
+        <span>दर: <strong>12%</strong></span>
+        <span>अवधि: <strong>4 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="लग्जरी कार बैलून लोन (luxury car balloon payment loan) वाहन लोन बीएमडब्ल्यू, मर्सिडीज या ऑडी हेतु अंतिम बड़ी बैलून किस्त के साथ सस्ती ईएमआई।"
+         onclick="loadPreset(4500000, 8.75, 60, 'लग्जरी कार बैलून लोन (Luxury Car Balloon Payment Loan)', 'बीएमडब्ल्यू, मर्सिडीज या ऑडी हेतु अंतिम बड़ी बैलून किस्त के साथ सस्ती ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#24</span>
+      </div>
+      <h4 class="variety-title">लग्जरी कार बैलून लोन (Luxury Car Balloon Payment Loan)</h4>
+      <p class="variety-desc">बीएमडब्ल्यू, मर्सिडीज या ऑडी हेतु अंतिम बड़ी बैलून किस्त के साथ सस्ती ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹45.0 Lakh</strong></span>
+        <span>दर: <strong>8.75%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="शून्य डाउन पेमेंट कार लोन (100% on-road funding car loan) वाहन लोन बिना किसी अग्रिम डाउन पेमेंट के पूरी ऑन-रोड कीमत की 7 वर्ष की ईएमआई।"
+         onclick="loadPreset(950000, 9.25, 84, 'शून्य डाउन पेमेंट कार लोन (100% On-Road Funding Car Loan)', 'बिना किसी अग्रिम डाउन पेमेंट के पूरी ऑन-रोड कीमत की 7 वर्ष की ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#25</span>
+      </div>
+      <h4 class="variety-title">शून्य डाउन पेमेंट कार लोन (100% On-Road Funding Car Loan)</h4>
+      <p class="variety-desc">बिना किसी अग्रिम डाउन पेमेंट के पूरी ऑन-रोड कीमत की 7 वर्ष की ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹9.5 Lakh</strong></span>
+        <span>दर: <strong>9.25%</strong></span>
+        <span>अवधि: <strong>7 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="कार लोन पार्ट-पेमेंट व प्री-क्लोजर (car loan part-payment calculator) वाहन लोन अवधि से पहले एकमुश्त भुगतान करने पर कुल ब्याज बचत की गणना।"
+         onclick="loadPreset(600000, 8.9, 48, 'कार लोन पार्ट-पेमेंट व प्री-क्लोजर (Car Loan Part-Payment Calculator)', 'अवधि से पहले एकमुश्त भुगतान करने पर कुल ब्याज बचत की गणना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#26</span>
+      </div>
+      <h4 class="variety-title">कार लोन पार्ट-पेमेंट व प्री-क्लोजर (Car Loan Part-Payment Calculator)</h4>
+      <p class="variety-desc">अवधि से पहले एकमुश्त भुगतान करने पर कुल ब्याज बचत की गणना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹6.0 Lakh</strong></span>
+        <span>दर: <strong>8.9%</strong></span>
+        <span>अवधि: <strong>4 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="vehicle" 
+         data-search="ओला/उबर टैक्सी फ्लीट लोन (cab / taxi commercial fleet loan) वाहन लोन टैक्सी ऑपरेटरों व फ्लीट मालिकों हेतु वाणिज्यिक वाहन ऋण की ईएमआई।"
+         onclick="loadPreset(700000, 11.25, 48, 'ओला/उबर टैक्सी फ्लीट लोन (Cab / Taxi Commercial Fleet Loan)', 'टैक्सी ऑपरेटरों व फ्लीट मालिकों हेतु वाणिज्यिक वाहन ऋण की ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">वाहन लोन</span>
+        <span class="variety-index-num">#27</span>
+      </div>
+      <h4 class="variety-title">ओला/उबर टैक्सी फ्लीट लोन (Cab / Taxi Commercial Fleet Loan)</h4>
+      <p class="variety-desc">टैक्सी ऑपरेटरों व फ्लीट मालिकों हेतु वाणिज्यिक वाहन ऋण की ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹7.0 Lakh</strong></span>
+        <span>दर: <strong>11.25%</strong></span>
+        <span>अवधि: <strong>4 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="वेतनभोगी कर्मचारी पर्सनल लोन (salaried employee personal loan) पर्सनल लोन प्राइवेट व कॉर्पोरेट कर्मचारियों के लिए 5 वर्ष की अनसिक्योर्ड व्यक्तिगत ऋण किस्त।"
+         onclick="loadPreset(500000, 10.75, 60, 'वेतनभोगी कर्मचारी पर्सनल लोन (Salaried Employee Personal Loan)', 'प्राइवेट व कॉर्पोरेट कर्मचारियों के लिए 5 वर्ष की अनसिक्योर्ड व्यक्तिगत ऋण किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#28</span>
+      </div>
+      <h4 class="variety-title">वेतनभोगी कर्मचारी पर्सनल लोन (Salaried Employee Personal Loan)</h4>
+      <p class="variety-desc">प्राइवेट व कॉर्पोरेट कर्मचारियों के लिए 5 वर्ष की अनसिक्योर्ड व्यक्तिगत ऋण किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹5.0 Lakh</strong></span>
+        <span>दर: <strong>10.75%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="स्व-रोजगार पेशेवर पर्सनल लोन (self-employed professional loan) पर्सनल लोन डॉक्टर, सीए व व्यापारियों के लिए आयकर रिटर्न के आधार पर पर्सनल लोन।"
+         onclick="loadPreset(750000, 12.25, 48, 'स्व-रोजगार पेशेवर पर्सनल लोन (Self-Employed Professional Loan)', 'डॉक्टर, सीए व व्यापारियों के लिए आयकर रिटर्न के आधार पर पर्सनल लोन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#29</span>
+      </div>
+      <h4 class="variety-title">स्व-रोजगार पेशेवर पर्सनल लोन (Self-Employed Professional Loan)</h4>
+      <p class="variety-desc">डॉक्टर, सीए व व्यापारियों के लिए आयकर रिटर्न के आधार पर पर्सनल लोन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹7.5 Lakh</strong></span>
+        <span>दर: <strong>12.25%</strong></span>
+        <span>अवधि: <strong>4 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="इंस्टेंट डिजिटल प्री-अप्रूव्ड लोन (instant pre-approved digital loan) पर्सनल लोन नेटबैंकिंग व मोबाइल ऐप द्वारा 10 सेकंड में स्वीकृत तुरंत पर्सनल लोन की ईएमआई।"
+         onclick="loadPreset(300000, 11.99, 36, 'इंस्टेंट डिजिटल प्री-अप्रूव्ड लोन (Instant Pre-Approved Digital Loan)', 'नेटबैंकिंग व मोबाइल ऐप द्वारा 10 सेकंड में स्वीकृत तुरंत पर्सनल लोन की ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#30</span>
+      </div>
+      <h4 class="variety-title">इंस्टेंट डिजिटल प्री-अप्रूव्ड लोन (Instant Pre-Approved Digital Loan)</h4>
+      <p class="variety-desc">नेटबैंकिंग व मोबाइल ऐप द्वारा 10 सेकंड में स्वीकृत तुरंत पर्सनल लोन की ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹3.0 Lakh</strong></span>
+        <span>दर: <strong>11.99%</strong></span>
+        <span>अवधि: <strong>3 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="विवाह व शादी खर्च लोन (wedding & marriage personal loan) पर्सनल लोन शादी-समारोह, आभूषण व कैटरिंग खर्चों के लिए 4 वर्ष की आसान किस्त।"
+         onclick="loadPreset(600000, 11.5, 48, 'विवाह व शादी खर्च लोन (Wedding & Marriage Personal Loan)', 'शादी-समारोह, आभूषण व कैटरिंग खर्चों के लिए 4 वर्ष की आसान किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#31</span>
+      </div>
+      <h4 class="variety-title">विवाह व शादी खर्च लोन (Wedding & Marriage Personal Loan)</h4>
+      <p class="variety-desc">शादी-समारोह, आभूषण व कैटरिंग खर्चों के लिए 4 वर्ष की आसान किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹6.0 Lakh</strong></span>
+        <span>दर: <strong>11.5%</strong></span>
+        <span>अवधि: <strong>4 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="आपातकालीन चिकित्सा लोन (medical emergency healthcare loan) पर्सनल लोन अस्पताल भर्ती व सर्जरी के अप्रत्याशित खर्चों के तत्काल प्रबंधन हेतु ईएमआई।"
+         onclick="loadPreset(400000, 10.99, 36, 'आपातकालीन चिकित्सा लोन (Medical Emergency Healthcare Loan)', 'अस्पताल भर्ती व सर्जरी के अप्रत्याशित खर्चों के तत्काल प्रबंधन हेतु ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#32</span>
+      </div>
+      <h4 class="variety-title">आपातकालीन चिकित्सा लोन (Medical Emergency Healthcare Loan)</h4>
+      <p class="variety-desc">अस्पताल भर्ती व सर्जरी के अप्रत्याशित खर्चों के तत्काल प्रबंधन हेतु ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹4.0 Lakh</strong></span>
+        <span>दर: <strong>10.99%</strong></span>
+        <span>अवधि: <strong>3 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="यात्रा व वेकेशन हॉलिडे लोन (travel & vacation holiday loan) पर्सनल लोन घरेलू व विदेश भ्रमण के हवाई टिकट व होटल पैकेज हेतु 2 वर्ष की किस्त।"
+         onclick="loadPreset(250000, 12.75, 24, 'यात्रा व वेकेशन हॉलिडे लोन (Travel & Vacation Holiday Loan)', 'घरेलू व विदेश भ्रमण के हवाई टिकट व होटल पैकेज हेतु 2 वर्ष की किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#33</span>
+      </div>
+      <h4 class="variety-title">यात्रा व वेकेशन हॉलिडे लोन (Travel & Vacation Holiday Loan)</h4>
+      <p class="variety-desc">घरेलू व विदेश भ्रमण के हवाई टिकट व होटल पैकेज हेतु 2 वर्ष की किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹2.5 Lakh</strong></span>
+        <span>दर: <strong>12.75%</strong></span>
+        <span>अवधि: <strong>2 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="होम फर्निशिंग व इंटीरियर लोन (home furnishing & interior loan) पर्सनल लोन नए फ्लैट के मॉड्यूलर किचन, सोफा व इलेक्ट्रॉनिक्स सामान खरीदने हेतु लोन।"
+         onclick="loadPreset(350000, 11.75, 36, 'होम फर्निशिंग व इंटीरियर लोन (Home Furnishing & Interior Loan)', 'नए फ्लैट के मॉड्यूलर किचन, सोफा व इलेक्ट्रॉनिक्स सामान खरीदने हेतु लोन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#34</span>
+      </div>
+      <h4 class="variety-title">होम फर्निशिंग व इंटीरियर लोन (Home Furnishing & Interior Loan)</h4>
+      <p class="variety-desc">नए फ्लैट के मॉड्यूलर किचन, सोफा व इलेक्ट्रॉनिक्स सामान खरीदने हेतु लोन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹3.5 Lakh</strong></span>
+        <span>दर: <strong>11.75%</strong></span>
+        <span>अवधि: <strong>3 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="कर्ज एकीकरण लोन (debt consolidation personal loan) पर्सनल लोन क्रेडिट कार्ड के महंगे बकायों को एक सस्ते एकल पर्सनल लोन में बदलने की ईएमआई।"
+         onclick="loadPreset(800000, 10.5, 60, 'कर्ज एकीकरण लोन (Debt Consolidation Personal Loan)', 'क्रेडिट कार्ड के महंगे बकायों को एक सस्ते एकल पर्सनल लोन में बदलने की ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#35</span>
+      </div>
+      <h4 class="variety-title">कर्ज एकीकरण लोन (Debt Consolidation Personal Loan)</h4>
+      <p class="variety-desc">क्रेडिट कार्ड के महंगे बकायों को एक सस्ते एकल पर्सनल लोन में बदलने की ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹8.0 Lakh</strong></span>
+        <span>दर: <strong>10.5%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="सरकारी कर्मचारी विशेष पर्सनल लोन (government employee concession) पर्सनल लोन केंद्र व राज्य सरकार के कर्मचारियों को 6 वर्ष तक की लंबी अवधि का रियायती लोन।"
+         onclick="loadPreset(700000, 10.25, 72, 'सरकारी कर्मचारी विशेष पर्सनल लोन (Government Employee Concession)', 'केंद्र व राज्य सरकार के कर्मचारियों को 6 वर्ष तक की लंबी अवधि का रियायती लोन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#36</span>
+      </div>
+      <h4 class="variety-title">सरकारी कर्मचारी विशेष पर्सनल लोन (Government Employee Concession)</h4>
+      <p class="variety-desc">केंद्र व राज्य सरकार के कर्मचारियों को 6 वर्ष तक की लंबी अवधि का रियायती लोन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹7.0 Lakh</strong></span>
+        <span>दर: <strong>10.25%</strong></span>
+        <span>अवधि: <strong>6 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="पेंशनभोगी वरिष्ठ नागरिक लोन (pensioners personal loan emi) पर्सनल लोन पेंशन खाते के आधार पर 75 वर्ष तक के वरिष्ठ नागरिकों हेतु कम ब्याज ईएमआई।"
+         onclick="loadPreset(300000, 10.9, 48, 'पेंशनभोगी वरिष्ठ नागरिक लोन (Pensioners Personal Loan EMI)', 'पेंशन खाते के आधार पर 75 वर्ष तक के वरिष्ठ नागरिकों हेतु कम ब्याज ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#37</span>
+      </div>
+      <h4 class="variety-title">पेंशनभोगी वरिष्ठ नागरिक लोन (Pensioners Personal Loan EMI)</h4>
+      <p class="variety-desc">पेंशन खाते के आधार पर 75 वर्ष तक के वरिष्ठ नागरिकों हेतु कम ब्याज ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹3.0 Lakh</strong></span>
+        <span>दर: <strong>10.9%</strong></span>
+        <span>अवधि: <strong>4 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="स्मॉल टिकट माइक्रो-पर्सनल लोन (small ticket nano personal loan) पर्सनल लोन 1 वर्ष की छोटी अवधि के लिए तत्काल ₹50,000 की डिजिटल आपातकालीन किस्त।"
+         onclick="loadPreset(50000, 14, 12, 'स्मॉल टिकट माइक्रो-पर्सनल लोन (Small Ticket Nano Personal Loan)', '1 वर्ष की छोटी अवधि के लिए तत्काल ₹50,000 की डिजिटल आपातकालीन किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#38</span>
+      </div>
+      <h4 class="variety-title">स्मॉल टिकट माइक्रो-पर्सनल लोन (Small Ticket Nano Personal Loan)</h4>
+      <p class="variety-desc">1 वर्ष की छोटी अवधि के लिए तत्काल ₹50,000 की डिजिटल आपातकालीन किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹50,000</strong></span>
+        <span>दर: <strong>14%</strong></span>
+        <span>अवधि: <strong>1 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="पीयर-टू-पीयर (p2p) लेंडिंग लोन (peer-to-peer fintech loan) पर्सनल लोन फिनटेक एनबीएफसी-पी2पी प्लेटफॉर्म पर क्रेडिट स्कोर के आधार पर ऋण किस्त।"
+         onclick="loadPreset(150000, 13.5, 18, 'पीयर-टू-पीयर (P2P) लेंडिंग लोन (Peer-to-Peer FinTech Loan)', 'फिनटेक एनबीएफसी-पी2पी प्लेटफॉर्म पर क्रेडिट स्कोर के आधार पर ऋण किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#39</span>
+      </div>
+      <h4 class="variety-title">पीयर-टू-पीयर (P2P) लेंडिंग लोन (Peer-to-Peer FinTech Loan)</h4>
+      <p class="variety-desc">फिनटेक एनबीएफसी-पी2पी प्लेटफॉर्म पर क्रेडिट स्कोर के आधार पर ऋण किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹1.5 Lakh</strong></span>
+        <span>दर: <strong>13.5%</strong></span>
+        <span>अवधि: <strong>2 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="पर्सनल लोन ओवरड्राफ्ट ड्रॉपलाइन (personal overdraft drop-line facility) पर्सनल लोन जितनी राशि उपयोग करें केवल उतने दिन का ब्याज चुकाने की ड्रॉपलाइन गणना।"
+         onclick="loadPreset(500000, 11.25, 36, 'पर्सनल लोन ओवरड्राफ्ट ड्रॉपलाइन (Personal Overdraft Drop-line Facility)', 'जितनी राशि उपयोग करें केवल उतने दिन का ब्याज चुकाने की ड्रॉपलाइन गणना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#40</span>
+      </div>
+      <h4 class="variety-title">पर्सनल लोन ओवरड्राफ्ट ड्रॉपलाइन (Personal Overdraft Drop-line Facility)</h4>
+      <p class="variety-desc">जितनी राशि उपयोग करें केवल उतने दिन का ब्याज चुकाने की ड्रॉपलाइन गणना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹5.0 Lakh</strong></span>
+        <span>दर: <strong>11.25%</strong></span>
+        <span>अवधि: <strong>3 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="personal" 
+         data-search="त्योहार ऑफर जीरो प्रोसेसिंग पर्सनल लोन (festive offer zero processing) पर्सनल लोन दिवाली/नवरात्रि में बिना किसी प्रोसेसिंग फीस के न्यूनतम ब्याज दर पर ईएमआई।"
+         onclick="loadPreset(450000, 10.65, 48, 'त्योहार ऑफर जीरो प्रोसेसिंग पर्सनल लोन (Festive Offer Zero Processing)', 'दिवाली/नवरात्रि में बिना किसी प्रोसेसिंग फीस के न्यूनतम ब्याज दर पर ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">पर्सनल लोन</span>
+        <span class="variety-index-num">#41</span>
+      </div>
+      <h4 class="variety-title">त्योहार ऑफर जीरो प्रोसेसिंग पर्सनल लोन (Festive Offer Zero Processing)</h4>
+      <p class="variety-desc">दिवाली/नवरात्रि में बिना किसी प्रोसेसिंग फीस के न्यूनतम ब्याज दर पर ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹4.5 Lakh</strong></span>
+        <span>दर: <strong>10.65%</strong></span>
+        <span>अवधि: <strong>4 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="education" 
+         data-search="घरेलू उच्च शिक्षा लोन ईएमआई (domestic higher education vidya lakshmi) शिक्षा लोन भारत के इंजीनियरिंग, मैनेजमेंट व यूनिवर्सिटी कोर्स हेतु 10 वर्ष की ईएमआई।"
+         onclick="loadPreset(750000, 8.75, 120, 'घरेलू उच्च शिक्षा लोन ईएमआई (Domestic Higher Education Vidya Lakshmi)', 'भारत के इंजीनियरिंग, मैनेजमेंट व यूनिवर्सिटी कोर्स हेतु 10 वर्ष की ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">शिक्षा लोन</span>
+        <span class="variety-index-num">#42</span>
+      </div>
+      <h4 class="variety-title">घरेलू उच्च शिक्षा लोन ईएमआई (Domestic Higher Education Vidya Lakshmi)</h4>
+      <p class="variety-desc">भारत के इंजीनियरिंग, मैनेजमेंट व यूनिवर्सिटी कोर्स हेतु 10 वर्ष की ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹7.5 Lakh</strong></span>
+        <span>दर: <strong>8.75%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="education" 
+         data-search="विदेश अध्ययन ओवरसीज शिक्षा लोन (study abroad overseas education) शिक्षा लोन अमेरिका, यूके, कनाडा या जर्मनी में एमएस/एमबीए हेतु 15 वर्ष की अवधि का लोन।"
+         onclick="loadPreset(3500000, 9.5, 180, 'विदेश अध्ययन ओवरसीज शिक्षा लोन (Study Abroad Overseas Education)', 'अमेरिका, यूके, कनाडा या जर्मनी में एमएस/एमबीए हेतु 15 वर्ष की अवधि का लोन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">शिक्षा लोन</span>
+        <span class="variety-index-num">#43</span>
+      </div>
+      <h4 class="variety-title">विदेश अध्ययन ओवरसीज शिक्षा लोन (Study Abroad Overseas Education)</h4>
+      <p class="variety-desc">अमेरिका, यूके, कनाडा या जर्मनी में एमएस/एमबीए हेतु 15 वर्ष की अवधि का लोन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹35.0 Lakh</strong></span>
+        <span>दर: <strong>9.5%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="education" 
+         data-search="एमबीबीएस व मेडिकल डिग्री लोन (medical / mbbs course loan emi) शिक्षा लोन मेडिकल कॉलेज की ट्यूशन फीस व हॉस्टल खर्च हेतु लंबी अवधि की किस्त।"
+         onclick="loadPreset(4000000, 8.95, 180, 'एमबीबीएस व मेडिकल डिग्री लोन (Medical / MBBS Course Loan EMI)', 'मेडिकल कॉलेज की ट्यूशन फीस व हॉस्टल खर्च हेतु लंबी अवधि की किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">शिक्षा लोन</span>
+        <span class="variety-index-num">#44</span>
+      </div>
+      <h4 class="variety-title">एमबीबीएस व मेडिकल डिग्री लोन (Medical / MBBS Course Loan EMI)</h4>
+      <p class="variety-desc">मेडिकल कॉलेज की ट्यूशन फीस व हॉस्टल खर्च हेतु लंबी अवधि की किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹40.0 Lakh</strong></span>
+        <span>दर: <strong>8.95%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="education" 
+         data-search="बी.टेक व तकनीकी शिक्षा लोन (b.tech / engineering degree loan) शिक्षा लोन आईआईटी, एनआईटी व निजी इंजीनियरिंग कॉलेजों के लिए 10 वर्ष की ईएमआई।"
+         onclick="loadPreset(1000000, 9.15, 120, 'बी.टेक व तकनीकी शिक्षा लोन (B.Tech / Engineering Degree Loan)', 'आईआईटी, एनआईटी व निजी इंजीनियरिंग कॉलेजों के लिए 10 वर्ष की ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">शिक्षा लोन</span>
+        <span class="variety-index-num">#45</span>
+      </div>
+      <h4 class="variety-title">बी.टेक व तकनीकी शिक्षा लोन (B.Tech / Engineering Degree Loan)</h4>
+      <p class="variety-desc">आईआईटी, एनआईटी व निजी इंजीनियरिंग कॉलेजों के लिए 10 वर्ष की ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹10.0 Lakh</strong></span>
+        <span>दर: <strong>9.15%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="education" 
+         data-search="आईआईएम व प्रीमियर एमबीए लोन (iim & premier b-school mba loan) शिक्षा लोन देश के शीर्ष 20 प्रबंधन संस्थानों में बिना किसी बंधक (collateral-free) के लोन।"
+         onclick="loadPreset(2500000, 8.4, 144, 'आईआईएम व प्रीमियर एमबीए लोन (IIM & Premier B-School MBA Loan)', 'देश के शीर्ष 20 प्रबंधन संस्थानों में बिना किसी बंधक (Collateral-Free) के लोन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">शिक्षा लोन</span>
+        <span class="variety-index-num">#46</span>
+      </div>
+      <h4 class="variety-title">आईआईएम व प्रीमियर एमबीए लोन (IIM & Premier B-School MBA Loan)</h4>
+      <p class="variety-desc">देश के शीर्ष 20 प्रबंधन संस्थानों में बिना किसी बंधक (Collateral-Free) के लोन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹25.0 Lakh</strong></span>
+        <span>दर: <strong>8.4%</strong></span>
+        <span>अवधि: <strong>12 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="education" 
+         data-search="कौशल विकास व वोकेशनल लोन (skill development & vocational loan) शिक्षा लोन पायलट ट्रेनिंग, मरीन या डिजाइनिंग डिप्लोमा कोर्स हेतु 4 वर्ष की किस्त।"
+         onclick="loadPreset(200000, 9.85, 48, 'कौशल विकास व वोकेशनल लोन (Skill Development & Vocational Loan)', 'पायलट ट्रेनिंग, मरीन या डिजाइनिंग डिप्लोमा कोर्स हेतु 4 वर्ष की किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">शिक्षा लोन</span>
+        <span class="variety-index-num">#47</span>
+      </div>
+      <h4 class="variety-title">कौशल विकास व वोकेशनल लोन (Skill Development & Vocational Loan)</h4>
+      <p class="variety-desc">पायलट ट्रेनिंग, मरीन या डिजाइनिंग डिप्लोमा कोर्स हेतु 4 वर्ष की किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹2.0 Lakh</strong></span>
+        <span>दर: <strong>9.85%</strong></span>
+        <span>अवधि: <strong>4 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="education" 
+         data-search="केंद्रीय ब्याज सब्सिडी शिक्षा लोन (csis subsidy education loan) शिक्षा लोन आर्थिक रूप से कमजोर वर्ग (ईडब्ल्यूएस) के छात्रों के लिए मॉरेटोरियम ब्याज माफी।"
+         onclick="loadPreset(600000, 8.65, 120, 'केंद्रीय ब्याज सब्सिडी शिक्षा लोन (CSIS Subsidy Education Loan)', 'आर्थिक रूप से कमजोर वर्ग (ईडब्ल्यूएस) के छात्रों के लिए मॉरेटोरियम ब्याज माफी।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">शिक्षा लोन</span>
+        <span class="variety-index-num">#48</span>
+      </div>
+      <h4 class="variety-title">केंद्रीय ब्याज सब्सिडी शिक्षा लोन (CSIS Subsidy Education Loan)</h4>
+      <p class="variety-desc">आर्थिक रूप से कमजोर वर्ग (ईडब्ल्यूएस) के छात्रों के लिए मॉरेटोरियम ब्याज माफी।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹6.0 Lakh</strong></span>
+        <span>दर: <strong>8.65%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="education" 
+         data-search="मॉरेटोरियम पीरियड पुनर्भुगतान ईएमआई (course + moratorium repayment) शिक्षा लोन पढ़ाई पूरी होने + 1 वर्ष नौकरी तलाश अवधि के बाद शुरू होने वाली वास्तविक किस्त।"
+         onclick="loadPreset(1200000, 9.25, 120, 'मॉरेटोरियम पीरियड पुनर्भुगतान ईएमआई (Course + Moratorium Repayment)', 'पढ़ाई पूरी होने + 1 वर्ष नौकरी तलाश अवधि के बाद शुरू होने वाली वास्तविक किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">शिक्षा लोन</span>
+        <span class="variety-index-num">#49</span>
+      </div>
+      <h4 class="variety-title">मॉरेटोरियम पीरियड पुनर्भुगतान ईएमआई (Course + Moratorium Repayment)</h4>
+      <p class="variety-desc">पढ़ाई पूरी होने + 1 वर्ष नौकरी तलाश अवधि के बाद शुरू होने वाली वास्तविक किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹12.0 Lakh</strong></span>
+        <span>दर: <strong>9.25%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="education" 
+         data-search="₹7.5 लाख तक बिना गारंटी शिक्षा लोन (₹7.5l collateral-free vidya lakshmi) शिक्षा लोन बिना किसी जमीन या मकान गिरवी रखे सीएजी/क्रेडिट गारंटी फंड के तहत ऋण।"
+         onclick="loadPreset(750000, 9, 120, '₹7.5 लाख तक बिना गारंटी शिक्षा लोन (₹7.5L Collateral-Free Vidya Lakshmi)', 'बिना किसी जमीन या मकान गिरवी रखे सीएजी/क्रेडिट गारंटी फंड के तहत ऋण।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">शिक्षा लोन</span>
+        <span class="variety-index-num">#50</span>
+      </div>
+      <h4 class="variety-title">₹7.5 लाख तक बिना गारंटी शिक्षा लोन (₹7.5L Collateral-Free Vidya Lakshmi)</h4>
+      <p class="variety-desc">बिना किसी जमीन या मकान गिरवी रखे सीएजी/क्रेडिट गारंटी फंड के तहत ऋण।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹7.5 Lakh</strong></span>
+        <span>दर: <strong>9%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="education" 
+         data-search="छात्रा विशेष 0.5% ब्याज छूट लोन (girl student 0.5% concession loan) शिक्षा लोन बैंकों द्वारा बालिकाओं की उच्च शिक्षा हेतु 0.50% की विशेष ब्याज छूट के साथ ईएमआई।"
+         onclick="loadPreset(1500000, 8.7, 120, 'छात्रा विशेष 0.5% ब्याज छूट लोन (Girl Student 0.5% Concession Loan)', 'बैंकों द्वारा बालिकाओं की उच्च शिक्षा हेतु 0.50% की विशेष ब्याज छूट के साथ ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">शिक्षा लोन</span>
+        <span class="variety-index-num">#51</span>
+      </div>
+      <h4 class="variety-title">छात्रा विशेष 0.5% ब्याज छूट लोन (Girl Student 0.5% Concession Loan)</h4>
+      <p class="variety-desc">बैंकों द्वारा बालिकाओं की उच्च शिक्षा हेतु 0.50% की विशेष ब्याज छूट के साथ ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹15.0 Lakh</strong></span>
+        <span>दर: <strong>8.7%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="पीएम मुद्रा शिशु लोन ईएमआई (pm mudra shishu - up to ₹50,000) व्यापार / msme छोटे फेरीवालों व दुकानदारों हेतु 3 वर्ष की आसान किस्त।"
+         onclick="loadPreset(50000, 9.5, 36, 'पीएम मुद्रा शिशु लोन ईएमआई (PM Mudra Shishu - up to ₹50,000)', 'छोटे फेरीवालों व दुकानदारों हेतु 3 वर्ष की आसान किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#52</span>
+      </div>
+      <h4 class="variety-title">पीएम मुद्रा शिशु लोन ईएमआई (PM Mudra Shishu - up to ₹50,000)</h4>
+      <p class="variety-desc">छोटे फेरीवालों व दुकानदारों हेतु 3 वर्ष की आसान किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹50,000</strong></span>
+        <span>दर: <strong>9.5%</strong></span>
+        <span>अवधि: <strong>3 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="पीएम मुद्रा किशोर लोन ईएमआई (pm mudra kishore - ₹50k to ₹5l) व्यापार / msme दुकान विस्तार व इन्वेंटरी स्टॉक हेतु 4 वर्ष की बिना गारंटी ईएमआई।"
+         onclick="loadPreset(400000, 10.25, 48, 'पीएम मुद्रा किशोर लोन ईएमआई (PM Mudra Kishore - ₹50K to ₹5L)', 'दुकान विस्तार व इन्वेंटरी स्टॉक हेतु 4 वर्ष की बिना गारंटी ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#53</span>
+      </div>
+      <h4 class="variety-title">पीएम मुद्रा किशोर लोन ईएमआई (PM Mudra Kishore - ₹50K to ₹5L)</h4>
+      <p class="variety-desc">दुकान विस्तार व इन्वेंटरी स्टॉक हेतु 4 वर्ष की बिना गारंटी ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹4.0 Lakh</strong></span>
+        <span>दर: <strong>10.25%</strong></span>
+        <span>अवधि: <strong>4 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="पीएम मुद्रा तरुण लोन ईएमआई (pm mudra tarun - ₹5l to ₹10l) व्यापार / msme स्थापित कारोबारियों के लिए कार्यशील पूंजी व नए उपकरणों हेतु 5 वर्ष की किस्त।"
+         onclick="loadPreset(900000, 10.75, 60, 'पीएम मुद्रा तरुण लोन ईएमआई (PM Mudra Tarun - ₹5L to ₹10L)', 'स्थापित कारोबारियों के लिए कार्यशील पूंजी व नए उपकरणों हेतु 5 वर्ष की किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#54</span>
+      </div>
+      <h4 class="variety-title">पीएम मुद्रा तरुण लोन ईएमआई (PM Mudra Tarun - ₹5L to ₹10L)</h4>
+      <p class="variety-desc">स्थापित कारोबारियों के लिए कार्यशील पूंजी व नए उपकरणों हेतु 5 वर्ष की किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹9.0 Lakh</strong></span>
+        <span>दर: <strong>10.75%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="स्टैंड-अप इंडिया लोन ईएमआई (stand-up india sc/st & women) व्यापार / msme महिला व अनुसूचित जाति/जनजाति उद्यमियों के ग्रीनफील्ड प्रोजेक्ट हेतु ऋण।"
+         onclick="loadPreset(4500000, 9.25, 84, 'स्टैंड-अप इंडिया लोन ईएमआई (Stand-Up India SC/ST & Women)', 'महिला व अनुसूचित जाति/जनजाति उद्यमियों के ग्रीनफील्ड प्रोजेक्ट हेतु ऋण।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#55</span>
+      </div>
+      <h4 class="variety-title">स्टैंड-अप इंडिया लोन ईएमआई (Stand-Up India SC/ST & Women)</h4>
+      <p class="variety-desc">महिला व अनुसूचित जाति/जनजाति उद्यमियों के ग्रीनफील्ड प्रोजेक्ट हेतु ऋण।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹45.0 Lakh</strong></span>
+        <span>दर: <strong>9.25%</strong></span>
+        <span>अवधि: <strong>7 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="सीजीटीएमएसई कोलैटरल-फ्री लोन (cgtmse collateral-free up to ₹5 cr) व्यापार / msme सरकारी क्रेडिट गारंटी ट्रस्ट योजना के तहत मध्यम विनिर्माण इकाई हेतु ईएमआई।"
+         onclick="loadPreset(5000000, 9.85, 84, 'सीजीटीएमएसई कोलैटरल-फ्री लोन (CGTMSE Collateral-Free up to ₹5 Cr)', 'सरकारी क्रेडिट गारंटी ट्रस्ट योजना के तहत मध्यम विनिर्माण इकाई हेतु ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#56</span>
+      </div>
+      <h4 class="variety-title">सीजीटीएमएसई कोलैटरल-फ्री लोन (CGTMSE Collateral-Free up to ₹5 Cr)</h4>
+      <p class="variety-desc">सरकारी क्रेडिट गारंटी ट्रस्ट योजना के तहत मध्यम विनिर्माण इकाई हेतु ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹50.0 Lakh</strong></span>
+        <span>दर: <strong>9.85%</strong></span>
+        <span>अवधि: <strong>7 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="कार्यशील पूंजी टर्म लोन (working capital business term loan) व्यापार / msme कच्चा माल खरीद, वेतन भुगतान व दैनिक परिचालन के लिए 5 वर्ष की ईएमआई।"
+         onclick="loadPreset(2500000, 10.5, 60, 'कार्यशील पूंजी टर्म लोन (Working Capital Business Term Loan)', 'कच्चा माल खरीद, वेतन भुगतान व दैनिक परिचालन के लिए 5 वर्ष की ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#57</span>
+      </div>
+      <h4 class="variety-title">कार्यशील पूंजी टर्म लोन (Working Capital Business Term Loan)</h4>
+      <p class="variety-desc">कच्चा माल खरीद, वेतन भुगतान व दैनिक परिचालन के लिए 5 वर्ष की ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹25.0 Lakh</strong></span>
+        <span>दर: <strong>10.5%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="मशीनरी व उपकरण खरीद लोन (machinery & equipment finance) व्यापार / msme सीएनसी मशीन, प्रिंटिंग प्रेस व कारखाने के टूल्स खरीदने हेतु ऋण किस्त।"
+         onclick="loadPreset(3000000, 9.75, 60, 'मशीनरी व उपकरण खरीद लोन (Machinery & Equipment Finance)', 'सीएनसी मशीन, प्रिंटिंग प्रेस व कारखाने के टूल्स खरीदने हेतु ऋण किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#58</span>
+      </div>
+      <h4 class="variety-title">मशीनरी व उपकरण खरीद लोन (Machinery & Equipment Finance)</h4>
+      <p class="variety-desc">सीएनसी मशीन, प्रिंटिंग प्रेस व कारखाने के टूल्स खरीदने हेतु ऋण किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹30.0 Lakh</strong></span>
+        <span>दर: <strong>9.75%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="डॉक्टर क्लिनिक व डायग्नोस्टिक सेटअप लोन (doctor clinic setup loan) व्यापार / msme डॉक्टरों द्वारा नया क्लिनिक, अल्ट्रासाउंड या लैब उपकरण लगाने हेतु किस्त।"
+         onclick="loadPreset(3500000, 9.4, 72, 'डॉक्टर क्लिनिक व डायग्नोस्टिक सेटअप लोन (Doctor Clinic Setup Loan)', 'डॉक्टरों द्वारा नया क्लिनिक, अल्ट्रासाउंड या लैब उपकरण लगाने हेतु किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#59</span>
+      </div>
+      <h4 class="variety-title">डॉक्टर क्लिनिक व डायग्नोस्टिक सेटअप लोन (Doctor Clinic Setup Loan)</h4>
+      <p class="variety-desc">डॉक्टरों द्वारा नया क्लिनिक, अल्ट्रासाउंड या लैब उपकरण लगाने हेतु किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹35.0 Lakh</strong></span>
+        <span>दर: <strong>9.4%</strong></span>
+        <span>अवधि: <strong>6 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="दुकानदार मर्चेंट पीओएस स्वाइप लोन (pos swipe / qr merchant loan) व्यापार / msme डेली क्यूआर कोड और कार्ड स्वाइप मशीन टर्नओवर के आधार पर ऋण।"
+         onclick="loadPreset(300000, 13.5, 24, 'दुकानदार मर्चेंट पीओएस स्वाइप लोन (POS Swipe / QR Merchant Loan)', 'डेली क्यूआर कोड और कार्ड स्वाइप मशीन टर्नओवर के आधार पर ऋण।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#60</span>
+      </div>
+      <h4 class="variety-title">दुकानदार मर्चेंट पीओएस स्वाइप लोन (POS Swipe / QR Merchant Loan)</h4>
+      <p class="variety-desc">डेली क्यूआर कोड और कार्ड स्वाइप मशीन टर्नओवर के आधार पर ऋण।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹3.0 Lakh</strong></span>
+        <span>दर: <strong>13.5%</strong></span>
+        <span>अवधि: <strong>2 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="इनवॉइस डिस्काउंटिंग बिल फाइनेंसिंग (invoice / bill discounting) व्यापार / msme बड़ी कंपनियों को जारी बिलों के बदले 90-180 दिन के लिए कार्यशील नकदी।"
+         onclick="loadPreset(1500000, 9.9, 12, 'इनवॉइस डिस्काउंटिंग बिल फाइनेंसिंग (Invoice / Bill Discounting)', 'बड़ी कंपनियों को जारी बिलों के बदले 90-180 दिन के लिए कार्यशील नकदी।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#61</span>
+      </div>
+      <h4 class="variety-title">इनवॉइस डिस्काउंटिंग बिल फाइनेंसिंग (Invoice / Bill Discounting)</h4>
+      <p class="variety-desc">बड़ी कंपनियों को जारी बिलों के बदले 90-180 दिन के लिए कार्यशील नकदी।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹15.0 Lakh</strong></span>
+        <span>दर: <strong>9.9%</strong></span>
+        <span>अवधि: <strong>1 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="स्टार्टअप स्केल-अप कैपिटल लोन (startup growth term loan) व्यापार / msme डीपीआईआईटी पंजीकृत नए इनोवेटिव स्टार्टअप्स हेतु विस्तार पूंजी ईएमआई।"
+         onclick="loadPreset(7500000, 10.5, 60, 'स्टार्टअप स्केल-अप कैपिटल लोन (Startup Growth Term Loan)', 'डीपीआईआईटी पंजीकृत नए इनोवेटिव स्टार्टअप्स हेतु विस्तार पूंजी ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#62</span>
+      </div>
+      <h4 class="variety-title">स्टार्टअप स्केल-अप कैपिटल लोन (Startup Growth Term Loan)</h4>
+      <p class="variety-desc">डीपीआईआईटी पंजीकृत नए इनोवेटिव स्टार्टअप्स हेतु विस्तार पूंजी ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹75.0 Lakh</strong></span>
+        <span>दर: <strong>10.5%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="गोदाम व कोल्ड स्टोरेज निर्माण लोन (warehouse & cold storage loan) व्यापार / msme कृषि उत्पादों के भंडारण हेतु 10 वर्ष की लंबी अवधि का अवसंरचना लोन।"
+         onclick="loadPreset(6000000, 9.15, 120, 'गोदाम व कोल्ड स्टोरेज निर्माण लोन (Warehouse & Cold Storage Loan)', 'कृषि उत्पादों के भंडारण हेतु 10 वर्ष की लंबी अवधि का अवसंरचना लोन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#63</span>
+      </div>
+      <h4 class="variety-title">गोदाम व कोल्ड स्टोरेज निर्माण लोन (Warehouse & Cold Storage Loan)</h4>
+      <p class="variety-desc">कृषि उत्पादों के भंडारण हेतु 10 वर्ष की लंबी अवधि का अवसंरचना लोन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹60.0 Lakh</strong></span>
+        <span>दर: <strong>9.15%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="निर्यात पूर्व व पश्चात पैकिंग क्रेडिट (export pre-shipment packing credit) व्यापार / msme विदेशी खरीदारों के आर्डर पूरे करने हेतु निर्यातकों के लिए रियायती ऋण।"
+         onclick="loadPreset(4000000, 8.85, 12, 'निर्यात पूर्व व पश्चात पैकिंग क्रेडिट (Export Pre-Shipment Packing Credit)', 'विदेशी खरीदारों के आर्डर पूरे करने हेतु निर्यातकों के लिए रियायती ऋण।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#64</span>
+      </div>
+      <h4 class="variety-title">निर्यात पूर्व व पश्चात पैकिंग क्रेडिट (Export Pre-Shipment Packing Credit)</h4>
+      <p class="variety-desc">विदेशी खरीदारों के आर्डर पूरे करने हेतु निर्यातकों के लिए रियायती ऋण।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹40.0 Lakh</strong></span>
+        <span>दर: <strong>8.85%</strong></span>
+        <span>अवधि: <strong>1 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="business" 
+         data-search="फ्रैंचाइज़ी बिजनेस सेटअप लोन (franchise business setup loan) व्यापार / msme लोकप्रिय ब्रांड्स (फूड, रिटेल, सैलून) की फ्रेंचाइजी खोलने हेतु पूंजी।"
+         onclick="loadPreset(2000000, 11, 48, 'फ्रैंचाइज़ी बिजनेस सेटअप लोन (Franchise Business Setup Loan)', 'लोकप्रिय ब्रांड्स (फूड, रिटेल, सैलून) की फ्रेंचाइजी खोलने हेतु पूंजी।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">व्यापार / MSME</span>
+        <span class="variety-index-num">#65</span>
+      </div>
+      <h4 class="variety-title">फ्रैंचाइज़ी बिजनेस सेटअप लोन (Franchise Business Setup Loan)</h4>
+      <p class="variety-desc">लोकप्रिय ब्रांड्स (फूड, रिटेल, सैलून) की फ्रेंचाइजी खोलने हेतु पूंजी।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹20.0 Lakh</strong></span>
+        <span>दर: <strong>11%</strong></span>
+        <span>अवधि: <strong>4 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="collateral" 
+         data-search="सोने के आभूषण पर गोल्ड लोन ईएमआई (gold jewellery loan monthly emi) गोल्ड व प्रॉपर्टी सोने के गहनों के 75% मूल्यांकन पर 2 वर्ष की आसान मासिक किस्त।"
+         onclick="loadPreset(300000, 9.25, 24, 'सोने के आभूषण पर गोल्ड लोन ईएमआई (Gold Jewellery Loan Monthly EMI)', 'सोने के गहनों के 75% मूल्यांकन पर 2 वर्ष की आसान मासिक किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">गोल्ड व प्रॉपर्टी</span>
+        <span class="variety-index-num">#66</span>
+      </div>
+      <h4 class="variety-title">सोने के आभूषण पर गोल्ड लोन ईएमआई (Gold Jewellery Loan Monthly EMI)</h4>
+      <p class="variety-desc">सोने के गहनों के 75% मूल्यांकन पर 2 वर्ष की आसान मासिक किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹3.0 Lakh</strong></span>
+        <span>दर: <strong>9.25%</strong></span>
+        <span>अवधि: <strong>2 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="collateral" 
+         data-search="कृषि प्रयोजन गोल्ड लोन 7% ब्याज (agricultural gold loan 7% p.a.) गोल्ड व प्रॉपर्टी किसानों द्वारा बीज व खाद हेतु गिरवी रखे सोने पर सरकारी 7% रियायती ब्याज।"
+         onclick="loadPreset(250000, 7, 12, 'कृषि प्रयोजन गोल्ड लोन 7% ब्याज (Agricultural Gold Loan 7% p.a.)', 'किसानों द्वारा बीज व खाद हेतु गिरवी रखे सोने पर सरकारी 7% रियायती ब्याज।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">गोल्ड व प्रॉपर्टी</span>
+        <span class="variety-index-num">#67</span>
+      </div>
+      <h4 class="variety-title">कृषि प्रयोजन गोल्ड लोन 7% ब्याज (Agricultural Gold Loan 7% p.a.)</h4>
+      <p class="variety-desc">किसानों द्वारा बीज व खाद हेतु गिरवी रखे सोने पर सरकारी 7% रियायती ब्याज।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹2.5 Lakh</strong></span>
+        <span>दर: <strong>7%</strong></span>
+        <span>अवधि: <strong>1 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="collateral" 
+         data-search="बुलेट रीपेमेंट गोल्ड लोन (gold loan bullet repayment) गोल्ड व प्रॉपर्टी बिना किसी मासिक ईएमआई के अंत में एक साथ मूलधन व ब्याज का भुगतान।"
+         onclick="loadPreset(200000, 9.5, 12, 'बुलेट रीपेमेंट गोल्ड लोन (Gold Loan Bullet Repayment)', 'बिना किसी मासिक ईएमआई के अंत में एक साथ मूलधन व ब्याज का भुगतान।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">गोल्ड व प्रॉपर्टी</span>
+        <span class="variety-index-num">#68</span>
+      </div>
+      <h4 class="variety-title">बुलेट रीपेमेंट गोल्ड लोन (Gold Loan Bullet Repayment)</h4>
+      <p class="variety-desc">बिना किसी मासिक ईएमआई के अंत में एक साथ मूलधन व ब्याज का भुगतान।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹2.0 Lakh</strong></span>
+        <span>दर: <strong>9.5%</strong></span>
+        <span>अवधि: <strong>1 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="collateral" 
+         data-search="मकान बंधक लोन अगेंस्ट प्रॉपर्टी (loan against residential property - lap) गोल्ड व प्रॉपर्टी अपने आवासीय मकान को गिरवी रखकर व्यापार या पारिवारिक जरूरतों हेतु 15 वर्ष का लोन।"
+         onclick="loadPreset(3500000, 9.65, 180, 'मकान बंधक लोन अगेंस्ट प्रॉपर्टी (Loan Against Residential Property - LAP)', 'अपने आवासीय मकान को गिरवी रखकर व्यापार या पारिवारिक जरूरतों हेतु 15 वर्ष का लोन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">गोल्ड व प्रॉपर्टी</span>
+        <span class="variety-index-num">#69</span>
+      </div>
+      <h4 class="variety-title">मकान बंधक लोन अगेंस्ट प्रॉपर्टी (Loan Against Residential Property - LAP)</h4>
+      <p class="variety-desc">अपने आवासीय मकान को गिरवी रखकर व्यापार या पारिवारिक जरूरतों हेतु 15 वर्ष का लोन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹35.0 Lakh</strong></span>
+        <span>दर: <strong>9.65%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="collateral" 
+         data-search="दुकान/ऑफिस बंधक लोन (commercial property lap) गोल्ड व प्रॉपर्टी व्यावसायिक दुकान या शोरूम के मूल्यांकन के 60% तक 10 वर्ष की ईएमआई।"
+         onclick="loadPreset(5000000, 10.25, 120, 'दुकान/ऑफिस बंधक लोन (Commercial Property LAP)', 'व्यावसायिक दुकान या शोरूम के मूल्यांकन के 60% तक 10 वर्ष की ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">गोल्ड व प्रॉपर्टी</span>
+        <span class="variety-index-num">#70</span>
+      </div>
+      <h4 class="variety-title">दुकान/ऑफिस बंधक लोन (Commercial Property LAP)</h4>
+      <p class="variety-desc">व्यावसायिक दुकान या शोरूम के मूल्यांकन के 60% तक 10 वर्ष की ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹50.0 Lakh</strong></span>
+        <span>दर: <strong>10.25%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="collateral" 
+         data-search="औद्योगिक प्लॉट व शेड बंधक लोन (industrial plot & factory lap) गोल्ड व प्रॉपर्टी कारखाने की जमीन व शेड पर बड़ी पूंजी विस्तार हेतु ऋण किस्त।"
+         onclick="loadPreset(8000000, 10.5, 120, 'औद्योगिक प्लॉट व शेड बंधक लोन (Industrial Plot & Factory LAP)', 'कारखाने की जमीन व शेड पर बड़ी पूंजी विस्तार हेतु ऋण किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">गोल्ड व प्रॉपर्टी</span>
+        <span class="variety-index-num">#71</span>
+      </div>
+      <h4 class="variety-title">औद्योगिक प्लॉट व शेड बंधक लोन (Industrial Plot & Factory LAP)</h4>
+      <p class="variety-desc">कारखाने की जमीन व शेड पर बड़ी पूंजी विस्तार हेतु ऋण किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹80.0 Lakh</strong></span>
+        <span>दर: <strong>10.5%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="collateral" 
+         data-search="लीज रेंटल डिस्काउंटिंग (lease rental discounting - lrd) गोल्ड व प्रॉपर्टी बैंक या कॉर्पोरेट को किराए पर दी गई संपत्ति के भविष्य के किराए पर अग्रिम लोन।"
+         onclick="loadPreset(10000000, 9.1, 120, 'लीज रेंटल डिस्काउंटिंग (Lease Rental Discounting - LRD)', 'बैंक या कॉर्पोरेट को किराए पर दी गई संपत्ति के भविष्य के किराए पर अग्रिम लोन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">गोल्ड व प्रॉपर्टी</span>
+        <span class="variety-index-num">#72</span>
+      </div>
+      <h4 class="variety-title">लीज रेंटल डिस्काउंटिंग (Lease Rental Discounting - LRD)</h4>
+      <p class="variety-desc">बैंक या कॉर्पोरेट को किराए पर दी गई संपत्ति के भविष्य के किराए पर अग्रिम लोन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹100.0 Lakh</strong></span>
+        <span>दर: <strong>9.1%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="collateral" 
+         data-search="शेयर व म्यूचुअल फंड बंधक लोन (loan against shares & mutual funds) गोल्ड व प्रॉपर्टी अपने निवेश पोर्टफोलियो को बेचे बिना तात्कालिक नकदी हासिल करने की सुविधा।"
+         onclick="loadPreset(500000, 9.75, 36, 'शेयर व म्यूचुअल फंड बंधक लोन (Loan Against Shares & Mutual Funds)', 'अपने निवेश पोर्टफोलियो को बेचे बिना तात्कालिक नकदी हासिल करने की सुविधा।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">गोल्ड व प्रॉपर्टी</span>
+        <span class="variety-index-num">#73</span>
+      </div>
+      <h4 class="variety-title">शेयर व म्यूचुअल फंड बंधक लोन (Loan Against Shares & Mutual Funds)</h4>
+      <p class="variety-desc">अपने निवेश पोर्टफोलियो को बेचे बिना तात्कालिक नकदी हासिल करने की सुविधा।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹5.0 Lakh</strong></span>
+        <span>दर: <strong>9.75%</strong></span>
+        <span>अवधि: <strong>3 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="collateral" 
+         data-search="बैंक एफडी पर लोन / ओवरड्राफ्ट (overdraft against fixed deposit) गोल्ड व प्रॉपर्टी fd ब्याज से केवल 1% अधिक दर पर बिना एफडी तोड़े तुरंत आपातकालीन ऋण।"
+         onclick="loadPreset(400000, 8.25, 24, 'बैंक एफडी पर लोन / ओवरड्राफ्ट (Overdraft Against Fixed Deposit)', 'FD ब्याज से केवल 1% अधिक दर पर बिना एफडी तोड़े तुरंत आपातकालीन ऋण।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">गोल्ड व प्रॉपर्टी</span>
+        <span class="variety-index-num">#74</span>
+      </div>
+      <h4 class="variety-title">बैंक एफडी पर लोन / ओवरड्राफ्ट (Overdraft Against Fixed Deposit)</h4>
+      <p class="variety-desc">FD ब्याज से केवल 1% अधिक दर पर बिना एफडी तोड़े तुरंत आपातकालीन ऋण।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹4.0 Lakh</strong></span>
+        <span>दर: <strong>8.25%</strong></span>
+        <span>अवधि: <strong>2 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="collateral" 
+         data-search="कमर्शियल प्रॉपर्टी परचेज लोन (commercial office/shop purchase loan) गोल्ड व प्रॉपर्टी नया व्यावसायिक दफ्तर या दुकान खरीदने हेतु 15 वर्ष की मासिक किस्त।"
+         onclick="loadPreset(6000000, 9.5, 180, 'कमर्शियल प्रॉपर्टी परचेज लोन (Commercial Office/Shop Purchase Loan)', 'नया व्यावसायिक दफ्तर या दुकान खरीदने हेतु 15 वर्ष की मासिक किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">गोल्ड व प्रॉपर्टी</span>
+        <span class="variety-index-num">#75</span>
+      </div>
+      <h4 class="variety-title">कमर्शियल प्रॉपर्टी परचेज लोन (Commercial Office/Shop Purchase Loan)</h4>
+      <p class="variety-desc">नया व्यावसायिक दफ्तर या दुकान खरीदने हेतु 15 वर्ष की मासिक किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹60.0 Lakh</strong></span>
+        <span>दर: <strong>9.5%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="agri" 
+         data-search="किसान क्रेडिट कार्ड (kisan credit card - kcc 4% net rate) किसान व कृषि समय पर पुनर्भुगतान करने पर 3% सरकारी ब्याज सबवेंशन सहित मात्र 4% प्रभावी वार्षिक ब्याज।"
+         onclick="loadPreset(300000, 4, 12, 'किसान क्रेडिट कार्ड (Kisan Credit Card - KCC 4% Net Rate)', 'समय पर पुनर्भुगतान करने पर 3% सरकारी ब्याज सबवेंशन सहित मात्र 4% प्रभावी वार्षिक ब्याज।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">किसान व कृषि</span>
+        <span class="variety-index-num">#76</span>
+      </div>
+      <h4 class="variety-title">किसान क्रेडिट कार्ड (Kisan Credit Card - KCC 4% Net Rate)</h4>
+      <p class="variety-desc">समय पर पुनर्भुगतान करने पर 3% सरकारी ब्याज सबवेंशन सहित मात्र 4% प्रभावी वार्षिक ब्याज।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹3.0 Lakh</strong></span>
+        <span>दर: <strong>4%</strong></span>
+        <span>अवधि: <strong>1 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="agri" 
+         data-search="पीएम कुसुम सोलर पंप कृषि लोन (pm kusum solar pump agri loan) किसान व कृषि खेतों में सिंचाई हेतु 60% सरकारी सब्सिडी के बाद शेष 30% किसान अंशदान का ऋण।"
+         onclick="loadPreset(180000, 8.5, 60, 'पीएम कुसुम सोलर पंप कृषि लोन (PM Kusum Solar Pump Agri Loan)', 'खेतों में सिंचाई हेतु 60% सरकारी सब्सिडी के बाद शेष 30% किसान अंशदान का ऋण।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">किसान व कृषि</span>
+        <span class="variety-index-num">#77</span>
+      </div>
+      <h4 class="variety-title">पीएम कुसुम सोलर पंप कृषि लोन (PM Kusum Solar Pump Agri Loan)</h4>
+      <p class="variety-desc">खेतों में सिंचाई हेतु 60% सरकारी सब्सिडी के बाद शेष 30% किसान अंशदान का ऋण।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹1.8 Lakh</strong></span>
+        <span>दर: <strong>8.5%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="agri" 
+         data-search="डेयरी फार्मिंग व पशुपालन लोन (dairy farming & cattle loan) किसान व कृषि दुधारू गाय-भैंस खरीदने व शेड निर्माण हेतु नाबार्ड सब्सिडी समर्थित ऋण।"
+         onclick="loadPreset(500000, 8.75, 60, 'डेयरी फार्मिंग व पशुपालन लोन (Dairy Farming & Cattle Loan)', 'दुधारू गाय-भैंस खरीदने व शेड निर्माण हेतु नाबार्ड सब्सिडी समर्थित ऋण।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">किसान व कृषि</span>
+        <span class="variety-index-num">#78</span>
+      </div>
+      <h4 class="variety-title">डेयरी फार्मिंग व पशुपालन लोन (Dairy Farming & Cattle Loan)</h4>
+      <p class="variety-desc">दुधारू गाय-भैंस खरीदने व शेड निर्माण हेतु नाबार्ड सब्सिडी समर्थित ऋण।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹5.0 Lakh</strong></span>
+        <span>दर: <strong>8.75%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="agri" 
+         data-search="पोल्ट्री फार्मिंग व्यवसाय लोन (poultry & broiler farming loan) किसान व कृषि लेयर व ब्रायलर पोल्ट्री शेड व ऑटोमैटिक फीडर लगाने हेतु 5 वर्ष की ईएमआई।"
+         onclick="loadPreset(800000, 9.25, 60, 'पोल्ट्री फार्मिंग व्यवसाय लोन (Poultry & Broiler Farming Loan)', 'लेयर व ब्रायलर पोल्ट्री शेड व ऑटोमैटिक फीडर लगाने हेतु 5 वर्ष की ईएमआई।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">किसान व कृषि</span>
+        <span class="variety-index-num">#79</span>
+      </div>
+      <h4 class="variety-title">पोल्ट्री फार्मिंग व्यवसाय लोन (Poultry & Broiler Farming Loan)</h4>
+      <p class="variety-desc">लेयर व ब्रायलर पोल्ट्री शेड व ऑटोमैटिक फीडर लगाने हेतु 5 वर्ष की ईएमआई।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹8.0 Lakh</strong></span>
+        <span>दर: <strong>9.25%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="agri" 
+         data-search="मत्स्य पालन व तालाब निर्माण लोन (fisheries & aquaculture pmmsy) किसान व कृषि प्रधानमंत्री मत्स्य संपदा योजना (pmmsy) के तहत बायोफ्लॉक व तालाब निर्माण लोन।"
+         onclick="loadPreset(700000, 8.9, 60, 'मत्स्य पालन व तालाब निर्माण लोन (Fisheries & Aquaculture PMMSY)', 'प्रधानमंत्री मत्स्य संपदा योजना (PMMSY) के तहत बायोफ्लॉक व तालाब निर्माण लोन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">किसान व कृषि</span>
+        <span class="variety-index-num">#80</span>
+      </div>
+      <h4 class="variety-title">मत्स्य पालन व तालाब निर्माण लोन (Fisheries & Aquaculture PMMSY)</h4>
+      <p class="variety-desc">प्रधानमंत्री मत्स्य संपदा योजना (PMMSY) के तहत बायोफ्लॉक व तालाब निर्माण लोन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹7.0 Lakh</strong></span>
+        <span>दर: <strong>8.9%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="agri" 
+         data-search="कंबाइन हार्वेस्टर खरीद लोन (combine harvester machine loan) किसान व कृषि फसल कटाई के आधुनिक कंबाइन हार्वेस्टर खरीदने हेतु व्यावसायिक कृषि लोन।"
+         onclick="loadPreset(2200000, 9.8, 60, 'कंबाइन हार्वेस्टर खरीद लोन (Combine Harvester Machine Loan)', 'फसल कटाई के आधुनिक कंबाइन हार्वेस्टर खरीदने हेतु व्यावसायिक कृषि लोन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">किसान व कृषि</span>
+        <span class="variety-index-num">#81</span>
+      </div>
+      <h4 class="variety-title">कंबाइन हार्वेस्टर खरीद लोन (Combine Harvester Machine Loan)</h4>
+      <p class="variety-desc">फसल कटाई के आधुनिक कंबाइन हार्वेस्टर खरीदने हेतु व्यावसायिक कृषि लोन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹22.0 Lakh</strong></span>
+        <span>दर: <strong>9.8%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="agri" 
+         data-search="बागवानी व फलदार वृक्षारोपण लोन (horticulture & orchard plantation) किसान व कृषि आम, सेब या अमरूद के बाग लगाने हेतु 7 वर्ष की दीर्घकालिक कृषि किस्त।"
+         onclick="loadPreset(400000, 8.65, 84, 'बागवानी व फलदार वृक्षारोपण लोन (Horticulture & Orchard Plantation)', 'आम, सेब या अमरूद के बाग लगाने हेतु 7 वर्ष की दीर्घकालिक कृषि किस्त।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">किसान व कृषि</span>
+        <span class="variety-index-num">#82</span>
+      </div>
+      <h4 class="variety-title">बागवानी व फलदार वृक्षारोपण लोन (Horticulture & Orchard Plantation)</h4>
+      <p class="variety-desc">आम, सेब या अमरूद के बाग लगाने हेतु 7 वर्ष की दीर्घकालिक कृषि किस्त।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹4.0 Lakh</strong></span>
+        <span>दर: <strong>8.65%</strong></span>
+        <span>अवधि: <strong>7 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="agri" 
+         data-search="एग्री-क्लिनिक व एग्री-बिजनेस सेंटर (acabc agri-clinic loan) किसान व कृषि कृषि स्नातकों द्वारा मिट्टी परीक्षण व कृषि परामर्श केंद्र खोलने हेतु ऋण।"
+         onclick="loadPreset(2000000, 9, 84, 'एग्री-क्लिनिक व एग्री-बिजनेस सेंटर (ACABC Agri-Clinic Loan)', 'कृषि स्नातकों द्वारा मिट्टी परीक्षण व कृषि परामर्श केंद्र खोलने हेतु ऋण।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">किसान व कृषि</span>
+        <span class="variety-index-num">#83</span>
+      </div>
+      <h4 class="variety-title">एग्री-क्लिनिक व एग्री-बिजनेस सेंटर (ACABC Agri-Clinic Loan)</h4>
+      <p class="variety-desc">कृषि स्नातकों द्वारा मिट्टी परीक्षण व कृषि परामर्श केंद्र खोलने हेतु ऋण।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹20.0 Lakh</strong></span>
+        <span>दर: <strong>9%</strong></span>
+        <span>अवधि: <strong>7 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="prepay" 
+         data-search="वार्षिक 5% स्टेप-अप प्रीपेमेंट प्रभाव (5% annual step-up prepayment) प्रीपेमेंट व बचत हर साल ईएमआई 5% बढ़ाकर 20 वर्ष के लोन को मात्र 12 वर्ष में समाप्त करने की गणना।"
+         onclick="loadPreset(4000000, 8.5, 240, 'वार्षिक 5% स्टेप-अप प्रीपेमेंट प्रभाव (5% Annual Step-Up Prepayment)', 'हर साल ईएमआई 5% बढ़ाकर 20 वर्ष के लोन को मात्र 12 वर्ष में समाप्त करने की गणना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">प्रीपेमेंट व बचत</span>
+        <span class="variety-index-num">#84</span>
+      </div>
+      <h4 class="variety-title">वार्षिक 5% स्टेप-अप प्रीपेमेंट प्रभाव (5% Annual Step-Up Prepayment)</h4>
+      <p class="variety-desc">हर साल ईएमआई 5% बढ़ाकर 20 वर्ष के लोन को मात्र 12 वर्ष में समाप्त करने की गणना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹40.0 Lakh</strong></span>
+        <span>दर: <strong>8.5%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="prepay" 
+         data-search="प्रति वर्ष 1 अतिरिक्त ईएमआई बचत (1 extra emi per year savings) प्रीपेमेंट व बचत साल में 12 की जगह 13 किश्तें चुकाकर लाखों रुपये का ब्याज बचाने की सटीक गणना।"
+         onclick="loadPreset(3500000, 8.6, 240, 'प्रति वर्ष 1 अतिरिक्त ईएमआई बचत (1 Extra EMI Per Year Savings)', 'साल में 12 की जगह 13 किश्तें चुकाकर लाखों रुपये का ब्याज बचाने की सटीक गणना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">प्रीपेमेंट व बचत</span>
+        <span class="variety-index-num">#85</span>
+      </div>
+      <h4 class="variety-title">प्रति वर्ष 1 अतिरिक्त ईएमआई बचत (1 Extra EMI Per Year Savings)</h4>
+      <p class="variety-desc">साल में 12 की जगह 13 किश्तें चुकाकर लाखों रुपये का ब्याज बचाने की सटीक गणना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹35.0 Lakh</strong></span>
+        <span>दर: <strong>8.6%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="prepay" 
+         data-search="एकमुश्त पार्ट-पेमेंट प्रभाव (lump-sum part payment impact) प्रीपेमेंट व बचत बोनस या बचत से ₹5 लाख जमा करने पर लोन अवधि में होने वाली भारी कमी।"
+         onclick="loadPreset(5000000, 8.5, 240, 'एकमुश्त पार्ट-पेमेंट प्रभाव (Lump-Sum Part Payment Impact)', 'बोनस या बचत से ₹5 लाख जमा करने पर लोन अवधि में होने वाली भारी कमी।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">प्रीपेमेंट व बचत</span>
+        <span class="variety-index-num">#86</span>
+      </div>
+      <h4 class="variety-title">एकमुश्त पार्ट-पेमेंट प्रभाव (Lump-Sum Part Payment Impact)</h4>
+      <p class="variety-desc">बोनस या बचत से ₹5 लाख जमा करने पर लोन अवधि में होने वाली भारी कमी।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹50.0 Lakh</strong></span>
+        <span>दर: <strong>8.5%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="prepay" 
+         data-search="लोन अवधि कमी बनाम ईएमआई कटौती (tenure reduction vs emi lowering) प्रीपेमेंट व बचत पार्ट पेमेंट के बाद ईएमआई कम करें या लोन की अवधि - दोनों विकल्पों की तुलना।"
+         onclick="loadPreset(4500000, 8.75, 240, 'लोन अवधि कमी बनाम ईएमआई कटौती (Tenure Reduction vs EMI Lowering)', 'पार्ट पेमेंट के बाद ईएमआई कम करें या लोन की अवधि - दोनों विकल्पों की तुलना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">प्रीपेमेंट व बचत</span>
+        <span class="variety-index-num">#87</span>
+      </div>
+      <h4 class="variety-title">लोन अवधि कमी बनाम ईएमआई कटौती (Tenure Reduction vs EMI Lowering)</h4>
+      <p class="variety-desc">पार्ट पेमेंट के बाद ईएमआई कम करें या लोन की अवधि - दोनों विकल्पों की तुलना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹45.0 Lakh</strong></span>
+        <span>दर: <strong>8.75%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="prepay" 
+         data-search="फ्लैट बनाम रिड्यूसिंग बैलेंस ब्याज (flat vs reducing balance rate) प्रीपेमेंट व बचत डीलरों द्वारा बताई गई 7% फ्लैट दर का वास्तविक 13% रिड्यूसिंग दर में अंतर।"
+         onclick="loadPreset(500000, 12, 60, 'फ्लैट बनाम रिड्यूसिंग बैलेंस ब्याज (Flat vs Reducing Balance Rate)', 'डीलरों द्वारा बताई गई 7% फ्लैट दर का वास्तविक 13% रिड्यूसिंग दर में अंतर।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">प्रीपेमेंट व बचत</span>
+        <span class="variety-index-num">#88</span>
+      </div>
+      <h4 class="variety-title">फ्लैट बनाम रिड्यूसिंग बैलेंस ब्याज (Flat vs Reducing Balance Rate)</h4>
+      <p class="variety-desc">डीलरों द्वारा बताई गई 7% फ्लैट दर का वास्तविक 13% रिड्यूसिंग दर में अंतर।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹5.0 Lakh</strong></span>
+        <span>दर: <strong>12%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="prepay" 
+         data-search="बैलेंस ट्रांसफर शुद्ध लाभ कैलकुलेटर (balance transfer net benefit) प्रीपेमेंट व बचत प्रोसेसिंग शुल्क काटने के बाद दूसरे बैंक में लोन ले जाने पर वास्तविक शुद्ध बचत।"
+         onclick="loadPreset(4000000, 8.9, 180, 'बैलेंस ट्रांसफर शुद्ध लाभ कैलकुलेटर (Balance Transfer Net Benefit)', 'प्रोसेसिंग शुल्क काटने के बाद दूसरे बैंक में लोन ले जाने पर वास्तविक शुद्ध बचत।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">प्रीपेमेंट व बचत</span>
+        <span class="variety-index-num">#89</span>
+      </div>
+      <h4 class="variety-title">बैलेंस ट्रांसफर शुद्ध लाभ कैलकुलेटर (Balance Transfer Net Benefit)</h4>
+      <p class="variety-desc">प्रोसेसिंग शुल्क काटने के बाद दूसरे बैंक में लोन ले जाने पर वास्तविक शुद्ध बचत।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹40.0 Lakh</strong></span>
+        <span>दर: <strong>8.9%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="prepay" 
+         data-search="फिक्स्ड बनाम फ्लोटिंग ब्याज तुलना (fixed vs floating rate comparison) प्रीपेमेंट व बचत आरबीआई रेपो रेट बढ़ने या घटने पर मासिक किस्तों में होने वाले उतार-चढ़ाव की जांच।"
+         onclick="loadPreset(3500000, 8.5, 240, 'फिक्स्ड बनाम फ्लोटिंग ब्याज तुलना (Fixed vs Floating Rate Comparison)', 'आरबीआई रेपो रेट बढ़ने या घटने पर मासिक किस्तों में होने वाले उतार-चढ़ाव की जांच।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">प्रीपेमेंट व बचत</span>
+        <span class="variety-index-num">#90</span>
+      </div>
+      <h4 class="variety-title">फिक्स्ड बनाम फ्लोटिंग ब्याज तुलना (Fixed vs Floating Rate Comparison)</h4>
+      <p class="variety-desc">आरबीआई रेपो रेट बढ़ने या घटने पर मासिक किस्तों में होने वाले उतार-चढ़ाव की जांच।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹35.0 Lakh</strong></span>
+        <span>दर: <strong>8.5%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="prepay" 
+         data-search="दैनिक घटती शेष ब्याज गणना (daily reducing balance emi engine) प्रीपेमेंट व बचत बैंकों में दैनिक आधार पर लगने वाले सटीक ब्याज की पारदर्शी गणना।"
+         onclick="loadPreset(3000000, 8.4, 180, 'दैनिक घटती शेष ब्याज गणना (Daily Reducing Balance EMI Engine)', 'बैंकों में दैनिक आधार पर लगने वाले सटीक ब्याज की पारदर्शी गणना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">प्रीपेमेंट व बचत</span>
+        <span class="variety-index-num">#91</span>
+      </div>
+      <h4 class="variety-title">दैनिक घटती शेष ब्याज गणना (Daily Reducing Balance EMI Engine)</h4>
+      <p class="variety-desc">बैंकों में दैनिक आधार पर लगने वाले सटीक ब्याज की पारदर्शी गणना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹30.0 Lakh</strong></span>
+        <span>दर: <strong>8.4%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="prepay" 
+         data-search="प्री-क्लोजर पेनल्टी बनाम बचत (pre-closure penalty vs interest saved) प्रीपेमेंट व बचत पर्सनल लोन जल्दी बंद करने पर 3% फोरक्लोजर चार्ज के बाद भी लाभ की गणना।"
+         onclick="loadPreset(800000, 11.5, 36, 'प्री-क्लोजर पेनल्टी बनाम बचत (Pre-closure Penalty vs Interest Saved)', 'पर्सनल लोन जल्दी बंद करने पर 3% फोरक्लोजर चार्ज के बाद भी लाभ की गणना।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">प्रीपेमेंट व बचत</span>
+        <span class="variety-index-num">#92</span>
+      </div>
+      <h4 class="variety-title">प्री-क्लोजर पेनल्टी बनाम बचत (Pre-closure Penalty vs Interest Saved)</h4>
+      <p class="variety-desc">पर्सनल लोन जल्दी बंद करने पर 3% फोरक्लोजर चार्ज के बाद भी लाभ की गणना।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹8.0 Lakh</strong></span>
+        <span>दर: <strong>11.5%</strong></span>
+        <span>अवधि: <strong>3 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="prepay" 
+         data-search="वेतन अनुसार अधिकतम लोन पात्रता (salary vs max loan affordability) प्रीपेमेंट व बचत 50% foir (नियम) के तहत आपके मासिक वेतन पर बैंक कितना अधिकतम लोन देगा।"
+         onclick="loadPreset(4800000, 8.5, 240, 'वेतन अनुसार अधिकतम लोन पात्रता (Salary vs Max Loan Affordability)', '50% FOIR (नियम) के तहत आपके मासिक वेतन पर बैंक कितना अधिकतम लोन देगा।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">प्रीपेमेंट व बचत</span>
+        <span class="variety-index-num">#93</span>
+      </div>
+      <h4 class="variety-title">वेतन अनुसार अधिकतम लोन पात्रता (Salary vs Max Loan Affordability)</h4>
+      <p class="variety-desc">50% FOIR (नियम) के तहत आपके मासिक वेतन पर बैंक कितना अधिकतम लोन देगा।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹48.0 Lakh</strong></span>
+        <span>दर: <strong>8.5%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="म्यूचुअल फंड एसआईपी कैलकुलेटर (mutual fund regular monthly sip) निवेश व बचत हर महीने ₹10,000 के अनुशासित निवेश से 10 वर्ष में संभावित ₹23.23 लाख का फंड।"
+         onclick="loadPreset(10000, 12, 120, 'म्यूचुअल फंड एसआईपी कैलकुलेटर (Mutual Fund Regular Monthly SIP)', 'हर महीने ₹10,000 के अनुशासित निवेश से 10 वर्ष में संभावित ₹23.23 लाख का फंड।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#94</span>
+      </div>
+      <h4 class="variety-title">म्यूचुअल फंड एसआईपी कैलकुलेटर (Mutual Fund Regular Monthly SIP)</h4>
+      <p class="variety-desc">हर महीने ₹10,000 के अनुशासित निवेश से 10 वर्ष में संभावित ₹23.23 लाख का फंड।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹10,000</strong></span>
+        <span>दर: <strong>12%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="स्टेप-अप एसआईपी कैलकुलेटर (step-up sip wealth compounding) निवेश व बचत प्रति वर्ष निवेश में 10% की वृद्धि करने पर 15 वर्षों में बनने वाला विशाल वेल्थ फंड।"
+         onclick="loadPreset(5000, 12.5, 180, 'स्टेप-अप एसआईपी कैलकुलेटर (Step-Up SIP Wealth Compounding)', 'प्रति वर्ष निवेश में 10% की वृद्धि करने पर 15 वर्षों में बनने वाला विशाल वेल्थ फंड।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#95</span>
+      </div>
+      <h4 class="variety-title">स्टेप-अप एसआईपी कैलकुलेटर (Step-Up SIP Wealth Compounding)</h4>
+      <p class="variety-desc">प्रति वर्ष निवेश में 10% की वृद्धि करने पर 15 वर्षों में बनने वाला विशाल वेल्थ फंड।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹5,000</strong></span>
+        <span>दर: <strong>12.5%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="एकमुश्त म्यूचुअल फंड निवेश (lump-sum mutual fund growth) निवेश व बचत एक बार ₹5,00,000 जमा करके 10 वर्ष में ₹15.52 लाख बनने का चक्रवृद्धि चक्र।"
+         onclick="loadPreset(500000, 12, 120, 'एकमुश्त म्यूचुअल फंड निवेश (Lump-Sum Mutual Fund Growth)', 'एक बार ₹5,00,000 जमा करके 10 वर्ष में ₹15.52 लाख बनने का चक्रवृद्धि चक्र।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#96</span>
+      </div>
+      <h4 class="variety-title">एकमुश्त म्यूचुअल फंड निवेश (Lump-Sum Mutual Fund Growth)</h4>
+      <p class="variety-desc">एक बार ₹5,00,000 जमा करके 10 वर्ष में ₹15.52 लाख बनने का चक्रवृद्धि चक्र।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹5.0 Lakh</strong></span>
+        <span>दर: <strong>12%</strong></span>
+        <span>अवधि: <strong>10 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="बैंक फिक्स्ड डिपॉजिट (fd) मैच्योरिटी (fixed deposit maturity calculator) निवेश व बचत त्रैमासिक चक्रवृद्धि (quarterly compounding) ब्याज के साथ 3 वर्ष की कुल परिपक्वता राशि।"
+         onclick="loadPreset(200000, 7.25, 36, 'बैंक फिक्स्ड डिपॉजिट (FD) मैच्योरिटी (Fixed Deposit Maturity Calculator)', 'त्रैमासिक चक्रवृद्धि (Quarterly Compounding) ब्याज के साथ 3 वर्ष की कुल परिपक्वता राशि।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#97</span>
+      </div>
+      <h4 class="variety-title">बैंक फिक्स्ड डिपॉजिट (FD) मैच्योरिटी (Fixed Deposit Maturity Calculator)</h4>
+      <p class="variety-desc">त्रैमासिक चक्रवृद्धि (Quarterly Compounding) ब्याज के साथ 3 वर्ष की कुल परिपक्वता राशि।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹2.0 Lakh</strong></span>
+        <span>दर: <strong>7.25%</strong></span>
+        <span>अवधि: <strong>3 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="रिकरिंग डिपॉजिट (rd) मासिक बचत (recurring deposit maturity value) निवेश व बचत हर महीने ₹5,000 डाकघर या बैंक आरडी में 5 वर्ष जमा करने पर कुल रिटर्न।"
+         onclick="loadPreset(5000, 7, 60, 'रिकरिंग डिपॉजिट (RD) मासिक बचत (Recurring Deposit Maturity Value)', 'हर महीने ₹5,000 डाकघर या बैंक आरडी में 5 वर्ष जमा करने पर कुल रिटर्न।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#98</span>
+      </div>
+      <h4 class="variety-title">रिकरिंग डिपॉजिट (RD) मासिक बचत (Recurring Deposit Maturity Value)</h4>
+      <p class="variety-desc">हर महीने ₹5,000 डाकघर या बैंक आरडी में 5 वर्ष जमा करने पर कुल रिटर्न।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹5,000</strong></span>
+        <span>दर: <strong>7%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="पब्लिक प्रॉविडेंट फंड 15 वर्ष (public provident fund - ppf 7.1% eee) निवेश व बचत वार्षिक ₹1.5 लाख जमा करके 15 वर्ष बाद ₹40.68 लाख का 100% टैक्स-फ्री फंड।"
+         onclick="loadPreset(12500, 7.1, 180, 'पब्लिक प्रॉविडेंट फंड 15 वर्ष (Public Provident Fund - PPF 7.1% EEE)', 'वार्षिक ₹1.5 लाख जमा करके 15 वर्ष बाद ₹40.68 लाख का 100% टैक्स-फ्री फंड।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#99</span>
+      </div>
+      <h4 class="variety-title">पब्लिक प्रॉविडेंट फंड 15 वर्ष (Public Provident Fund - PPF 7.1% EEE)</h4>
+      <p class="variety-desc">वार्षिक ₹1.5 लाख जमा करके 15 वर्ष बाद ₹40.68 लाख का 100% टैक्स-फ्री फंड।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹12,500</strong></span>
+        <span>दर: <strong>7.1%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="सुकन्या समृद्धि योजना परिपक्वता (sukanya samriddhi 8.2% maturity) निवेश व बचत बेटी की पढ़ाई व विवाह हेतु 8.2% की उच्चतम सरकारी ब्याज दर पर चक्रवृद्धि लाभ।"
+         onclick="loadPreset(10000, 8.2, 180, 'सुकन्या समृद्धि योजना परिपक्वता (Sukanya Samriddhi 8.2% Maturity)', 'बेटी की पढ़ाई व विवाह हेतु 8.2% की उच्चतम सरकारी ब्याज दर पर चक्रवृद्धि लाभ।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#100</span>
+      </div>
+      <h4 class="variety-title">सुकन्या समृद्धि योजना परिपक्वता (Sukanya Samriddhi 8.2% Maturity)</h4>
+      <p class="variety-desc">बेटी की पढ़ाई व विवाह हेतु 8.2% की उच्चतम सरकारी ब्याज दर पर चक्रवृद्धि लाभ।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹10,000</strong></span>
+        <span>दर: <strong>8.2%</strong></span>
+        <span>अवधि: <strong>15 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="नेशनल पेंशन सिस्टम (nps monthly pension & 60% corpus payout) निवेश व बचत सेवानिवृत्ति पर 60% एकमुश्त कर-मुक्त फंड + 40% एन्युइटी से आजीवन मासिक पेंशन।"
+         onclick="loadPreset(5000, 10, 300, 'नेशनल पेंशन सिस्टम (NPS Monthly Pension & 60% Corpus Payout)', 'सेवानिवृत्ति पर 60% एकमुश्त कर-मुक्त फंड + 40% एन्युइटी से आजीवन मासिक पेंशन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#101</span>
+      </div>
+      <h4 class="variety-title">नेशनल पेंशन सिस्टम (NPS Monthly Pension & 60% Corpus Payout)</h4>
+      <p class="variety-desc">सेवानिवृत्ति पर 60% एकमुश्त कर-मुक्त फंड + 40% एन्युइटी से आजीवन मासिक पेंशन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹5,000</strong></span>
+        <span>दर: <strong>10%</strong></span>
+        <span>अवधि: <strong>25 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="अटल पेंशन योजना मासिक अंशदान (apy contribution & ₹5,000 pension) निवेश व बचत 18 वर्ष की आयु में मात्र ₹210 प्रति माह जमा करके 60 वर्ष बाद ₹5,000/माह पक्की पेंशन।"
+         onclick="loadPreset(210, 8, 504, 'अटल पेंशन योजना मासिक अंशदान (APY Contribution & ₹5,000 Pension)', '18 वर्ष की आयु में मात्र ₹210 प्रति माह जमा करके 60 वर्ष बाद ₹5,000/माह पक्की पेंशन।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#102</span>
+      </div>
+      <h4 class="variety-title">अटल पेंशन योजना मासिक अंशदान (APY Contribution & ₹5,000 Pension)</h4>
+      <p class="variety-desc">18 वर्ष की आयु में मात्र ₹210 प्रति माह जमा करके 60 वर्ष बाद ₹5,000/माह पक्की पेंशन।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹210</strong></span>
+        <span>दर: <strong>8%</strong></span>
+        <span>अवधि: <strong>42 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="डाकघर मासिक आय योजना (post office mis monthly cash flow) निवेश व बचत एकल खाते में ₹9 लाख जमा कर हर महीने ₹5,550 की निश्चित मासिक ब्याज आय।"
+         onclick="loadPreset(900000, 7.4, 60, 'डाकघर मासिक आय योजना (Post Office MIS Monthly Cash Flow)', 'एकल खाते में ₹9 लाख जमा कर हर महीने ₹5,550 की निश्चित मासिक ब्याज आय।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#103</span>
+      </div>
+      <h4 class="variety-title">डाकघर मासिक आय योजना (Post Office MIS Monthly Cash Flow)</h4>
+      <p class="variety-desc">एकल खाते में ₹9 लाख जमा कर हर महीने ₹5,550 की निश्चित मासिक ब्याज आय।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹9.0 Lakh</strong></span>
+        <span>दर: <strong>7.4%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="वरिष्ठ नागरिक बचत योजना (senior citizen savings scheme - scss 8.2%) निवेश व बचत 60+ वर्ष के नागरिकों हेतु हर 3 महीने में सीधे खाते में ₹30,750 की गारंटीड पेंशन आय।"
+         onclick="loadPreset(1500000, 8.2, 60, 'वरिष्ठ नागरिक बचत योजना (Senior Citizen Savings Scheme - SCSS 8.2%)', '60+ वर्ष के नागरिकों हेतु हर 3 महीने में सीधे खाते में ₹30,750 की गारंटीड पेंशन आय।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#104</span>
+      </div>
+      <h4 class="variety-title">वरिष्ठ नागरिक बचत योजना (Senior Citizen Savings Scheme - SCSS 8.2%)</h4>
+      <p class="variety-desc">60+ वर्ष के नागरिकों हेतु हर 3 महीने में सीधे खाते में ₹30,750 की गारंटीड पेंशन आय।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹15.0 Lakh</strong></span>
+        <span>दर: <strong>8.2%</strong></span>
+        <span>अवधि: <strong>5 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+
+    <div class="calculator-variety-card" 
+         data-cat="wealth" 
+         data-search="कर्मचारी ग्रेच्युटी कैलकुलेटर (statutory employee gratuity calculator) निवेश व बचत कंपनी में 5+ वर्ष की निरंतर सेवा के बाद 15/26 फार्मूले के आधार पर ग्रेच्युटी राशि।"
+         onclick="loadPreset(1500000, 0, 240, 'कर्मचारी ग्रेच्युटी कैलकुलेटर (Statutory Employee Gratuity Calculator)', 'कंपनी में 5+ वर्ष की निरंतर सेवा के बाद 15/26 फार्मूले के आधार पर ग्रेच्युटी राशि।')">
+      <div class="variety-badge-row">
+        <span class="variety-cat-badge">निवेश व बचत</span>
+        <span class="variety-index-num">#105</span>
+      </div>
+      <h4 class="variety-title">कर्मचारी ग्रेच्युटी कैलकुलेटर (Statutory Employee Gratuity Calculator)</h4>
+      <p class="variety-desc">कंपनी में 5+ वर्ष की निरंतर सेवा के बाद 15/26 फार्मूले के आधार पर ग्रेच्युटी राशि।</p>
+      <div class="variety-meta-row">
+        <span>राशि: <strong>₹15.0 Lakh</strong></span>
+        <span>दर: <strong>0%</strong></span>
+        <span>अवधि: <strong>20 वर्ष</strong></span>
+      </div>
+      <button class="btn-load-preset" type="button">
+        🧮 इस कैलकुलेटर को लोड करें (Calculate) →
+      </button>
+    </div>
+    
+    </div>
+  </main>
+
+  <script>
+    // Live Master Calculation Engine
+    function calculateEMI() {
+      const P = parseFloat(document.getElementById('input-amount').value) || 0;
+      const annualRate = parseFloat(document.getElementById('input-rate').value) || 0;
+      const years = parseFloat(document.getElementById('input-tenure').value) || 0;
+      const N = years * 12;
+
+      if (P <= 0 || N <= 0) return;
+
+      let emi = 0;
+      let totalInterest = 0;
+      let totalPayment = 0;
+
+      if (annualRate === 0) {
+        emi = P / N;
+        totalPayment = P;
+        totalInterest = 0;
+      } else {
+        const R = (annualRate / 12) / 100;
+        emi = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+        totalPayment = emi * N;
+        totalInterest = totalPayment - P;
+      }
+
+      document.getElementById('res-monthly-emi').textContent = '₹' + Math.round(emi).toLocaleString('en-IN');
+      document.getElementById('res-total-interest').textContent = '₹' + Math.round(totalInterest).toLocaleString('en-IN');
+      document.getElementById('res-total-payment').textContent = '₹' + Math.round(totalPayment).toLocaleString('en-IN');
+
+      const pPercent = Math.round((P / totalPayment) * 100);
+      const iPercent = 100 - pPercent;
+      document.getElementById('ratio-p-val').textContent = pPercent + '%';
+      document.getElementById('ratio-i-val').textContent = iPercent + '%';
+      document.getElementById('bar-principal').style.width = pPercent + '%';
+      document.getElementById('bar-interest').style.width = iPercent + '%';
+    }
+
+    // Sync numeric inputs and sliders
+    function setupSync(inputId, sliderId) {
+      const input = document.getElementById(inputId);
+      const slider = document.getElementById(sliderId);
+
+      input.addEventListener('input', () => {
+        slider.value = input.value;
+        calculateEMI();
+      });
+
+      slider.addEventListener('input', () => {
+        input.value = slider.value;
+        calculateEMI();
+      });
+    }
+
+    setupSync('input-amount', 'slider-amount');
+    setupSync('input-rate', 'slider-rate');
+    setupSync('input-tenure', 'slider-tenure');
+
+    // Preset loader when user clicks any of the 100+ variety cards
+    window.loadPreset = function(amount, rate, tenureMonths, name, desc) {
+      const years = Math.max(1, Math.round(tenureMonths / 12));
+      document.getElementById('input-amount').value = amount;
+      document.getElementById('slider-amount').value = Math.min(20000000, amount);
+
+      document.getElementById('input-rate').value = rate;
+      document.getElementById('slider-rate').value = Math.min(24, rate);
+
+      document.getElementById('input-tenure').value = years;
+      document.getElementById('slider-tenure').value = Math.min(30, years);
+
+      document.getElementById('display-calc-title').textContent = name;
+      document.getElementById('display-calc-desc').textContent = desc;
+
+      calculateEMI();
+
+      // Smooth scroll up to engine
+      const engine = document.getElementById('master-calculator-engine');
+      if (engine) {
+        engine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    };
+
+    // Filter and Search for 100 varieties
+    document.addEventListener('DOMContentLoaded', () => {
+      calculateEMI();
+
+      const searchInput = document.getElementById('calc-search-input');
+      const chipBtns = document.querySelectorAll('.chip-btn');
+      const cards = document.querySelectorAll('.calculator-variety-card');
+
+      let currentCat = 'all';
+      let currentQuery = '';
+
+      function applyFilter() {
+        cards.forEach(card => {
+          const cat = card.getAttribute('data-cat');
+          const searchData = card.getAttribute('data-search') || '';
+
+          const catMatch = (currentCat === 'all' || cat === currentCat);
+          const queryMatch = (!currentQuery || searchData.includes(currentQuery));
+
+          if (catMatch && queryMatch) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.trim().toLowerCase();
+          applyFilter();
+        });
+      }
+
+      chipBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          chipBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCat = btn.getAttribute('data-filter');
+          applyFilter();
+        });
+      });
+    });
+  </script>
+
+  
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="logo-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </span>
+            <span class="brand-name">Fengoo<span>.in</span></span>
+          </div>
+          <p>Fengoo भारत का एक स्वतंत्र, निष्पक्ष वित्तीय सूचना व शिक्षा मंच है। यहाँ केवल वैधानिक और आधिकारिक स्रोतों (RBI, SEBI, IRDAI, Income Tax, PFRDA, DICGC) से सत्यापित डेटा प्रस्तुत किया जाता है।</p>
+          <div class="footer-badges">
+            <span class="trust-badge-pill">🛡️ DICGC ₹5L Coverage Guide</span>
+            <span class="trust-badge-pill">⚖️ Zero Biased Advice</span>
+            <span class="trust-badge-pill">🏛️ Verified Regulators</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>बैंकिंग व कार्ड्स</h5>
+          <ul class="footer-links">
+            <li><a href="../banks/public-sector/sbi/sbi.html">State Bank of India</a></li>
+            <li><a href="../banks/private-sector/hdfc/hdfc.html">HDFC Bank</a></li>
+            <li><a href="../banks/private-sector/kotak/kotak.html">Kotak Mahindra Bank</a></li>
+            <li><a href="../banks/small-finance/au-small-finance/au-small-finance.html">AU Small Finance</a></li>
+            <li><a href="../credit-cards/index.html">Credit Cards Directory</a></li>
+            <li><a href="../upi/index.html">UPI Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>ऋण व निवेश</h5>
+          <ul class="footer-links">
+            <li><a href="../loans/home-loan/home-loan.html">Home Loan Guide</a></li>
+            <li><a href="../loans/personal-loan/personal-loan.html">Personal Loan</a></li>
+            <li><a href="../investments/mutual-funds/sip-equity-debt.html">Mutual Funds & SIP</a></li>
+            <li><a href="../investments/bonds/sovereign-gold-bonds.html">Sovereign Gold Bonds</a></li>
+            <li><a href="../insurance/life/term-insurance.html">Term Life Insurance</a></li>
+            <li><a href="../insurance/health/individual-family-floater.html">Health Insurance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>सरकारी योजनाएं व टैक्स</h5>
+          <ul class="footer-links">
+            <li><a href="../government/schemes/pm-jan-dhan-yojana.html">PM Jan Dhan Yojana</a></li>
+            <li><a href="../government/schemes/sukanya-samriddhi-yojana.html">Sukanya Samriddhi</a></li>
+            <li><a href="../pension/nps/nps.html">National Pension System</a></li>
+            <li><a href="../pension/atal-pension-yojana/atal-pension-yojana.html">Atal Pension Yojana</a></li>
+            <li><a href="../tax/income-tax-slabs/income-tax-slabs.html">Income Tax Slabs</a></li>
+            <li><a href="../tax/gst-slabs/gst-slabs.html">GST Slabs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>टूल्स व नीतियां</h5>
+          <ul class="footer-links">
+            <li><a href="../calculators/emi.html">EMI Calculator</a></li>
+            <li><a href="../calculators/sip.html">SIP Calculator</a></li>
+            <li><a href="../calculators/income-tax.html">Tax Calculator</a></li>
+            <li><a href="../official-links/official-links.html">Official Links Portal</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('affiliate-disclosure-modal')">Affiliate Disclosure</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('disclaimer-modal')">Legal Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-compliance-box">
+        <strong>वैधानिक अस्वीकरण (Statutory Disclaimer):</strong> Fengoo.in कोई बैंक, गैर-बैंकिंग वित्तीय कंपनी (NBFC), बीमा मध्यस्थ अथवा SEBI-पंजीकृत निवेश सलाहकार नहीं है। यहाँ उपलब्ध सामग्री केवल सामान्य सूचना व वित्तीय साक्षरता के उद्देश्य से है। किसी भी वित्तीय उत्पाद में निवेश या ऋण लेने से पूर्व संबंधित संस्थान के आधिकारिक दस्तावेज़ व नियम अवश्य पढ़ें।
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fengoo.in. All rights reserved. Free, Independent Financial Information for India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Affiliate Disclosure Modal -->
+  <div class="modal-backdrop" id="affiliate-disclosure-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>पारदर्शिता व पार्टनर नीति (Affiliate Disclosure)</h3>
+        <button class="modal-close" onclick="closeModal('affiliate-disclosure-modal')">&times;</button>
+      </div>
+      <div style="font-size:0.9rem; line-height:1.6; color:var(--text); display:flex; flex-direction:column; gap:0.75rem;">
+        <p>1. <strong>स्पष्ट पृथक्करण:</strong> Fengoo पर आधिकारिक विनियामक लिंक्स (जैसे RBI, SEBI, Income Tax) 100% गैर-व्यावसायिक हैं और उन पर कोई कमीशन नहीं लिया जाता।</p>
+        <p>2. <strong>पार्टनर लिंक्स की पहचान:</strong> जहाँ भी व्यावसायिक रेफरल लिंक उपलब्ध है, वहाँ स्पष्ट रूप से <strong>"Partner Link"</strong> अथवा <strong>"Affiliate Link"</strong> का लेबल लगाया गया है।</p>
+        <p>3. <strong>उपयोगकर्ता पर शून्य अतिरिक्त लागत:</strong> यदि आप किसी पार्टनर लिंक का उपयोग करके खाता खोलते हैं या सेवा लेते हैं, तो आपको कोई अतिरिक्त शुल्क नहीं देना पड़ता।</p>
+        <p>4. <strong>संपादकीय स्वतंत्रता:</strong> किसी बैंक अथवा वित्तीय संस्था द्वारा दी जाने वाली कमीशन दर हमारी निष्पक्ष समीक्षा या कैलकुलेटर की गणना को प्रभावित नहीं करती।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer Modal -->
+  <div class="modal-backdrop" id="disclaimer-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>कानूनी अस्वीकरण (Disclaimer)</h3>
+        <button class="modal-close" onclick="closeModal('disclaimer-modal')">&times;</button>
+      </div>
+      <div style="font-size:0.9rem; line-height:1.6; color:var(--text); display:flex; flex-direction:column; gap:0.75rem;">
+        <p>Fengoo.in पर दी गई ब्याज दरें, शुल्क और सरकारी योजना के नियम संबंधित आधिकारिक पोर्टल्स के नवीनतम विज्ञापनों पर आधारित हैं। ब्याज दरें और पात्रता शर्तें समय-समय पर RBI और संबंधित बैंकों द्वारा बदली जा सकती हैं। अंतिम निर्णय से पूर्व अधिकृत बैंक शाखा अथवा पोर्टल से पुष्टि अवश्य करें।</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="../js/registry.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/links.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  
+</body>
+</html>

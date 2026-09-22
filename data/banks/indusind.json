@@ -1,0 +1,44 @@
+{
+  "id": "indusind",
+  "name": "IndusInd Bank",
+  "legalName": "IndusInd Bank Limited",
+  "type": "Private Sector Bank",
+  "category": "private",
+  "tag": "High Savings Interest Tier",
+  "detailPage": "private-sector/hdfc/hdfc.html",
+  "officialUrl": "https://www.indusind.com/",
+  "helpline": "1860 267 7777",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Indus Delite Zero Balance Account",
+    "details": "चुनिंदा डिजिटल ऑफरिंग में जीरो बैलेंस खाता, ऑनलाइन शॉपिंग रिवॉर्ड्स और 5% डाइनिंग कैशबैक।",
+    "openUrl": "https://www.indusind.com/in/en/personal/accounts/savings-account.html"
+  },
+  "creditCards": {
+    "topCards": "Legend Credit Card (LTF), Nexxt Credit Card, Platinum Aura Edge",
+    "topOffer": "वीकेंड पर रिवॉर्ड पॉइंट्स 2x + लाइफटाइम फ्री कार्ड्स की विस्तृत रेंज।",
+    "applyUrl": "https://www.indusind.com/in/en/personal/cards/credit-cards.html"
+  },
+  "rates": {
+    "savings": "3.50% - 6.75% p.a.",
+    "fd": "3.50% - 7.75% p.a. (Senior Citizen: 8.25%)"
+  },
+  "loans": "Vehicle Loans, Personal Loan, Home Loan",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "IndusInd Bank भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": null
+}

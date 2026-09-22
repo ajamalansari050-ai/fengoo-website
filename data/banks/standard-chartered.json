@@ -1,0 +1,64 @@
+{
+  "id": "standard-chartered",
+  "name": "Standard Chartered Bank (India)",
+  "legalName": "Standard Chartered Bank (Indian Branches)",
+  "type": "Foreign Bank",
+  "category": "foreign",
+  "tag": "Premier Global Wealth Bank",
+  "detailPage": "foreign/standard-chartered/standard-chartered.html",
+  "officialUrl": "https://www.sc.com/in/",
+  "helpline": "1800 345 1000",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": false,
+    "type": "Salary & Priority Accounts",
+    "details": "वेतनभोगी कॉर्पोरेट खातों के लिए शून्य शेष, सामान्य खातों के लिए मासिक औसत शेष आवश्यक।",
+    "openUrl": "https://www.sc.com/in/save/"
+  },
+  "creditCards": {
+    "topCards": "Standard Chartered Ultimate, Smart Credit Card, Rewards Card",
+    "topOffer": "Ultimate कार्ड पर सभी खर्चों पर 3.3% फ्लैट रिवॉर्ड वैल्यू + 2% विदेशी मुद्रा मार्कअप।",
+    "applyUrl": "https://www.sc.com/in/credit-cards/"
+  },
+  "rates": {
+    "savings": "2.75% - 3.00% p.a.",
+    "fd": "3.00% - 7.50% p.a."
+  },
+  "loans": "Loan Against Property, Global Mortgages, Express Personal Loan",
+  "founded": "1858 in India",
+  "headquarters": "Kolkata/Mumbai (Operating Head: Mumbai)",
+  "rbiStatus": "Foreign Bank operating through branch presence licensed by RBI",
+  "dicgcCoverage": "Yes (DICGC ₹5 Lakh coverage applies to Indian branch deposits)",
+  "about": "Standard Chartered Bank has operated continuously in India for over 165 years, establishing its first branch in Kolkata in 1858. With over 100 branches across 42 cities, it is the largest international bank operating in India. It serves high-net-worth retail clients via Priority Banking, cross-border business traders, multinational corporates, and financial institutions.",
+  "products": [
+    {
+      "name": "Priority & Private Banking",
+      "desc": "Bespoke global wealth advisory, cross-border family accounts, and dedicated senior relationship managers."
+    },
+    {
+      "name": "Ultimate & Rewards Credit Cards",
+      "desc": "Premium international travel cards with unmatched reward points and domestic/overseas airport lounge access."
+    },
+    {
+      "name": "Foreign Currency (FCNR / NRE / NRO) Accounts",
+      "desc": "Specialized foreign currency deposits and tax-exempt repatriation accounts for Non-Resident Indians (NRIs)."
+    }
+  ],
+  "eligibility": [
+    "Resident Indians, High Net-worth Individuals, and Non-Resident Indians (NRIs)."
+  ],
+  "documents": [
+    "Aadhaar, Passport, PAN, foreign visa/work permits for NRI accounts."
+  ],
+  "charges": [
+    {
+      "item": "Priority Banking Relationship Value",
+      "fee": "Minimum Total Relationship Value (TRV) of ₹30 Lakh"
+    },
+    {
+      "item": "Cross-Border Transfers",
+      "fee": "Competitive institutional forex spreads"
+    }
+  ],
+  "partnerLink": null
+}

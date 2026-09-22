@@ -1,0 +1,56 @@
+{
+  "id": "cosmos-bank",
+  "name": "Cosmos Co-operative Bank",
+  "legalName": "The Cosmos Co-operative Bank Limited",
+  "type": "Multi-State Co-operative Bank",
+  "category": "rrb",
+  "tag": "Historic Co-op Bank (Established 1906)",
+  "detailPage": "cooperative/cosmos-bank/cosmos-bank.html",
+  "officialUrl": "https://www.cosmosbank.com/",
+  "helpline": "1800 233 0234",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Cosmos BSBDA Basic Savings",
+    "details": "शून्य बैलेंस खाता, कॉसमॉस डिजिटल कनेक्ट और सुरक्षित जमा विकल्प।",
+    "openUrl": "https://www.cosmosbank.com/"
+  },
+  "creditCards": {
+    "topCards": "Cosmos RuPay Card Variants",
+    "topOffer": "यूटिलिटी बिल भुगतान पर पॉइंट्स।",
+    "applyUrl": "https://www.cosmosbank.com/"
+  },
+  "rates": {
+    "savings": "3.00% - 3.50% p.a.",
+    "fd": "3.50% - 7.50% p.a. (Senior: 8.00%)"
+  },
+  "loans": "Commercial Property Loan, Gold Loans",
+  "founded": "1906",
+  "headquarters": "Pune, Maharashtra",
+  "rbiStatus": "Multi-State Scheduled Urban Co-operative Bank (RBI & MSCS Act)",
+  "dicgcCoverage": "Yes (DICGC ₹5,00,000 statutory deposit cover)",
+  "about": "Cosmos Co-operative Bank is one of the oldest multi-state scheduled urban co-operative banks in India, founded in 1906 in Pune. It operates across 7 states, providing full modern digital banking, corporate and retail lending.",
+  "products": [
+    {
+      "name": "Cosmos CosmoNet & Mobile Banking",
+      "desc": "Modern internet and mobile banking with IMPS, NEFT, and bill pay facilities."
+    },
+    {
+      "name": "Cosmos Home & Education Loans",
+      "desc": "Competitive loans for higher studies and home purchases."
+    }
+  ],
+  "eligibility": [
+    "Residents and businesses in operating states."
+  ],
+  "documents": [
+    "Aadhaar, PAN, residential proof."
+  ],
+  "charges": [
+    {
+      "item": "Minimum Balance",
+      "fee": "As per branch location category"
+    }
+  ],
+  "partnerLink": null
+}

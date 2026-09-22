@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fengoo.in - भारत का संपूर्ण वित्तीय सूचना पोर्टल (Complete India Financial Information Platform)</title>
+  <meta name="description" content="भारत का स्वतंत्र वित्तीय सूचना मंच: बैंक, सरकारी योजनाएं, 100+ ईएमआई कैलकुलेटर, क्रेडिट कार्ड, ऋण, बीमा, टैक्स स्लैब व सत्यापित आधिकारिक लिंक्स।" />
+  <link rel="canonical" href="https://fengoo.in/index.html" />
+  
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/calculators.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/monetization.css" />
+  
+  <style>
+    /* Hero section */
+    .home-hero {
+      background: radial-gradient(circle at 50% 0%, var(--surface-2) 0%, var(--surface) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(1.5rem, 4vw, 2.5rem);
+      text-align: center;
+      width: 100%;
+      overflow-x: hidden;
+    }
+    .home-hero-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.6rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-size: clamp(0.75rem, 2vw, 0.825rem);
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-sm);
+      max-width: 100%;
+      line-height: 1.4;
+    }
+    .home-hero h1 {
+      font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+      font-weight: 900;
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      overflow-wrap: break-word;
+    }
+    .home-hero h1 span {
+      color: var(--primary);
+    }
+    .home-hero p {
+      font-size: clamp(0.925rem, 2.2vw, 1.1rem);
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.55;
+      padding: 0 0.5rem;
+      overflow-wrap: break-word;
+    }
+    .home-search-wrap {
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Key Trust Stats */
+    .stats-strip {
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border);
+      padding: clamp(1rem, 2.5vw, 1.25rem) 0;
+      width: 100%;
+    }
+    .stats-strip-inner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+      gap: 1rem;
+      text-align: center;
+    }
+    .stat-pill-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.35rem 0.5rem;
+    }
+    .stat-pill-icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+    .stat-pill-text {
+      text-align: left;
+    }
+    .stat-pill-text strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--text);
+      font-weight: 800;
+      line-height: 1.3;
+    }
+    .stat-pill-text span {
+      font-size: 0.775rem;
+      color: var(--text-muted);
+    }
+
+    /* Folder Directory Grid */
+    .directory-section {
+      padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(2.5rem, 6vw, 5rem);
+      width: 100%;
+      max-width: 1200px;
+      box-sizing: border-box;
+    }
+    .section-head-box {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto clamp(1.5rem, 4vw, 2.5rem);
+      padding: 0 0.5rem;
+    }
+    .section-head-badge {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-block;
+      margin-bottom: 0.4rem;
+    }
+    .section-head-title {
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+      overflow-wrap: break-word;
+    }
+    .section-head-desc {
+      font-size: clamp(0.875rem, 2vw, 0.95rem);
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .folders-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .folders-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .folders-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .stat-pill-item {
+        justify-content: flex-start;
+      }
+    }
+
+    .folder-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: clamp(1.15rem, 3vw, 1.5rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+    .folder-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .folder-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      min-width: 0;
+    }
+    .folder-icon-box {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+    .folder-title-box {
+      flex: 1;
+      min-width: 0;
+    }
+    .folder-badge {
+      display: inline-block;
+      font-size: 0.725rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.35rem;
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
+    .folder-name {
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.35;
+      margin: 0;
+      overflow-wrap: break-word;
+    }
+    .folder-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+      overflow-wrap: break-word;
+    }
+    .folder-tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .folder-tag {
+      font-size: 0.725rem;
+      font-weight: 600;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.2rem 0.5rem;
+      border-radius: 9999px;
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
+    .folder-footer {
+      margin-top: 0.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 0.85rem;
+    }
+    .btn-open-folder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      min-height: 44px;
+      text-align: center;
+      box-sizing: border-box;
+      line-height: 1.35;
+    }
+    .btn-open-folder:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" id="header-logo-link">
+        <span class="logo-badge" id="header-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </span>
+        <span class="brand-name">Fengoo<span>.in</span></span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="banks/index.html" class="nav-link">Banks</a>
+        <a href="credit-cards/index.html" class="nav-link">Cards</a>
+        <a href="upi/index.html" class="nav-link">UPI</a>
+        <a href="loans/index.html" class="nav-link">Loans</a>
+        <a href="insurance/index.html" class="nav-link">Insurance</a>
+        <a href="investments/index.html" class="nav-link">Investments</a>
+        <a href="government/index.html" class="nav-link">Govt Schemes</a>
+        <a href="tax/index.html" class="nav-link">Tax</a>
+        <a href="pension/index.html" class="nav-link">Pension</a>
+        <a href="savings/index.html" class="nav-link">Savings</a>
+        <a href="calculators/index.html" class="nav-link">Calculators</a>
+        <a href="official-links/official-links.html" class="nav-link">Official Links</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <button class="btn-icon mobile-menu-btn" id="mobile-menu-btn" title="Open Menu" aria-label="Open Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="brand-name font-bold">Fengoo Navigation</span>
+        <button class="modal-close drawer-close-btn" id="drawer-close-btn">&times;</button>
+      </div>
+      <div class="drawer-links">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="banks/index.html" class="drawer-link">Banks Directory</a>
+        <a href="credit-cards/index.html" class="drawer-link">Credit Cards</a>
+        <a href="upi/index.html" class="drawer-link">UPI & Payments</a>
+        <a href="loans/index.html" class="drawer-link">Loans</a>
+        <a href="insurance/index.html" class="drawer-link">Insurance</a>
+        <a href="investments/index.html" class="drawer-link">Investments</a>
+        <a href="government/index.html" class="drawer-link">Government Schemes</a>
+        <a href="tax/index.html" class="drawer-link">Tax Slabs</a>
+        <a href="pension/index.html" class="drawer-link">Pension & Retirement</a>
+        <a href="savings/index.html" class="drawer-link">Savings & Deposits</a>
+        <a href="financial-education/index.html" class="drawer-link">Financial Education</a>
+        <a href="calculators/index.html" class="drawer-link">20+ Calculators</a>
+        <a href="official-links/official-links.html" class="drawer-link">Official Regulatory Links</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Hero Section -->
+  <section class="home-hero">
+    <div class="container">
+      <div class="home-hero-pill">
+        <span>🇮🇳 स्वतंत्र, निष्पक्ष भारतीय वित्तीय सूचना मंच</span>
+        <span style="opacity:0.4;">•</span>
+        <span>RBI, SEBI & IRDAI Verified</span>
+      </div>
+      <h1>भारत की संपूर्ण वित्तीय व्यवस्था, <span>अब श्रेणियों में व्यवस्थित</span></h1>
+      <p>
+        जिस श्रेणी की जानकारी चाहिए, सीधे उसके फोल्डर पर क्लिक करें। अंदर सभी बैंकों के नाम, क्रेडिट कार्ड ऑफर, जीरो बैलेंस खाता लिंक, सरकारी योजनाओं के ऑफिशियल फॉर्म व 100+ ईएमआई कैलकुलेटर उपलब्ध हैं।
+      </p>
+
+      <!-- Global Live Search -->
+      <div class="home-search-wrap">
+        <div class="search-input-box">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          <input 
+            type="text" 
+            id="home-category-search" 
+            placeholder="खोजें: HDFC, SBI, सरकारी योजना, 100 EMI कैलकुलेटर, क्रेडिट कार्ड, लोन, सुकन्या..." 
+            aria-label="Search Categories and Entities"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Guarantees Strip -->
+  <section class="stats-strip">
+    <div class="container stats-strip-inner">
+      <div class="stat-pill-item">
+        <span class="stat-pill-icon">🛡️</span>
+        <div class="stat-pill-text">
+          <strong>DICGC ₹5 लाख सुरक्षा</strong>
+          <span>सभी बैंकों पर सुरक्षित जमा विवरण</span>
+        </div>
+      </div>
+      <div class="stat-pill-item">
+        <span class="stat-pill-icon">⚖️</span>
+        <div class="stat-pill-text">
+          <strong>100% पारदर्शी लिंक्स</strong>
+          <span>Official व Partner Links अलग-अलग</span>
+        </div>
+      </div>
+      <div class="stat-pill-item">
+        <span class="stat-pill-icon">📂</span>
+        <div class="stat-pill-text">
+          <strong>मॉड्यूलर फोल्डर स्ट्रक्चर</strong>
+          <span>हर बैंक व योजना का स्वतंत्र संपूर्ण पृष्ठ</span>
+        </div>
+      </div>
+      <div class="stat-pill-item">
+        <span class="stat-pill-icon">📞</span>
+        <div class="stat-pill-text">
+          <strong>साइबर फ्रॉड हेल्पलाइन 1930</strong>
+          <span>वित्तीय धोखाधड़ी रिपोर्टिंग सहायता</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Folder Directory -->
+  <main class="container directory-section">
+    <div class="section-head-box">
+      <span class="section-head-badge">श्रेणी अनुसार सम्पूर्ण डायरेक्टरी</span>
+      <h2 class="section-head-title">वित्तीय फोल्डर डायरेक्टरी (Category Portals)</h2>
+      <p class="section-head-desc">
+        नीचे दिए गए किसी भी फोल्डर पर क्लिक करें। प्रत्येक फोल्डर के अंदर संपूर्ण सूची, बैंक स्पेसिफिकेशंस, अप्लाई लिंक व ऑफिशियल फॉर्म्स उपलब्ध हैं।
+      </p>
+    </div>
+
+    <div class="folders-grid" id="folders-container">
+      
+    <article class="folder-card" id="folder-banks" data-search="बैंक डायरेक्टरी (banks directory) भारत के सभी सार्वजनिक, निजी, स्मॉल फाइनेंस व पेमेंट्स बैंक। hdfc, sbi, icici, kotak 811, axis, pnb आदि। जीरो बैलेंस खाता खोलने का लिंक, क्रेडिट कार्ड ऑफर्स, ब्याज दरें, dicgc ₹5 लाख सुरक्षा व कस्टमर केयर। hdfc bank sbi yono kotak 811 zero balance icici bank bob au sfb">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #1e3a8a15; color: #1e3a8a; border-color: #1e3a8a30;">
+          <span>🏦</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">India के सभी 40+ बैंक • PSU, Private, SFB</span>
+          <h2 class="folder-name">बैंक डायरेक्टरी (Banks Directory)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">भारत के सभी सार्वजनिक, निजी, स्मॉल फाइनेंस व पेमेंट्स बैंक। HDFC, SBI, ICICI, Kotak 811, Axis, PNB आदि। जीरो बैलेंस खाता खोलने का लिंक, क्रेडिट कार्ड ऑफर्स, ब्याज दरें, DICGC ₹5 लाख सुरक्षा व कस्टमर केयर।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">HDFC Bank</span><span class="folder-tag">SBI YONO</span><span class="folder-tag">Kotak 811 Zero Balance</span><span class="folder-tag">ICICI Bank</span><span class="folder-tag">BoB</span><span class="folder-tag">AU SFB</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="banks/index.html" class="btn-open-folder" style="background: #1e3a8a;">
+          बैंक डायरेक्टरी फोल्डर खोलें (Open Banks) →
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="folder-card" id="folder-govt" data-search="सरकारी योजनाएं (govt schemes directory) प्रधानमंत्री जन धन, पीएम किसान, आयुष्मान भारत, सुकन्या समृद्धि, मुद्रा योजना सहित उत्तर प्रदेश, बिहार, मध्य प्रदेश, महाराष्ट्र, राजस्थान, पश्चिम बंगाल व सभी राज्यों की योजनाओं की जानकारी व ओरिजिनल पोर्टल पर आवेदन लिंक। pm jan dhan pm kisan ₹6000 ayushman bharat ₹5l state schemes ssy mudra">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #b4530915; color: #b45309; border-color: #b4530930;">
+          <span>📜</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">50+ योजनाएं • केंद्र व भारत के सभी 28 राज्य</span>
+          <h2 class="folder-name">सरकारी योजनाएं (Govt Schemes Directory)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">प्रधानमंत्री जन धन, पीएम किसान, आयुष्मान भारत, सुकन्या समृद्धि, मुद्रा योजना सहित उत्तर प्रदेश, बिहार, मध्य प्रदेश, महाराष्ट्र, राजस्थान, पश्चिम बंगाल व सभी राज्यों की योजनाओं की जानकारी व ओरिजिनल पोर्टल पर आवेदन लिंक।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">PM Jan Dhan</span><span class="folder-tag">PM Kisan ₹6000</span><span class="folder-tag">Ayushman Bharat ₹5L</span><span class="folder-tag">State Schemes</span><span class="folder-tag">SSY</span><span class="folder-tag">Mudra</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="government/index.html" class="btn-open-folder" style="background: #b45309;">
+          सरकारी योजनाएं फोल्डर खोलें (Open Govt Schemes) →
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="folder-card" id="folder-calc" data-search="100+ ईएमआई व वित्तीय कैलकुलेटर (calculators) होम लोन emi, कार लोन, पर्सनल लोन, बाइक लोन, गोल्ड लोन, मुद्रा लोन, एसआईपी (sip), पीपीएफ (ppf), एफडी (fd), आरडी (rd), रिटायरमेंट कॉर्पस, सुकन्या समृद्धि व जीएसटी कैलकुलेटर। home loan emi car loan emi personal loan emi sip calculator ppf fd/rd">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #4338ca15; color: #4338ca; border-color: #4338ca30;">
+          <span>🧮</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">105 प्रकार के कैलकुलेटर • सटीक व त्वरित गणित</span>
+          <h2 class="folder-name">100+ ईएमआई व वित्तीय कैलकुलेटर (Calculators)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">होम लोन EMI, कार लोन, पर्सनल लोन, बाइक लोन, गोल्ड लोन, मुद्रा लोन, एसआईपी (SIP), पीपीएफ (PPF), एफडी (FD), आरडी (RD), रिटायरमेंट कॉर्पस, सुकन्या समृद्धि व जीएसटी कैलकुलेटर।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">Home Loan EMI</span><span class="folder-tag">Car Loan EMI</span><span class="folder-tag">Personal Loan EMI</span><span class="folder-tag">SIP Calculator</span><span class="folder-tag">PPF</span><span class="folder-tag">FD/RD</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="calculators/index.html" class="btn-open-folder" style="background: #4338ca;">
+          100+ कैलकुलेटर फोल्डर खोलें (Open 105 Calculators) →
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="folder-card" id="folder-cc" data-search="क्रेडिट कार्ड डायरेक्टरी (credit cards in india) hdfc millennia, sbi cashback (5%), amazon pay icici (lifetime free), flipkart axis, rupay upi क्रेडिट कार्ड, एयरपोर्ट लाउंज, वार्षिक शुल्क माफी व सीधे बैंक पोर्टल पर ऑनलाइन अप्लाई करने का लिंक। amazon pay icici sbi cashback 5% hdfc millennia rupay upi cards au lit scapia">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #6d28d915; color: #6d28d9; border-color: #6d28d930;">
+          <span>💳</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">कैशबैक, LTF, RuPay on UPI, लाउंज एक्सेस</span>
+          <h2 class="folder-name">क्रेडिट कार्ड डायरेक्टरी (Credit Cards in India)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">HDFC Millennia, SBI Cashback (5%), Amazon Pay ICICI (Lifetime Free), Flipkart Axis, RuPay UPI क्रेडिट कार्ड, एयरपोर्ट लाउंज, वार्षिक शुल्क माफी व सीधे बैंक पोर्टल पर ऑनलाइन अप्लाई करने का लिंक।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">Amazon Pay ICICI</span><span class="folder-tag">SBI Cashback 5%</span><span class="folder-tag">HDFC Millennia</span><span class="folder-tag">RuPay UPI Cards</span><span class="folder-tag">AU LIT</span><span class="folder-tag">Scapia</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="credit-cards/index.html" class="btn-open-folder" style="background: #6d28d9;">
+          क्रेडिट कार्ड फोल्डर खोलें (Open Credit Cards) →
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="folder-card" id="folder-loans" data-search="ऋण व लोन डायरेक्टरी (all loans in india) होम लोन (8.40%), पर्सनल लोन, विद्या लक्ष्मी पोर्टल शिक्षा लोन, कार लोन, गोल्ड लोन (8.75%), पीएम मुद्रा लोन (₹10 लाख तक) व किसान क्रेडिट कार्ड (4%)। पात्रता, दस्तावेज व सीधा आवेदन लिंक। home loan 8.40% personal loan vidya lakshmi education mudra loan gold loan 8.75% kcc 4%">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #0f766e15; color: #0f766e; border-color: #0f766e30;">
+          <span>💰</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">होम लोन, पर्सनल, एजुकेशन, गोल्ड व मुद्रा लोन</span>
+          <h2 class="folder-name">ऋण व लोन डायरेक्टरी (All Loans in India)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">होम लोन (8.40%), पर्सनल लोन, विद्या लक्ष्मी पोर्टल शिक्षा लोन, कार लोन, गोल्ड लोन (8.75%), पीएम मुद्रा लोन (₹10 लाख तक) व किसान क्रेडिट कार्ड (4%)। पात्रता, दस्तावेज व सीधा आवेदन लिंक।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">Home Loan 8.40%</span><span class="folder-tag">Personal Loan</span><span class="folder-tag">Vidya Lakshmi Education</span><span class="folder-tag">Mudra Loan</span><span class="folder-tag">Gold Loan 8.75%</span><span class="folder-tag">KCC 4%</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="loans/index.html" class="btn-open-folder" style="background: #0f766e;">
+          लोन डायरेक्टरी फोल्डर खोलें (Open Loans) →
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="folder-card" id="folder-upi" data-search="यूपीआई व डिजिटल पेमेंट्स (upi & payments) phonepe, google pay, paytm, bhim upi। प्रति दिन ₹1 लाख से ₹5 लाख लिमिट, upi lite बिना पिन पेमेंट, rupay क्रेडिट कार्ड लिंकेज और साइबर फ्रॉड हेल्पलाइन 1930 पर शिकायत समाधान। bhim upi phonepe google pay paytm upi lite cyber fraud 1930">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #0369a115; color: #0369a1; border-color: #0369a130;">
+          <span>📱</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">NPCI गाइडलइन्स • UPI Lite • RuPay on UPI</span>
+          <h2 class="folder-name">यूपीआई व डिजिटल पेमेंट्स (UPI & Payments)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">PhonePe, Google Pay, Paytm, BHIM UPI। प्रति दिन ₹1 लाख से ₹5 लाख लिमिट, UPI Lite बिना पिन पेमेंट, RuPay क्रेडिट कार्ड लिंकेज और साइबर फ्रॉड हेल्पलाइन 1930 पर शिकायत समाधान।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">BHIM UPI</span><span class="folder-tag">PhonePe</span><span class="folder-tag">Google Pay</span><span class="folder-tag">Paytm</span><span class="folder-tag">UPI Lite</span><span class="folder-tag">Cyber Fraud 1930</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="upi/index.html" class="btn-open-folder" style="background: #0369a1;">
+          UPI फोल्डर खोलें (Open UPI Directory) →
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="folder-card" id="folder-insurance" data-search="बीमा व सुरक्षा (insurance directory) टर्म लाइफ इंश्योरेंस, फैमिली फ्लोटर हेल्थ इंश्योरेंस, मोटर व्हीकल इंश्योरेंस, पीएम जीवन ज्योति बीमा (pmjjby ₹436) व पीएम सुरक्षा बीमा (pmsby ₹20)। क्लेम रेशियो व सही पॉलिसी चुनने की गाइड। term life insurance health insurance pmjjby ₹2l pmsby ₹20 motor insurance csr data">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #be185d15; color: #be185d; border-color: #be185d30;">
+          <span>🛡️</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">IRDAI अधिकृत • Claim Settlement Ratio (CSR)</span>
+          <h2 class="folder-name">बीमा व सुरक्षा (Insurance Directory)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">टर्म लाइफ इंश्योरेंस, फैमिली फ्लोटर हेल्थ इंश्योरेंस, मोटर व्हीकल इंश्योरेंस, पीएम जीवन ज्योति बीमा (PMJJBY ₹436) व पीएम सुरक्षा बीमा (PMSBY ₹20)। क्लेम रेशियो व सही पॉलिसी चुनने की गाइड।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">Term Life Insurance</span><span class="folder-tag">Health Insurance</span><span class="folder-tag">PMJJBY ₹2L</span><span class="folder-tag">PMSBY ₹20</span><span class="folder-tag">Motor Insurance</span><span class="folder-tag">CSR Data</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="insurance/index.html" class="btn-open-folder" style="background: #be185d;">
+          बीमा फोल्डर खोलें (Open Insurance Hub) →
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="folder-card" id="folder-investments" data-search="निवेश व शेयर बाजार (investments hub) म्यूचुअल फंड एसआईपी (sip), लार्ज/मिड/स्मॉल कैप फंड्स, सॉवरेन गोल्ड बॉन्ड (sgb), डायरेक्ट स्टॉक्स, आरबीआई रिटेल डायरेक्ट (सरकारी बॉन्ड 7.15%) और इंडेक्स फंड्स में निवेश का तरीका। mutual funds sip index funds sovereign gold bond rbi retail direct stocks fd vs mf">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #15803d15; color: #15803d; border-color: #15803d30;">
+          <span>📈</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">SEBI पंजीकृत • Mutual Funds, SIP, SGB, Stocks</span>
+          <h2 class="folder-name">निवेश व शेयर बाजार (Investments Hub)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">म्यूचुअल फंड एसआईपी (SIP), लार्ज/मिड/स्मॉल कैप फंड्स, सॉवरेन गोल्ड बॉन्ड (SGB), डायरेक्ट स्टॉक्स, आरबीआई रिटेल डायरेक्ट (सरकारी बॉन्ड 7.15%) और इंडेक्स फंड्स में निवेश का तरीका।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">Mutual Funds SIP</span><span class="folder-tag">Index Funds</span><span class="folder-tag">Sovereign Gold Bond</span><span class="folder-tag">RBI Retail Direct</span><span class="folder-tag">Stocks</span><span class="folder-tag">FD vs MF</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="investments/index.html" class="btn-open-folder" style="background: #15803d;">
+          निवेश फोल्डर खोलें (Open Investments) →
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="folder-card" id="folder-tax" data-search="टैक्स व इनकम टैक्स स्लैब (income tax & gst) नई टैक्स व्यवस्था (new tax regime) बनाम पुरानी टैक्स व्यवस्था (old regime), सेक्शन 80c व 80d कटौतियां, वेतनभोगियों को ₹75,000 स्टैंडर्ड डिडक्शन, कैपिटल गेन्स टैक्स व आयकर ई-फाइलिंग पोर्टल। new tax regime old tax regime standard deduction ₹75k section 80c itr filing gst slabs">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #c2410c15; color: #c2410c; border-color: #c2410c30;">
+          <span>⚖️</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">बजट 2024-25 • New vs Old Tax Regime</span>
+          <h2 class="folder-name">टैक्स व इनकम टैक्स स्लैब (Income Tax & GST)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">नई टैक्स व्यवस्था (New Tax Regime) बनाम पुरानी टैक्स व्यवस्था (Old Regime), सेक्शन 80C व 80D कटौतियां, वेतनभोगियों को ₹75,000 स्टैंडर्ड डिडक्शन, कैपिटल गेन्स टैक्स व आयकर ई-फाइलिंग पोर्टल।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">New Tax Regime</span><span class="folder-tag">Old Tax Regime</span><span class="folder-tag">Standard Deduction ₹75K</span><span class="folder-tag">Section 80C</span><span class="folder-tag">ITR Filing</span><span class="folder-tag">GST Slabs</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="tax/index.html" class="btn-open-folder" style="background: #c2410c;">
+          टैक्स फोल्डर खोलें (Open Tax Hub) →
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="folder-card" id="folder-pension" data-search="पेंशन व सेवानिवृत्ति (pension & retirement) नेशनल पेंशन सिस्टम (nps tier-1 व tier-2), अटल पेंशन योजना (apy ₹1,000 से ₹5,000 मासिक पेंशन), ईपीएफओ (epfo) पासबुक, यूएएन (uan) व ईपीएस-95 (eps-95) पेंशन नियम। national pension system (nps) atal pension yojana (apy) epfo epf passbook eps-95 pension">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #4b556315; color: #4b5563; border-color: #4b556330;">
+          <span>👴</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">PFRDA व EPFO अधिकृत • NPS, APY, EPS</span>
+          <h2 class="folder-name">पेंशन व सेवानिवृत्ति (Pension & Retirement)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">नेशनल पेंशन सिस्टम (NPS Tier-1 व Tier-2), अटल पेंशन योजना (APY ₹1,000 से ₹5,000 मासिक पेंशन), ईपीएफओ (EPFO) पासबुक, यूएएन (UAN) व ईपीएस-95 (EPS-95) पेंशन नियम।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">National Pension System (NPS)</span><span class="folder-tag">Atal Pension Yojana (APY)</span><span class="folder-tag">EPFO EPF Passbook</span><span class="folder-tag">EPS-95 Pension</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="pension/index.html" class="btn-open-folder" style="background: #4b5563;">
+          पेंशन फोल्डर खोलें (Open Pension Hub) →
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="folder-card" id="folder-savings" data-search="बचत व डाकघर योजनाएं (savings & post office) पब्लिक प्रॉविडेंट फंड (ppf 7.1%), सुकन्या समृद्धि योजना (ssy 8.2%), महिला सम्मान बचत पत्र, डाकघर मासिक आय योजना (mis 7.4%), राष्ट्रीय बचत पत्र (nsc 7.7%) व वरिष्ठ नागरिक बचत योजना (scss 8.2%)। sukanya samriddhi 8.2% ppf 7.1% mahila samman post office mis nsc 7.7% scss 8.2%">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #ca8a0415; color: #ca8a04; border-color: #ca8a0430;">
+          <span>🪙</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">भारत सरकार की 100% सॉवरेन गारंटी</span>
+          <h2 class="folder-name">बचत व डाकघर योजनाएं (Savings & Post Office)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">पब्लिक प्रॉविडेंट फंड (PPF 7.1%), सुकन्या समृद्धि योजना (SSY 8.2%), महिला सम्मान बचत पत्र, डाकघर मासिक आय योजना (MIS 7.4%), राष्ट्रीय बचत पत्र (NSC 7.7%) व वरिष्ठ नागरिक बचत योजना (SCSS 8.2%)।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">Sukanya Samriddhi 8.2%</span><span class="folder-tag">PPF 7.1%</span><span class="folder-tag">Mahila Samman</span><span class="folder-tag">Post Office MIS</span><span class="folder-tag">NSC 7.7%</span><span class="folder-tag">SCSS 8.2%</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="savings/index.html" class="btn-open-folder" style="background: #ca8a04;">
+          बचत योजनाएं फोल्डर खोलें (Open Savings) →
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="folder-card" id="folder-official" data-search="आधिकारिक विनियामक लिंक्स (official portals) भारतीय रिज़र्व बैंक (rbi), सेबी (sebi), आईआरडीएआई (irdai), एनपीसीआई (npci), आयकर विभाग, यूआईडीएआई (आधार), डिजिपिन, उमंग और राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल 1930। rbi official sebi portal income tax e-filing cybercrime 1930 npci upi uidai aadhaar">
+      <div class="folder-header">
+        <div class="folder-icon-box" style="background-color: #2563eb15; color: #2563eb; border-color: #2563eb30;">
+          <span>🌐</span>
+        </div>
+        <div class="folder-title-box">
+          <span class="folder-badge">100% सत्यापित सरकारी व विनियामक पोर्टल्स</span>
+          <h2 class="folder-name">आधिकारिक विनियामक लिंक्स (Official Portals)</h2>
+        </div>
+      </div>
+
+      <p class="folder-desc">भारतीय रिज़र्व बैंक (RBI), सेबी (SEBI), आईआरडीएआई (IRDAI), एनपीसीआई (NPCI), आयकर विभाग, यूआईडीएआई (आधार), डिजिपिन, उमंग और राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल 1930।</p>
+
+      <div class="folder-tags-wrap">
+        <span class="folder-tag">RBI Official</span><span class="folder-tag">SEBI Portal</span><span class="folder-tag">Income Tax e-Filing</span><span class="folder-tag">Cybercrime 1930</span><span class="folder-tag">NPCI UPI</span><span class="folder-tag">UIDAI Aadhaar</span>
+      </div>
+
+      <div class="folder-footer">
+        <a href="official-links/official-links.html" class="btn-open-folder" style="background: #2563eb;">
+          आधिकारिक पोर्टल्स खोलें (Open Portals) →
+        </a>
+      </div>
+    </article>
+  
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('home-category-search');
+      const folderCards = document.querySelectorAll('.folder-card');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.trim().toLowerCase();
+          folderCards.forEach(card => {
+            const searchData = card.getAttribute('data-search') || '';
+            if (!query || searchData.includes(query)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+  </script>
+
+  
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="logo-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </span>
+            <span class="brand-name">Fengoo<span>.in</span></span>
+          </div>
+          <p>Fengoo भारत का एक स्वतंत्र, निष्पक्ष वित्तीय सूचना व शिक्षा मंच है। यहाँ केवल वैधानिक और आधिकारिक स्रोतों (RBI, SEBI, IRDAI, Income Tax, PFRDA, DICGC) से सत्यापित डेटा प्रस्तुत किया जाता है।</p>
+          <div class="footer-badges">
+            <span class="trust-badge-pill">🛡️ DICGC ₹5L Coverage Guide</span>
+            <span class="trust-badge-pill">⚖️ Zero Biased Advice</span>
+            <span class="trust-badge-pill">🏛️ Verified Regulators</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>बैंकिंग व कार्ड्स</h5>
+          <ul class="footer-links">
+            <li><a href="banks/public-sector/sbi/sbi.html">State Bank of India</a></li>
+            <li><a href="banks/private-sector/hdfc/hdfc.html">HDFC Bank</a></li>
+            <li><a href="banks/private-sector/kotak/kotak.html">Kotak Mahindra Bank</a></li>
+            <li><a href="banks/small-finance/au-small-finance/au-small-finance.html">AU Small Finance</a></li>
+            <li><a href="credit-cards/index.html">Credit Cards Directory</a></li>
+            <li><a href="upi/index.html">UPI Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>ऋण व निवेश</h5>
+          <ul class="footer-links">
+            <li><a href="loans/home-loan/index.html">Home Loan Guide</a></li>
+            <li><a href="loans/personal-loan/index.html">Personal Loan</a></li>
+            <li><a href="investments/mutual-funds/sip-equity-debt.html">Mutual Funds & SIP</a></li>
+            <li><a href="investments/bonds/sovereign-gold-bonds.html">Sovereign Gold Bonds</a></li>
+            <li><a href="insurance/life/term-insurance.html">Term Life Insurance</a></li>
+            <li><a href="insurance/health/individual-family-floater.html">Health Insurance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>सरकारी योजनाएं व टैक्स</h5>
+          <ul class="footer-links">
+            <li><a href="government/schemes/pm-jan-dhan-yojana.html">PM Jan Dhan Yojana</a></li>
+            <li><a href="government/schemes/sukanya-samriddhi-yojana.html">Sukanya Samriddhi</a></li>
+            <li><a href="pension/nps/nps.html">National Pension System</a></li>
+            <li><a href="pension/atal-pension-yojana/atal-pension-yojana.html">Atal Pension Yojana</a></li>
+            <li><a href="tax/income-tax-slabs/income-tax-slabs.html">Income Tax Slabs</a></li>
+            <li><a href="calculators/gst.html">GST Calculator & Slabs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>टूल्स व नीतियां (Policies)</h5>
+          <ul class="footer-links">
+            <li><a href="link-manager.html" style="color:var(--primary); font-weight:700;">⚡ BankSathi Link Manager</a></li>
+            <li><a href="calculators/emi.html">EMI Calculator</a></li>
+            <li><a href="calculators/sip.html">SIP Calculator</a></li>
+            <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="disclaimer.html">Legal Disclaimer</a></li>
+            <li><a href="about-us.html">About Fengoo</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="advertise.html">📢 Advertise With Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-compliance-box">
+        <strong>वैधानिक अस्वीकरण (Statutory Disclaimer):</strong> Fengoo.in कोई बैंक, गैर-बैंकिंग वित्तीय कंपनी (NBFC), बीमा मध्यस्थ अथवा SEBI-पंजीकृत निवेश सलाहकार नहीं है। यहाँ उपलब्ध सामग्री केवल सामान्य सूचना व वित्तीय साक्षरता के उद्देश्य से है। किसी भी वित्तीय उत्पाद में निवेश या ऋण लेने से पूर्व संबंधित संस्थान के आधिकारिक दस्तावेज़ व नियम अवश्य पढ़ें।
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fengoo.in. All rights reserved. Free, Independent Financial Information for India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Affiliate Disclosure Modal -->
+  <div class="modal-backdrop" id="affiliate-disclosure-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>पारदर्शिता व पार्टनर नीति (Affiliate Disclosure)</h3>
+        <button class="modal-close" onclick="closeModal('affiliate-disclosure-modal')">&times;</button>
+      </div>
+      <div style="font-size:0.9rem; line-height:1.6; color:var(--text); display:flex; flex-direction:column; gap:0.75rem;">
+        <p>1. <strong>स्पष्ट पृथक्करण:</strong> Fengoo पर आधिकारिक विनियामक लिंक्स (जैसे RBI, SEBI, Income Tax) 100% गैर-व्यावसायिक हैं और उन पर कोई कमीशन नहीं लिया जाता।</p>
+        <p>2. <strong>पार्टनर लिंक्स की पहचान:</strong> जहाँ भी व्यावसायिक रेफरल लिंक उपलब्ध है, वहाँ स्पष्ट रूप से <strong>"Partner Link"</strong> अथवा <strong>"Affiliate Link"</strong> का लेबल लगाया गया है।</p>
+        <p>3. <strong>उपयोगकर्ता पर शून्य अतिरिक्त लागत:</strong> यदि आप किसी पार्टनर लिंक का उपयोग करके खाता खोलते हैं या सेवा लेते हैं, तो आपको कोई अतिरिक्त शुल्क नहीं देना पड़ता।</p>
+        <p>4. <strong>संपादकीय स्वतंत्रता:</strong> किसी बैंक अथवा वित्तीय संस्था द्वारा दी जाने वाली कमीशन दर हमारी निष्पक्ष समीक्षा या कैलकुलेटर की गणना को प्रभावित नहीं करती।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer Modal -->
+  <div class="modal-backdrop" id="disclaimer-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>कानूनी अस्वीकरण (Disclaimer)</h3>
+        <button class="modal-close" onclick="closeModal('disclaimer-modal')">&times;</button>
+      </div>
+      <div style="font-size:0.9rem; line-height:1.6; color:var(--text); display:flex; flex-direction:column; gap:0.75rem;">
+        <p>Fengoo.in पर दी गई ब्याज दरें, शुल्क और सरकारी योजना के नियम संबंधित आधिकारिक पोर्टल्स के नवीनतम विज्ञापनों पर आधारित हैं। ब्याज दरें और पात्रता शर्तें समय-समय पर RBI और संबंधित बैंकों द्वारा बदली जा सकती हैं। अंतिम निर्णय से पूर्व अधिकृत बैंक शाखा अथवा पोर्टल से पुष्टि अवश्य करें।</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="js/registry.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/links.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/affiliate_config.js"></script>
+  <script src="js/monetization.js"></script>
+  
+</body>
+</html>

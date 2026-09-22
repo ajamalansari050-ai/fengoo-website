@@ -1,0 +1,56 @@
+{
+  "id": "hsbc",
+  "name": "HSBC India",
+  "legalName": "The Hongkong and Shanghai Banking Corporation Limited",
+  "type": "Foreign Bank",
+  "category": "foreign",
+  "tag": "International NRI & Wealth Specialist",
+  "detailPage": "foreign/hsbc/hsbc.html",
+  "officialUrl": "https://www.hsbc.co.in/",
+  "helpline": "1800 266 3456",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": false,
+    "type": "Corporate Salary & Premier Accounts",
+    "details": "कॉर्पोरेट पेरोल टाई-अप्स में शून्य शेष। अंतर्राष्ट्रीय खाता पोर्टेबिलिटी और वैश्विक लाउंज।",
+    "openUrl": "https://www.hsbc.co.in/accounts/"
+  },
+  "creditCards": {
+    "topCards": "HSBC Cashback Credit Card, HSBC Premier Mastercard",
+    "topOffer": "डाइनिंग, ग्रोसरी और ऑनलाइन फूड डिलीवरी पर 10% कैशबैक।",
+    "applyUrl": "https://www.hsbc.co.in/credit-cards/"
+  },
+  "rates": {
+    "savings": "2.50% - 3.00% p.a.",
+    "fd": "3.00% - 7.25% p.a."
+  },
+  "loans": "Cross-Border Wealth Lending, Smart Home Loan",
+  "founded": "1853 (Mercantile Bank predecessor in Mumbai)",
+  "headquarters": "Mumbai, Maharashtra",
+  "rbiStatus": "Licensed Foreign Bank operating through branches in India",
+  "dicgcCoverage": "Yes (Covered under DICGC ₹5,00,000 protection for Indian deposits)",
+  "about": "HSBC India is a full-service banking franchise providing wealth management, personal banking, commercial banking, and global trade solutions. HSBC offers premier cross-border banking advantages for global Indians and international travelers.",
+  "products": [
+    {
+      "name": "HSBC Premier Banking",
+      "desc": "Global account linking, relationship manager, and international ATM access with zero foreign conversion markups on premier tiers."
+    },
+    {
+      "name": "HSBC Cashback Credit Card",
+      "desc": "10% cashback on dining, food delivery, and grocery spends with worldwide concierge benefits."
+    }
+  ],
+  "eligibility": [
+    "Resident Indians, Expats, and NRIs meeting relationship criteria."
+  ],
+  "documents": [
+    "Passport, PAN Card, Indian residential proof, foreign employment contract if NRI."
+  ],
+  "charges": [
+    {
+      "item": "HSBC Premier Minimum Relationship Balance",
+      "fee": "₹40,00,000 TRV across deposits/investments"
+    }
+  ],
+  "partnerLink": null
+}

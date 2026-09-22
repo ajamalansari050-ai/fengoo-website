@@ -1,0 +1,75 @@
+{
+  "id": "icici",
+  "name": "ICICI Bank",
+  "legalName": "ICICI Bank Limited",
+  "type": "Private Sector Bank",
+  "category": "private",
+  "tag": "D-SIB (Systemically Important)",
+  "detailPage": "private-sector/icici/icici.html",
+  "officialUrl": "https://www.icicibank.com/",
+  "helpline": "1800 1080",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "ICICI Mine & BSBDA Basic Savings",
+    "details": "युवाओं और सामान्य नागरिकों के लिए शून्य शेष बचत खाता व iMobile Pay आधारित डिजिटल ऑनबोर्डिंग।",
+    "openUrl": "https://www.icicibank.com/personal-banking/accounts/savings-account"
+  },
+  "creditCards": {
+    "topCards": "Amazon Pay ICICI (Lifetime Free 5% Unlimited), Coral RuPay UPI, Sapphiro, Rubyx",
+    "topOffer": "Amazon Prime सदस्यों के लिए 5% अनलिमिटेड कैशबैक, कोई जॉइनिंग शुल्क नहीं (LTF)।",
+    "applyUrl": "https://www.icicibank.com/personal-banking/cards/credit-cards"
+  },
+  "rates": {
+    "savings": "3.00% - 3.50% p.a.",
+    "fd": "3.00% - 7.20% p.a. (Senior Citizen: 7.75%)"
+  },
+  "loans": "Home Loan (from 8.60%), Insta Personal Loan (Disbursed in 3 seconds)",
+  "founded": "1994 (by Industrial Credit and Investment Corporation of India)",
+  "headquarters": "Mumbai, Maharashtra",
+  "rbiStatus": "Domestic Systemically Important Bank (D-SIB) / Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Statutory ₹5,00,000 insurance per depositor under DICGC Act)",
+  "about": "ICICI Bank Limited is a leading Indian private sector commercial bank and is categorized by the Reserve Bank of India as a Domestic Systemically Important Bank (D-SIB). Renowned for pioneering modern digital banking infrastructure in India, ICICI Bank operates an expansive network of branches and ATMs, alongside digital platforms including iMobile Pay, InstaBIZ, and Trade Online.",
+  "products": [
+    {
+      "name": "iMobile Pay Digital Savings",
+      "desc": "Next-generation mobile banking app offering super-fast UPI payments, mutual fund investments, and credit card controls."
+    },
+    {
+      "name": "Mine Savings Account for Millennials",
+      "desc": "Customizable zero-paperwork digital account for young professionals with cashback debit card tiers."
+    },
+    {
+      "name": "Amazon Pay ICICI Credit Card",
+      "desc": "Lifetime free co-branded credit card with 5% unlimited cashback on Amazon India for Prime members."
+    },
+    {
+      "name": "Insta Home & Personal Loans",
+      "desc": "Pre-approved digital lending sanctions with zero physical branch visits for eligible customers."
+    },
+    {
+      "name": "iWish Flexible Recurring Deposit",
+      "desc": "Goal-based online recurring deposit allowing variable monthly deposits without penalties on missed installments."
+    }
+  ],
+  "eligibility": [
+    "Individuals residing in India aged 18+.",
+    "PAN and Aadhaar mandatory for video KYC processing."
+  ],
+  "documents": [
+    "Aadhaar Card with linked active mobile number for OTP authentication.",
+    "Original PAN Card.",
+    "Income slips or ITR for credit cards and loan applications."
+  ],
+  "charges": [
+    {
+      "item": "Monthly Average Balance (MAB)",
+      "fee": "₹10,000 (Metro/Urban), ₹5,000 (Semi-Urban), ₹2,000 (Rural)"
+    },
+    {
+      "item": "Digital NEFT / RTGS",
+      "fee": "Free through iMobile Pay & Internet Banking"
+    }
+  ],
+  "partnerLink": null
+}

@@ -1,0 +1,64 @@
+{
+  "id": "exim-bank",
+  "name": "Export-Import Bank of India (EXIM)",
+  "legalName": "Export-Import Bank of India",
+  "type": "Specialized Financial Institution",
+  "category": "foreign",
+  "tag": "Apex Export Financing Agency (Govt of India)",
+  "detailPage": "other-rbi-regulated/exim-bank/exim-bank.html",
+  "officialUrl": "https://www.eximbankindia.in/",
+  "helpline": "022 2217 2600",
+  "dicgc": false,
+  "zeroBalance": {
+    "available": false,
+    "type": "Institutional Only (Not for Retail Deposits)",
+    "details": "यह बैंक खुदरा जनता के लिए बचत खाता नहीं खोलता, केवल निर्यातकों व अंतरराष्ट्रीय व्यापार हेतु वित्त प्रदान करता है।",
+    "openUrl": "https://www.eximbankindia.in/"
+  },
+  "creditCards": {
+    "topCards": "No Retail Credit Cards (Corporate Trade Finance)",
+    "topOffer": "विदेशी सरकारों व व्यापारिक कंपनियों के लिए ऋण सुविधाएं (Buyer's Credit)।",
+    "applyUrl": "https://www.eximbankindia.in/"
+  },
+  "rates": {
+    "savings": "Not Applicable",
+    "fd": "Bonds & Institutional Placements"
+  },
+  "loans": "Lines of Credit (LOC), Export Project Finance, Overseas Investment Term Loans",
+  "founded": "1982 under Export-Import Bank of India Act, 1981",
+  "headquarters": "Mumbai, Maharashtra",
+  "rbiStatus": "All-India Financial Institution (AIFI) directly regulated by RBI",
+  "dicgcCoverage": "Not applicable (Does not accept retail public savings/current deposits)",
+  "about": "Export-Import Bank of India is the premier export finance institution in the country, established in 1982 by an Act of Parliament. Regulated by RBI alongside NABARD, SIDBI, and NHB as an All-India Financial Institution (AIFI), EXIM Bank coordinates the working of institutions engaged in financing export and import of goods and services, extending Lines of Credit (LOC) to foreign governments and assisting Indian companies in overseas investments.",
+  "products": [
+    {
+      "name": "Export Credits & Buyer's Credit",
+      "desc": "Financing for foreign sovereign and commercial buyers to import capital goods and turnkey projects from India."
+    },
+    {
+      "name": "Lines of Credit (LOC)",
+      "desc": "Concessional government-backed credit lines extended to developing nations across Africa, Asia, and Latin America."
+    },
+    {
+      "name": "Overseas Investment Finance",
+      "desc": "Term loans to Indian joint ventures and wholly-owned subsidiaries abroad for mergers and capacity building."
+    },
+    {
+      "name": "Trade Assistance Programme (TAP)",
+      "desc": "Trade credit risk mitigation for Indian commercial banks engaged in cross-border trade transactions."
+    }
+  ],
+  "eligibility": [
+    "Indian exporters, overseas sovereign governments, and financial institutions."
+  ],
+  "documents": [
+    "Export-Import Code (IEC), commercial contracts, audited company financials."
+  ],
+  "charges": [
+    {
+      "item": "Retail Public Deposits",
+      "fee": "Not accepted (Non-retail wholesale institutional lender)"
+    }
+  ],
+  "partnerLink": null
+}

@@ -1,0 +1,43 @@
+{
+  "_README": "नया बैंक जोड़ने के लिए: इस फाइल को कॉपी करें, नाम बदलें (उदा. new-bank.json) और विवरण भरें। यह बैंक डायरेक्टरी और सर्च में अपने आप जुड़ जाएगा!",
+  "id": "bank-unique-id",
+  "name": "Bank Name (जैसे: Bandhan Bank)",
+  "legalName": "Bandhan Bank Limited",
+  "type": "Private Sector Bank",
+  "category": "private",
+  "tag": "Fast Growing Private Bank",
+  "detailPage": "banks/private-sector/bandhan/bandhan.html",
+  "officialUrl": "https://www.examplebank.com/",
+  "helpline": "1800 123 4567",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Digital Savings Account",
+    "details": "शून्य न्यूनतम शेष, डेबिट कार्ड और वीडियो केवाईसी सुविधा उपलब्ध।",
+    "openUrl": "https://leads.banksathi.com/?h=YOUR_AFFILIATE_CODE"
+  },
+  "creditCards": {
+    "topCards": "RuPay Credit Card, Platinum Card",
+    "topOffer": "शॉपिंग पर 5% तक कैशबैक ऑफर।",
+    "applyUrl": "https://leads.banksathi.com/?h=YOUR_AFFILIATE_CODE"
+  },
+  "rates": {
+    "savings": "3.50% - 6.00% p.a.",
+    "fd": "3.00% - 7.50% p.a."
+  },
+  "loans": "Home Loan, Micro Loan, Personal Loan",
+  "founded": "2015",
+  "headquarters": "Kolkata, West Bengal",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "about": "बैंक का संक्षिप्त विवरण...",
+  "products": [
+    {
+      "name": "Savings Account",
+      "desc": "जीरो बैलेंस डिजिटल सेविंग्स अकाउंट"
+    }
+  ],
+  "partnerLink": {
+    "url": "https://leads.banksathi.com/?h=YOUR_AFFILIATE_CODE",
+    "label": "अकाउंट तुरंत खोलें (Partner Offer)"
+  }
+}

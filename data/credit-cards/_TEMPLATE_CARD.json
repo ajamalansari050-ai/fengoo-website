@@ -1,0 +1,18 @@
+{
+  "_README": "नया क्रेडिट कार्ड जोड़ने के लिए: इस फाइल को कॉपी करें, नाम बदलें (उदा. sbi-simplyclick.json) और नीचे दिए गए फील्ड्स भरें। यह कार्ड वेबसाइट पर अपने आप जुड़ जाएगा!",
+  "id": "bank-cardname",
+  "name": "Bank Card Name (जैसे: HDFC Swiggy Credit Card)",
+  "title": "Bank Card Name (1,500+ शब्द संपूर्ण विश्लेषण व समीक्षा)",
+  "bank": "HDFC Bank",
+  "network": "Mastercard / Visa / RuPay",
+  "tag": "Top Cashback / Lifetime Free / RuPay UPI / Travel",
+  "category": "cashback",
+  "wordCount": 1800,
+  "readTime": "9 मिनट पठन",
+  "fee": "₹500 + GST (या Lifetime Free)",
+  "waiver": "वार्षिक ₹1,00,000 खर्च पर शुल्क माफ",
+  "rewards": "Swiggy पर 10% कैशबैक + अन्य ऑनलाइन खर्चों पर 5%",
+  "applyUrl": "https://leads.banksathi.com/?h=YOUR_AFFILIATE_CODE_HERE",
+  "pageUrl": "credit-cards/hdfc/swiggy.html",
+  "contentHTML": "\n    <div class=\"guide-meta-banner\">\n      <span class=\"guide-word-badge\">📖 1800 शब्द • 9 मिनट पठन</span>\n      <span class=\"guide-verified-badge\">✓ RBI विनियामक दिशानिर्देश व बैंकिंग कोड्स के अनुसार सत्यापित (2025)</span>\n    </div>\n\n    <section class=\"guide-sec\">\n      <h2>1. कार्ड का परिचय व मुख्य विशेषताएँ (Overview & Key Highlights)</h2>\n      <p>यहाँ कार्ड का 1500+ शब्दों का विस्तृत विवरण, लाभ, और उपयोगिता लिखें...</p>\n    </section>\n\n    <section class=\"guide-sec\">\n      <h2>2. रिवॉर्ड स्ट्रक्चर व कैशबैक का गणित (Reward Math & CashBack)</h2>\n      <p>यहाँ रिवॉर्ड्स की गणना और टेबल दें...</p>\n    </section>\n\n    <section class=\"guide-sec\">\n      <h2>3. शुल्क, ब्याज दरें व छिपे हुए चार्ज (Fees, Interest & Charges)</h2>\n      <p>यहाँ शुल्क और वार्षिक चार्ज की जानकारी दें...</p>\n    </section>\n\n    <section class=\"guide-sec\">\n      <h2>4. 50-दिवसीय ब्याज-मुक्त अवधि व बिलिंग चक्र (Grace Period & Billing)</h2>\n      <p>यहाँ ग्रेस पीरियड का विवरण दें...</p>\n    </section>\n\n    <section class=\"guide-sec\">\n      <h2>5. पात्रता शर्तें व सिबिल स्कोर मानदंड (Eligibility & CIBIL)</h2>\n      <p>यहाँ आयु, आय और सिबिल स्कोर आवश्यकता लिखें...</p>\n    </section>\n\n    <section class=\"guide-sec\">\n      <h2>6. ऑनलाइन आवेदन की चरणबद्ध प्रक्रिया (Step-by-Step Application)</h2>\n      <p>यहाँ आवेदन करने के चरण लिखें...</p>\n    </section>\n\n    <section class=\"guide-sec\">\n      <h2>7. फायदे और नुकसान (Pros & Cons)</h2>\n      <p>यहाँ फायदे और सीमाएं लिखें...</p>\n    </section>\n\n    <section class=\"guide-sec\">\n      <h2>8. आरबीआई मास्टर निर्देश व उपभोक्ता सुरक्षा नियम (RBI Guidelines)</h2>\n      <p>यहाँ आरबीआई नियमों का विवरण दें...</p>\n    </section>\n\n    <section class=\"guide-sec\">\n      <h2>9. अक्सर पूछे जाने वाले महत्वपूर्ण प्रश्नोत्तर (FAQs)</h2>\n      <div class=\"guide-faq-item\">\n        <h4>प्रश्न 1: क्या यह कार्ड बिना आय प्रमाण के मिलता है?</h4>\n        <p>उत्तर: हाँ, यदि आप प्री-अप्रूव्ड ऑफर या एफडी के आधार पर आवेदन करते हैं...</p>\n      </div>\n    </section>\n  "
+}

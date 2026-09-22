@@ -1,0 +1,44 @@
+{
+  "id": "central-bank",
+  "name": "Central Bank of India",
+  "legalName": "Central Bank of India",
+  "type": "Public Sector Bank",
+  "category": "psu",
+  "tag": "First Truly Indian Commercial Bank (1911)",
+  "detailPage": "public-sector/sbi/sbi.html",
+  "officialUrl": "https://www.centralbankofindia.co.in/",
+  "helpline": "1800 22 1911",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Cent Param & BSBDA Account",
+    "details": "बिना किसी न्यूनतम शेष आवश्यकता के वेतनभोगियों और आम जनता के लिए खाता।",
+    "openUrl": "https://www.centralbankofindia.co.in/en/savings-account"
+  },
+  "creditCards": {
+    "topCards": "Cent RuPay Select, Visa Platinum",
+    "topOffer": "स्वास्थ्य जांच पैकेजों पर विशेष छूट और लाउंज एक्सेस।",
+    "applyUrl": "https://www.centralbankofindia.co.in/en/credit-cards"
+  },
+  "rates": {
+    "savings": "2.75% p.a.",
+    "fd": "3.50% - 7.15% p.a."
+  },
+  "loans": "Cent Home Loan, Cent Personal Loan",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "Central Bank of India भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": null
+}

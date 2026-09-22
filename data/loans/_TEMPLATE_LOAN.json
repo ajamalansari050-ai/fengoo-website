@@ -1,0 +1,17 @@
+{
+  "_README": "नया लोन जोड़ने के लिए: इस फाइल को कॉपी करें, नाम बदलें (उदा. business-loan.json) और विवरण भरें। यह वेबसाइट पर अपने आप जुड़ जाएगा!",
+  "id": "loan-id",
+  "category": "personal",
+  "title": "लोन संपूर्ण गाइड (Complete Loan Guide)",
+  "name": "लोन का नाम (जैसे: बिज़नेस लोन / MSME Loan)",
+  "rates": "9.50% - 14.00% p.a.",
+  "tenure": "1 वर्ष से 5 वर्ष",
+  "maxAmount": "₹50 लाख तक",
+  "processingFee": "1% - 2% + GST",
+  "applyUrl": "https://leads.banksathi.com/?h=YOUR_AFFILIATE_CODE",
+  "pageUrl": "loans/business-loan/index.html",
+  "wordCount": 1800,
+  "readTime": "9 मिनट पठन",
+  "desc": "लघु व मध्यम उद्योगों हेतु बिना किसी सिक्योरिटी के तत्काल पूंजी ऋण।",
+  "contentHTML": "\n    <div class=\"guide-meta-banner\">\n      <span class=\"guide-word-badge\">📖 1800 शब्द • 9 मिनट पठन</span>\n      <span class=\"guide-verified-badge\">✓ RBI विनियामक दिशानिर्देश व बैंकिंग कोड्स के अनुसार सत्यापित (2025)</span>\n    </div>\n    <section class=\"guide-sec\">\n      <h2>1. ऋण का परिचय व मूलभूत उद्देश्य (Overview)</h2>\n      <p>विस्तृत विवरण...</p>\n    </section>\n  "
+}

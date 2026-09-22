@@ -1,0 +1,56 @@
+{
+  "id": "ujjivan-small-finance",
+  "name": "Ujjivan Small Finance Bank",
+  "legalName": "Ujjivan Small Finance Bank Limited",
+  "type": "Small Finance Bank",
+  "category": "sfb",
+  "tag": "Financial Inclusion & High FD Rates",
+  "detailPage": "small-finance/ujjivan-small-finance/ujjivan-small-finance.html",
+  "officialUrl": "https://www.ujjivansfb.in/",
+  "helpline": "1800 208 2121",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "Garima Zero Balance & Digital Account",
+    "details": "वरिष्ठ नागरिकों और महिलाओं के लिए विशेष लाभ और उच्च ब्याज दरें।",
+    "openUrl": "https://www.ujjivansfb.in/personal-banking/savings-account"
+  },
+  "creditCards": {
+    "topCards": "Ujjivan RuPay Credit Card",
+    "topOffer": "RuPay नेटवर्क पर यूपीआई क्यूआर कोड स्कैन करके सीधा भुगतान।",
+    "applyUrl": "https://www.ujjivansfb.in/"
+  },
+  "rates": {
+    "savings": "3.50% - 7.50% p.a.",
+    "fd": "3.75% - 8.25% p.a. (Senior: 8.75%)"
+  },
+  "loans": "Micro-enterprises, Rural Housing",
+  "founded": "2005 (as Ujjivan Financial Services) / SFB 2017",
+  "headquarters": "Bengaluru, Karnataka",
+  "rbiStatus": "Scheduled Small Finance Bank (RBI Act, 1934)",
+  "dicgcCoverage": "Yes (DICGC ₹5 Lakh insurance applicable)",
+  "about": "Ujjivan Small Finance Bank is a mass-market focused scheduled commercial bank providing micro-loans, affordable housing finance, MSME loans, and high-interest retail deposits for underserved communities.",
+  "products": [
+    {
+      "name": "Garima Savings Account",
+      "desc": "Specialized savings scheme for women with higher daily ATM limits and health insurance benefits."
+    },
+    {
+      "name": "Platina Fixed Deposit",
+      "desc": "High yield term deposits offering attractive interest rates for senior citizens."
+    }
+  ],
+  "eligibility": [
+    "Resident Indian individuals and micro-entrepreneurs."
+  ],
+  "documents": [
+    "Aadhaar Card, PAN card."
+  ],
+  "charges": [
+    {
+      "item": "Zero Balance Options",
+      "fee": "Available under basic savings tiers"
+    }
+  ],
+  "partnerLink": null
+}

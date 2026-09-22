@@ -1,0 +1,44 @@
+{
+  "id": "ippb",
+  "name": "India Post Payments Bank (IPPB)",
+  "legalName": "India Post Payments Bank Limited",
+  "type": "Payments Bank",
+  "category": "payments",
+  "tag": "Department of Posts (Govt of India)",
+  "detailPage": "payments-banks/india-post-payments-bank/india-post-payments-bank.html",
+  "officialUrl": "https://www.ippbonline.com/",
+  "helpline": "155299 / 1800 8899 860",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "IPPB Regular Digital Savings (100% Zero Balance)",
+    "details": "डाकिया (Grameen Dak Sevak) बायोमेट्रिक मशीन लेकर घर आकर खाता खोलता है और नकद जमा/निकासी करता है।",
+    "openUrl": "https://www.ippbonline.com/web/ippb/regular-savings-account"
+  },
+  "creditCards": {
+    "topCards": "IPPB Doorstep Virtual Debit Card (No Credit Cards - Payments Bank regulation)",
+    "topOffer": "RBI नियमों के तहत पेमेंट्स बैंक क्रेडिट कार्ड जारी नहीं कर सकते, किंतु डिजिटल रुपे डेबिट कार्ड उपलब्ध है।",
+    "applyUrl": "https://www.ippbonline.com/"
+  },
+  "rates": {
+    "savings": "2.00% - 2.25% p.a. (Limit: ₹2 Lakh per RBI)",
+    "fd": "Post Office POSB Sweep-in Available (No direct FD)"
+  },
+  "loans": "Third-party Partner Loans (Home, Personal via PNB & HDFC)",
+  "founded": "",
+  "headquarters": "",
+  "rbiStatus": "Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Up to ₹5,00,000 per depositor)",
+  "about": "India Post Payments Bank (IPPB) भारतीय रिज़र्व बैंक (RBI) द्वारा विनियमित एक प्रमुख बैंक है।",
+  "products": [],
+  "eligibility": [
+    "भारतीय नागरिक (18 वर्ष या अधिक)",
+    "आधार कार्ड व पैन कार्ड अनिवार्य"
+  ],
+  "documents": [
+    "पहचान प्रमाण: आधार / पैन / पासपोर्ट",
+    "पता प्रमाण: आधार कार्ड"
+  ],
+  "charges": [],
+  "partnerLink": null
+}

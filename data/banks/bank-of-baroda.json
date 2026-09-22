@@ -1,0 +1,75 @@
+{
+  "id": "bank-of-baroda",
+  "name": "Bank of Baroda (BoB)",
+  "legalName": "Bank of Baroda",
+  "type": "Public Sector Bank",
+  "category": "psu",
+  "tag": "Second Largest PSU Bank",
+  "detailPage": "public-sector/bank-of-baroda/bank-of-baroda.html",
+  "officialUrl": "https://www.bankofbaroda.in/",
+  "helpline": "1800 5700 / 1800 5000",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "bob World Digital BSBDA Account",
+    "details": "bob World ऐप द्वारा जीरो बैलेंस खाता और आधार आधारित तत्काल खाता खोलने की सुविधा।",
+    "openUrl": "https://www.bankofbaroda.in/personal-banking/accounts/saving-accounts"
+  },
+  "creditCards": {
+    "topCards": "bob Easy, Premier RuPay, Select, Eterna",
+    "topOffer": "किराने, मूवीज और डिपार्टमेंटल स्टोर पर 5x रिवॉर्ड पॉइंट्स + RuPay UPI क्रेडिट सपोर्ट।",
+    "applyUrl": "https://www.bobcard.co.in/"
+  },
+  "rates": {
+    "savings": "2.75% p.a.",
+    "fd": "3.50% - 7.15% p.a. (Senior Citizen: 7.65%)"
+  },
+  "loans": "Baroda Grah Shobha Home Loan (from 8.40%), Kisan Credit Card (BKCC)",
+  "founded": "1908 by Maharaja Sayajirao Gaekwad III",
+  "headquarters": "Vadodara, Gujarat",
+  "rbiStatus": "Nationalized Scheduled Commercial Bank (Banking Companies Act, 1970)",
+  "dicgcCoverage": "Yes (DICGC ₹5 Lakh statutory deposit guarantee)",
+  "about": "Bank of Baroda is one of India's largest nationalized public sector banks, established in 1908. Following the successful amalgamation of Dena Bank and Vijaya Bank in 2019, Bank of Baroda commands an extensive footprint across urban, semi-urban, and rural India, alongside a robust international presence spanning New York, London, Dubai, and Singapore. Its digital suite bob World offers comprehensive retail lending, deposits, and agricultural credit.",
+  "products": [
+    {
+      "name": "bob World Digital Banking",
+      "desc": "Single unified app for savings account management, investment, insurance, and FASTag recharges."
+    },
+    {
+      "name": "Baroda Advantage Savings Account",
+      "desc": "Flexible savings scheme with customized debit card variants and personal accident insurance coverage."
+    },
+    {
+      "name": "Baroda Home Loan (Baroda Grah Shobha)",
+      "desc": "Affordable residential mortgage with competitive interest rates linked to Baroda Repo Linked Lending Rate (BRLLR)."
+    },
+    {
+      "name": "Baroda Kisan Credit Card (BKCC)",
+      "desc": "Dedicated agricultural credit line for farmers for crop production, farm equipment, and post-harvest storage."
+    },
+    {
+      "name": "Baroda Term Deposits & Capital Gain Schemes",
+      "desc": "Guaranteed interest fixed and recurring deposits with senior citizen preferential margins."
+    }
+  ],
+  "eligibility": [
+    "Individuals 18 years and older; joint applicants permitted.",
+    "Valid proof of identity and residence under RBI KYC Master Directions."
+  ],
+  "documents": [
+    "Aadhaar / Voter ID / Passport.",
+    "PAN card or Form 60.",
+    "Agricultural land revenue records (for BKCC loans)."
+  ],
+  "charges": [
+    {
+      "item": "Quarterly Average Balance (QAB)",
+      "fee": "₹2,000 (Metro/Urban), ₹1,000 (Semi-Urban), ₹500 (Rural)"
+    },
+    {
+      "item": "Online NEFT / RTGS",
+      "fee": "Free via bob World mobile banking"
+    }
+  ],
+  "partnerLink": null
+}

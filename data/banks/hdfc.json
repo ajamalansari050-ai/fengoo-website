@@ -1,0 +1,84 @@
+{
+  "id": "hdfc",
+  "name": "HDFC Bank",
+  "legalName": "HDFC Bank Limited",
+  "type": "Private Sector Bank",
+  "category": "private",
+  "tag": "D-SIB (Systemically Important)",
+  "detailPage": "private-sector/hdfc/hdfc.html",
+  "officialUrl": "https://www.hdfcbank.com/",
+  "helpline": "1800 202 6161 / 1800 1600",
+  "dicgc": true,
+  "zeroBalance": {
+    "available": true,
+    "type": "BSBDA & Digital InstaAccount",
+    "details": "शून्य न्यूनतम शेष (Zero MAB) विकल्प उपलब्ध। वीडियो केवाईसी द्वारा तुरंत डिजिटल खाता खुलता है।",
+    "openUrl": "https://www.hdfcbank.com/personal/save/accounts/savings-accounts"
+  },
+  "creditCards": {
+    "topCards": "Millennia (5% CashBack), Regalia Gold (Lounge Access), Swiggy HDFC (10% Off), Tata Neu Infinity (RuPay UPI)",
+    "topOffer": "अमेज़न, फ्लिपकार्ट व जोमैटो पर 5% से 10% तक कैशबैक + लाइफटाइम फ्री रिन्यूअल ऑफर।",
+    "applyUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards"
+  },
+  "rates": {
+    "savings": "3.00% - 3.50% p.a.",
+    "fd": "3.00% - 7.25% p.a. (Senior Citizen: 7.75%)"
+  },
+  "loans": "Home Loan (from 8.50%), Personal Loan (from 10.50%), Auto Loan (from 8.75%)",
+  "founded": "1994",
+  "headquarters": "Mumbai, Maharashtra",
+  "rbiStatus": "Domestic Systemically Important Bank (D-SIB) / Scheduled Commercial Bank",
+  "dicgcCoverage": "Yes (Statutory ₹5,00,000 per depositor insurance)",
+  "about": "HDFC Bank Limited is India's largest private sector bank by assets and market valuation. Following its historic mega-merger with Housing Development Finance Corporation (HDFC) in July 2023, the institution holds dominant market leadership across mortgages, credit card issuance, consumer lending, SME trade finance, and rural banking networks. Designated by the Reserve Bank of India as a Domestic Systemically Important Bank (D-SIB), it is considered an institution \"Too Big To Fail\".",
+  "products": [
+    {
+      "name": "Regular Savings & DigiSave Youth",
+      "desc": "Versatile savings accounts with debit card international limits, insurance covers, and high transactional bandwidth."
+    },
+    {
+      "name": "Mortgages & Housing Finance",
+      "desc": "Industry-leading retail home loans, home improvement finance, and top-up loans with long amortizations up to 30 years."
+    },
+    {
+      "name": "Credit Cards (Regalia Gold, Millennia, Infinia)",
+      "desc": "India's largest card portfolio offering high cashback on SmartBuy, flight miles conversions, and global golf privileges."
+    },
+    {
+      "name": "Fixed Deposits & SureCover FDs",
+      "desc": "Secure term deposits offering quarterly compounding interest, overdraft against FD, and senior citizen rate bonuses."
+    },
+    {
+      "name": "Express Personal Loans",
+      "desc": "Instant pre-approved personal loans disbursed in under 10 seconds for existing salaried relationship holders."
+    },
+    {
+      "name": "HDFC Bank MobileBanking App & PayZapp",
+      "desc": "Complete banking in your palm with one-click bill pay, virtual debit card generation, and UPI interoperability."
+    }
+  ],
+  "eligibility": [
+    "Resident Individuals (Sole or Joint accounts) above 18 years.",
+    "Minors represented by natural or legal guardians.",
+    "Valid identification via Aadhaar and PAN for instant digital onboarding."
+  ],
+  "documents": [
+    "Identity & Address: Aadhaar / Passport / Voter ID card.",
+    "Income Proof: 3-month salary certificate and bank credit trail for loan applicants.",
+    "Tax Proof: Physical PAN card."
+  ],
+  "charges": [
+    {
+      "item": "Regular Savings Average Monthly Balance (AMB)",
+      "fee": "₹10,000 (Metro/Urban), ₹5,000 (Semi-Urban), ₹2,500 (Rural)"
+    },
+    {
+      "item": "Non-Maintenance Fee",
+      "fee": "Capped as per RBI proportional norms"
+    },
+    {
+      "item": "Digital Transfers (NEFT / RTGS via NetBanking)",
+      "fee": "Nil"
+    }
+  ],
+  "partnerLink": null
+}

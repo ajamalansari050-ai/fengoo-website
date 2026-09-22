@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /link-manager.html
+
+User-agent: Mediapartners-Google
+Allow: /
+
+Sitemap: https://fengoo.in/sitemap.xml
